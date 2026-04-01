@@ -1,5 +1,5 @@
 # report sites online as of last scan
-# usage: perl online.pl, http://search.fed.wiki.org:3030/logs/online
+# usage: perl online.pl, http://search.federatedwiki.org:3030/logs/online
 
 $latest = `ls -t logs | head -1`;
 $pages = 0;

@@ -19,7 +19,7 @@
 
     <script>
       names = []
-      fetch('http://search.fed.wiki.org:3030/slugs.txt')
+      fetch('//search.federatedwiki.org:3030/slugs.txt')
         .then((response) => response.text())
         .then((text) => names = text.split(/\r?\n/))
 
@@ -35,7 +35,7 @@
       }
 
       function link(text) {
-        return `<a href=http://search.fed.wiki.org:3030/#/find=slugs&within=pages&match=and&query=${text} target=_blank>${asTitle(text)}</a>`
+        return `<a href=//search.federatedwiki.org:3030/#/find=slugs&within=pages&match=and&query=${text} target=_blank>${asTitle(text)}</a>`
       }
 
       function get() {

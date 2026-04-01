@@ -18,7 +18,7 @@
 <h1>Federated Wiki Title Network</h1>
 <p>Click a title to center on its paths through the federation.<br>
 See counts of pages ÷ titles nearby.
-<a href="http://ward.asia.wiki.org/title-network-browser.html" target="ward.asia.wiki.org ">more</a></p>
+<a href="//search.federatedwiki.org/title-network-browser.html" target="search.federatedwiki.org ">more</a></p>
 <table>
   <tr> <th id="gdadh"> <th id="dadh"> <th id="meh"> <th id="sonh"> <th id="gsonh">
   <tr> <td id="gdad"> <td id="dad"> <td id="me"> <td id="son"> <td id="gson">
@@ -27,7 +27,7 @@ See counts of pages ÷ titles nearby.
 
   var query = location.search.replace(/^\?/,'') || 'title-network-browser'
   var center = query.split(/,/)
-  var url = `http://search.fed.wiki.org:3030/sites?query=${center[0]}`
+  var url = `//search.federatedwiki.org:3030/sites?query=${center[0]}`
   column('me', center)
   fetch(url).then(sites)
   column('son', those = follow(center,outlinks))
@@ -39,8 +39,8 @@ See counts of pages ÷ titles nearby.
     var list = await res.json()
     var html = list.sort().slice(0,100)
       .map(site => `
-        <img src="http://${site}/favicon.png" width=12>
-        <a href="http://${site}/${center[0]}.html" target=_blank>${site}</a>
+        <img src="//${site}/favicon.png" width=12>
+        <a href="//${site}/${center[0]}.html" target=_blank>${site}</a>
       `).join("<br>")
     window.me.innerHTML += `<p>${html}</p>`
   }

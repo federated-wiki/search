@@ -77,8 +77,8 @@ helpers do
     references.each do |slug,sites|
       result << "<p>#{slug.gsub /-/, ' '}<br>"
       sites.each do |site|
-        href = "http://#{site}/view/#{slug}"
-        flag = "http://#{site}/favicon.png"
+        href = "//#{site}/view/#{slug}"
+        flag = "//#{site}/favicon.png"
         result << "<a href='#{href}' target='#{site}' title='#{site}'><img src='#{flag}' width=16></a> "
       end
       result << "</p>"
@@ -128,8 +128,8 @@ get '/' do
       <input class=query type=text size=70></input>
     </table>
     <div id=results style="padding-top:20px;"></div>
-    <a href="http://search.fed.wiki.org/search-help.html">help</a> |
-    <a href="http://ward.asia.wiki.org/ruby-sitemap-scrape.html">about</a>
+    <a href="//search.federatedwiki.org/search-help.html">help</a> |
+    <a href="//search.federatedwiki.org/ruby-sitemap-scrape.html">about</a>
   </body>
 EOF
 end

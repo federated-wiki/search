@@ -49,5 +49,5 @@ ruby site-web.rb > public/site-web.json
 ruby slug-web.rb > public/slug-web.json
 (perl -e 'print "window.slugs="'; cat public/slug-web.json) > public/slug-web.js
 
-# ruby neo-batch.rb
+ruby neo-batch.rb
 # sh neo-build.sh
