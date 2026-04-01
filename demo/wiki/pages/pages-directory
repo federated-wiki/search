@@ -1,0 +1,101 @@
+{
+  "title": "pages directory",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Retain data about pages from scrape to scrape."
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "sites directory --> HERE\nHERE\nHERE --> attributes directory"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "pages directory",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508099010793
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "sites directory --> HERE\nHERE"
+      },
+      "date": 1508099019955
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Retain data about pages within a site from scrape to scrape."
+      },
+      "date": 1508099086660
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Retain data about pages from scrape to scrape."
+      },
+      "date": 1508099100055
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "sites directory --> HERE\nHERE\nHERE --> attributes directory"
+      },
+      "date": 1508099120028
+    },
+    {
+      "type": "edit",
+      "id": "3fbf75ca82910a51",
+      "item": {
+        "type": "graph",
+        "id": "3fbf75ca82910a51",
+        "text": "HERE\nHERE --> scrape script --> log file\nHERE --> rollup script\nHERE --> found script\nHERE --> activity script\n\nHERE --> pages directory"
+      },
+      "date": 1518735157845
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078517694
+    }
+  ]
+}

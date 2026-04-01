@@ -1,0 +1,116 @@
+{
+  "title": "plugins file",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Lists plugin names found as types of items."
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "scrape script --> HERE\nHERE"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "code",
+      "id": "177ade2d0a8d5a7c",
+      "text": "pagefold\nparagraph\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "plugins file",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508202506130
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "177ade2d0a8d5a7c"
+      },
+      "id": "177ade2d0a8d5a7c",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1508204954110
+    },
+    {
+      "type": "edit",
+      "id": "177ade2d0a8d5a7c",
+      "item": {
+        "type": "code",
+        "id": "177ade2d0a8d5a7c",
+        "text": "pagefold\nparagraph\n"
+      },
+      "date": 1508204959589
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Lists plugin names found as types of items."
+      },
+      "date": 1508209120076
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE"
+      },
+      "date": 1511739926828
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE --> plugins rollup"
+      },
+      "date": 1511739968461
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE"
+      },
+      "date": 1511740062322
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775080870280
+    }
+  ]
+}

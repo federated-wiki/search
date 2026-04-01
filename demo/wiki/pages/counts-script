@@ -1,0 +1,107 @@
+{
+  "title": "counts script",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Report run time and sizes of total rollups. [https://github.com/WardCunningham/search/blob/master/counts.rb github]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "activity script --> HERE\nHERE --> counts file"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "paragraph",
+      "id": "4b0adef0142edd30",
+      "text": "We also issue POST requests to signal downstream consumers that downloads are ready based on counts."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "counts script",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1511734603541
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nHERE"
+      },
+      "date": 1511734645696
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Report run time and sizes of total rollups. [https://github.com/WardCunningham/search/blob/master/counts.rb github]"
+      },
+      "date": 1511734952965
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nHERE --> counts plot page"
+      },
+      "date": 1511735365869
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nHERE --> counts file"
+      },
+      "date": 1511735478358
+    },
+    {
+      "type": "add",
+      "id": "4b0adef0142edd30",
+      "item": {
+        "type": "paragraph",
+        "id": "4b0adef0142edd30",
+        "text": "We also issue POST requests to signal downstream consumers that downloads are ready based on counts."
+      },
+      "after": "7a22af872bf037d5",
+      "date": 1606952973524
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078692866
+    }
+  ]
+}

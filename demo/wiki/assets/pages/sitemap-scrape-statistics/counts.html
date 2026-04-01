@@ -1,0 +1,49 @@
+
+<link id='favicon' href='/favicon.png' rel='icon' type='image/png'>
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<style> div.plot {width:800px;height:400px;} </style>
+
+<center>
+	<div id="run_time" class="plot"></div>
+	<div id="scan_sites" class="plot"></div>
+	<div id="scan_pages" class="plot"></div>
+	<div id="index_sites" class="plot"></div>
+        <div id="index_slugs" class="plot"></div>
+	<div id="index_words" class="plot"></div>
+	<div id="index_items" class="plot"></div>
+	<div id="index_links" class="plot"></div>
+	<div id="growth_items" class="plot"></div>
+	<div id="growth_links" class="plot"></div>
+
+<script>
+
+	async function display (text) {
+		var lines = text.trim().split(/\n/)
+		var newer = await fetch('http://search.federatedwiki.org:3030/counts.txt')
+			.then(res => res.text())
+			.then(text => text.trim().split(/\n/))
+		var data = [...lines,...newer.slice(10)].map(function (line) {return JSON.parse(line)})
+
+		function x() {return data.map(function (d) {return new Date(d.date*1000)})}
+		function plot(e,f) { Plotly.plot( e, [{ x:x(), y:data.map(f) }], {title: e.id.replace('_',' ') } )}
+
+		plot(run_time, function (d) {return (d.date/60-20)%60+20})
+		plot(scan_sites, function (d) {return d.scan.sites})
+		plot(scan_pages, function (d) {return d.scan.pages})
+		plot(index_sites, function (d) {return d.index.sites})
+                plot(index_slugs, function (d) {return d.index.slugs})
+		plot(index_words, function (d) {return d.index.words})
+		plot(index_items, function (d) {return d.index.items})
+		plot(index_links, function (d) {return d.index.links})
+		plot(growth_items, function (d,i,a) {return i ? d.index.items - a[i-1].index.items : 0})
+		plot(growth_links, function (d,i,a) {return i ? d.index.links - a[i-1].index.links : 0})
+	}
+
+	Plotly.d3.text('counts.txt', display)
+
+</script>
+
+<footer>
+	Sitemap Scrape Statistics<br>
+	<a href=http://search.federatedwiki.org/sitemap-scrape-statistics.html>wiki</a> |
+	<a href=https://plot.ly/api/>plotly</a>

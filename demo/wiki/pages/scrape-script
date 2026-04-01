@@ -1,0 +1,540 @@
+{
+  "title": "scrape script",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Update every site that has new pages. [https://github.com/WardCunningham/search/blob/master/scrape.rb github]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "cron script --> HERE\nsites directory --> HERE\nHERE --> words file --> words rollup\nHERE --> links file --> links rollup\nHERE --> sites file --> sites rollup --> sites total rollup\nHERE --> items file --> items rollup\nHERE --> plugins file --> plugins rollup\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "reference",
+      "id": "6bf6cdc96e344e61",
+      "site": "ward.asia.wiki.org",
+      "slug": "ruby-sitemap-scrape",
+      "title": "Ruby Sitemap Scrape",
+      "text": "This is a rewrite of the first ruby scraper that saves text files useful for searching instead of whole sites in export format. It incrementally refetches pages that have changed based on dates in the sitemaps. [https://github.com/WardCunningham/search github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "23559e13c1f37028",
+      "text": "The script loops over all pages of all known sites updating our records for any page that has changed."
+    },
+    {
+      "type": "code",
+      "id": "f9d878938de70242",
+      "text": "for all known sites\n  for each page in sitemap\n    if page changed since last visit\n      scrape fresh info for page"
+    },
+    {
+      "type": "paragraph",
+      "id": "3166397a585ba1ea",
+      "text": "Scrape looks for five different attributes on each page it visits. The values it finds are recorded in five different files. "
+    },
+    {
+      "type": "paragraph",
+      "id": "081f0e813ed91001",
+      "text": "[[words file]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "8800058b58cd523d",
+      "text": "[[links file]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "cd664058f27255b9",
+      "text": "[[sites file]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "78ce5036e18c6fc1",
+      "text": "[[slugs file]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "752c9b896e82b515",
+      "text": "[[items file]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "2f4bf93402483afa",
+      "text": "[[plugins file]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "83bef0e6129be035",
+      "text": "We probe with http but now accept redirects so that https only sites can be scraped."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "scrape script",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508092477053
+    },
+    {
+      "type": "fork",
+      "site": null,
+      "date": 1508092483745
+    },
+    {
+      "type": "fork",
+      "date": 1508092510683
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "HERE\nHERE --> scrape script"
+      },
+      "date": 1508092513970
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "HERE\n"
+      },
+      "date": 1508092541484
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nHERE\n"
+      },
+      "date": 1508092565356
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "We update every site that has new pages since the last scrape."
+      },
+      "date": 1508094367311
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Update every site that has new pages."
+      },
+      "date": 1508094381928
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\n"
+      },
+      "date": 1508094487302
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nHERE --> words file\nHERE --> links file\nHERE --> items file\nHERE --> plugins file\nHERE --> sites file\n"
+      },
+      "date": 1508094698323
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nHERE --> words file\nHERE --> links file\nHERE --> sites file\nHERE --> items file\nHERE --> plugins file\n"
+      },
+      "date": 1508094783439
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "3166397a585ba1ea"
+      },
+      "id": "3166397a585ba1ea",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1508095001259
+    },
+    {
+      "type": "edit",
+      "id": "3166397a585ba1ea",
+      "item": {
+        "type": "paragraph",
+        "id": "3166397a585ba1ea",
+        "text": "For each page of each site for each of five attributes scrape writes a list of values found on pages that have been updated"
+      },
+      "date": 1508095223590
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "3166397a585ba1ea",
+        "7a22af872bf037d5"
+      ],
+      "id": "3166397a585ba1ea",
+      "date": 1508095242229
+    },
+    {
+      "type": "add",
+      "id": "081f0e813ed91001",
+      "item": {
+        "type": "paragraph",
+        "id": "081f0e813ed91001",
+        "text": "[[words file]]"
+      },
+      "after": "3166397a585ba1ea",
+      "date": 1508095973137
+    },
+    {
+      "type": "add",
+      "id": "8800058b58cd523d",
+      "item": {
+        "type": "paragraph",
+        "id": "8800058b58cd523d",
+        "text": "[[links file]]"
+      },
+      "after": "081f0e813ed91001",
+      "date": 1508095979634
+    },
+    {
+      "type": "add",
+      "id": "cd664058f27255b9",
+      "item": {
+        "type": "paragraph",
+        "id": "cd664058f27255b9",
+        "text": "[[sites file]]"
+      },
+      "after": "8800058b58cd523d",
+      "date": 1508095989825
+    },
+    {
+      "type": "add",
+      "id": "752c9b896e82b515",
+      "item": {
+        "type": "paragraph",
+        "id": "752c9b896e82b515",
+        "text": "[[items file]]"
+      },
+      "after": "cd664058f27255b9",
+      "date": 1508095998139
+    },
+    {
+      "type": "add",
+      "id": "2f4bf93402483afa",
+      "item": {
+        "type": "paragraph",
+        "id": "2f4bf93402483afa",
+        "text": "[[plugins file]]"
+      },
+      "after": "752c9b896e82b515",
+      "date": 1508096005647
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "7a22af872bf037d5",
+        "3166397a585ba1ea",
+        "081f0e813ed91001",
+        "8800058b58cd523d",
+        "cd664058f27255b9",
+        "752c9b896e82b515",
+        "2f4bf93402483afa"
+      ],
+      "id": "7a22af872bf037d5",
+      "date": 1508096014480
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nHERE --> words file --> words rollup\nHERE --> links file\nHERE --> sites file\nHERE --> items file\nHERE --> plugins file\n"
+      },
+      "date": 1508202571893
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nHERE --> words file --> words rollup\nHERE --> links file --> links rollup\nHERE --> sites file --> sites rollup\nHERE --> items file --> items rollup\nHERE --> plugins file --> plugins rollup\n"
+      },
+      "date": 1508202626157
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6bf6cdc96e344e61"
+      },
+      "id": "6bf6cdc96e344e61",
+      "type": "add",
+      "after": "2f4bf93402483afa",
+      "date": 1508205210553
+    },
+    {
+      "type": "edit",
+      "id": "6bf6cdc96e344e61",
+      "item": {
+        "type": "reference",
+        "id": "6bf6cdc96e344e61",
+        "site": "ward.asia.wiki.org",
+        "slug": "ruby-sitemap-scrape",
+        "title": "Ruby Sitemap Scrape",
+        "text": "This is a rewrite of the first ruby scraper that saves text files useful for searching instead of whole sites in export format. It incrementally refetches pages that have changed based on dates in the sitemaps. [https://github.com/WardCunningham/search github]"
+      },
+      "date": 1508205220357
+    },
+    {
+      "type": "add",
+      "id": "e80655eb0f79bbf4",
+      "item": {
+        "type": "paragraph",
+        "id": "e80655eb0f79bbf4",
+        "text": "Each of these pages includes a sample from a single page, Ruby Sitemap Scrape."
+      },
+      "after": "2f4bf93402483afa",
+      "date": 1508205292027
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Update every site that has new pages. [https://github.com/WardCunningham/search/blob/master/scrape.rb github]"
+      },
+      "date": 1511738498921
+    },
+    {
+      "type": "fork",
+      "date": 1511738617940
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nHERE --> words file --> words rollup\nHERE --> links file --> links rollup\nHERE --> sites file --> sites rollup --> sites total rollup\nHERE --> items file --> items rollup\nHERE --> plugins file --> plugins rollup\n"
+      },
+      "date": 1511909249258
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "7a22af872bf037d5",
+        "6bf6cdc96e344e61",
+        "3166397a585ba1ea",
+        "081f0e813ed91001",
+        "8800058b58cd523d",
+        "cd664058f27255b9",
+        "752c9b896e82b515",
+        "2f4bf93402483afa",
+        "e80655eb0f79bbf4"
+      ],
+      "id": "6bf6cdc96e344e61",
+      "date": 1528546647480
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "7a22af872bf037d5",
+        "3166397a585ba1ea",
+        "081f0e813ed91001",
+        "8800058b58cd523d",
+        "cd664058f27255b9",
+        "752c9b896e82b515",
+        "2f4bf93402483afa",
+        "e80655eb0f79bbf4",
+        "6bf6cdc96e344e61"
+      ],
+      "id": "6bf6cdc96e344e61",
+      "date": 1528547430917
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f9d878938de70242"
+      },
+      "id": "f9d878938de70242",
+      "type": "add",
+      "after": "6bf6cdc96e344e61",
+      "date": 1528547435201
+    },
+    {
+      "type": "edit",
+      "id": "f9d878938de70242",
+      "item": {
+        "type": "code",
+        "id": "f9d878938de70242",
+        "text": "for all known sites\n  for each page in site's sitemap\n    if page changed since last visit\n      scrape fresh info for page"
+      },
+      "date": 1528547441374
+    },
+    {
+      "type": "edit",
+      "id": "f9d878938de70242",
+      "item": {
+        "type": "code",
+        "id": "f9d878938de70242",
+        "text": "for all known sites\n  for each page in sitemap\n    if page changed since last visit\n      scrape fresh info for page"
+      },
+      "date": 1528547457724
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "7a22af872bf037d5",
+        "f9d878938de70242",
+        "3166397a585ba1ea",
+        "081f0e813ed91001",
+        "8800058b58cd523d",
+        "cd664058f27255b9",
+        "752c9b896e82b515",
+        "2f4bf93402483afa",
+        "e80655eb0f79bbf4",
+        "6bf6cdc96e344e61"
+      ],
+      "id": "f9d878938de70242",
+      "date": 1528547480557
+    },
+    {
+      "type": "add",
+      "id": "23559e13c1f37028",
+      "item": {
+        "type": "paragraph",
+        "id": "23559e13c1f37028",
+        "text": "The script loops over all pages of all known sites updating our records for any page that has changed."
+      },
+      "after": "7a22af872bf037d5",
+      "date": 1528547639587
+    },
+    {
+      "type": "edit",
+      "id": "3166397a585ba1ea",
+      "item": {
+        "type": "paragraph",
+        "id": "3166397a585ba1ea",
+        "text": "For each page of each site for each of five attributes scrape maintains a list of values found on the page."
+      },
+      "date": 1528547682218
+    },
+    {
+      "type": "remove",
+      "id": "e80655eb0f79bbf4",
+      "date": 1528547765326
+    },
+    {
+      "type": "edit",
+      "id": "3166397a585ba1ea",
+      "item": {
+        "type": "paragraph",
+        "id": "3166397a585ba1ea",
+        "text": "Scrape looks for five different attributes on each page it visits. The values it finds are recorded in five different files. "
+      },
+      "date": 1528547985204
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "7a22af872bf037d5",
+        "6bf6cdc96e344e61",
+        "23559e13c1f37028",
+        "f9d878938de70242",
+        "3166397a585ba1ea",
+        "081f0e813ed91001",
+        "8800058b58cd523d",
+        "cd664058f27255b9",
+        "752c9b896e82b515",
+        "2f4bf93402483afa"
+      ],
+      "id": "6bf6cdc96e344e61",
+      "date": 1528548003890
+    },
+    {
+      "type": "add",
+      "id": "83bef0e6129be035",
+      "item": {
+        "type": "paragraph",
+        "id": "83bef0e6129be035",
+        "text": "We probe with http but now accept redirects so that https only sites can be scraped."
+      },
+      "after": "2f4bf93402483afa",
+      "date": 1529071870796
+    },
+    {
+      "type": "add",
+      "id": "78ce5036e18c6fc1",
+      "item": {
+        "type": "paragraph",
+        "id": "78ce5036e18c6fc1",
+        "text": "[[slugs file]]"
+      },
+      "after": "cd664058f27255b9",
+      "date": 1546818310021
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078640941
+    }
+  ]
+}

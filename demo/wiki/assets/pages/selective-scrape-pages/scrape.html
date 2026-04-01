@@ -1,0 +1,240 @@
+
+<html>
+    <head>
+        <style>
+            pre {
+                width: 400px;
+                background-color: #eee;
+                margin: 20px;
+                padding: 5px;
+                overflow: hidden;
+            }
+            div.column {
+              float:left;
+            }
+        </style>
+    </head>
+    <body>
+      <div class='column' >
+        <div>
+            <h3> sites todo (0)</h3>
+            <pre id="sitestodo"></pre>
+        </div>
+        <div>
+            <h3> sites done (0)</h3>
+            <pre id="sitesdone"></pre>
+        </div>
+      </div>
+      <div class='column'>
+        <div>
+            <h3> pages todo (0)</h3>
+            <pre id="pagestodo"></pre>
+        </div>
+      </div>
+      <div class='column'>
+        <div>
+            <h3> pages done (0)</h3>
+            <pre id="pagesdone"></pre>
+        </div>
+      </div>
+        <script>
+
+        function params () {
+
+            function hashed(hash, assign) {
+                let op=assign.split(/=/)
+                if (op[1]) hash[op[0]]=op[1]
+                return hash
+            }
+
+            let query = window.location.href.split(/\?/)[1]||''
+            let args = query.split(/&/)
+            return args.reduce(hashed,{})
+        }
+
+        function main() {
+
+            let p = params()
+            let site = p.site || 'found.ward.bay.wiki.org'
+            let days = p.days || 30
+
+            var sites_todo = [site],
+                sites_done = [];
+
+            var pages_todo = [],
+                pages_done = [];
+
+            var json_graph = {} // site => slug => links
+
+            var oldest = Date.now() - 1000*60*60*24*days
+
+            function chronological (a, b) {
+              return a.date - b.date
+            }
+
+            function count (id,list) {
+                heading = id.parentElement.querySelector('h3')
+                heading.innerText = (heading.innerText.replace(/\d+/, list.length))
+            }
+
+            function show(id,list) {
+                id.innerText = (list.join("\n"));
+                count(id,list)
+                return list;
+            }
+
+            function showr(id,list) {
+                id.innerText = (list.slice().reverse().join("\n"));
+                count(id,list)
+                return list;
+            }
+
+            function report() {
+                showr(sitestodo, sites_todo);
+                showr(sitesdone, sites_done);
+                show(pagestodo, pages_todo);
+                showr(pagesdone, pages_done);
+            }
+
+            function new_site (site) {
+                return sites_done.indexOf(site) < 0 &&
+                       sites_todo.indexOf(site) < 0
+            }
+
+            function new_page (site_page) {
+                return pages_done.indexOf(site_page) < 0 &&
+                       pages_todo.indexOf(site_page) < 0
+            }
+
+            function remove (array, element) {
+                var index = array.indexOf(element);
+                if (index > -1) {
+                    array.splice(index, 1);
+                }
+                return element
+            }
+
+            function do_site(site, sitemap) {
+                var site_graph = json_graph[site] = {}
+                for (var i=0; i<sitemap.length; i++) {
+                    try {
+                        var entry = sitemap[i];
+                        // {date, slug, title, synopsis}
+                        if (entry.date > oldest) {
+                            var site_page = site + '/' + entry.slug
+                            if (new_page(site_page)) {
+                                pages_todo.push(site_page)
+                            }
+                            //report();
+                            site_graph[entry.slug] = {
+                                date: entry.date,
+                                title: entry.title,
+                                synopsis: entry.synopsis
+                            }
+                        }
+                    }
+                    catch (e) {
+                    }
+                }
+                pages_todo.sort(chronological);
+                sites_inflight--
+            }
+
+            function do_page(site, slug, page) {
+                // {title, story, journal}
+                var page_node = json_graph[site][slug]
+                try {
+                    var links = {}
+                    for (var i=0; i<page.story.length; i++) {
+                        var item = page.story[i]
+                        // {type:'paragraph', text}
+                        // {type:'image', text, url}
+                        // {type:'reference', text, site, slug}
+
+                        if (item.site && new_site(item.site)) {
+                            sites_todo.push(item.site)
+                        }
+                        for (var link of (item.text||'').match(/\[\[(.+?)\]\]/g)||[]) {
+                            links[link.substr(2,link.length-4)] = true
+                        }
+                    }
+                    page_node['links'] = Object.keys(links)
+
+                    var sites = [site]
+                    for (var i=page.journal.length-1; i>=0; i--) {
+                        var action = page.journal[i]
+                        // {type, date}
+                        // {type:'fork', date, site}
+                        if (action.site && new_site(action.site)) {
+                            sites_todo.push(action.site)
+
+                        }
+                        if (action.site && !sites.includes(action.site)) {
+                            sites.push(action.site)
+                        }
+                    }
+                    page_node['sites'] = sites
+                }
+                catch (e) {
+                }
+                pages_inflight--
+
+            }
+
+            function fetch_site(site) {
+                sites_inflight++
+                sites_done.push(site); //report()
+                var url = 'http://' + site + '/system/sitemap.json';
+                fetch(url)
+                    .then(res=>res.json())
+                    .then(sitemap=>do_site(site, sitemap))
+                    .catch(err=>sites_inflight--)
+            }
+
+            function fetch_page(site_page) {
+                pages_inflight++
+                pages_done.push(site_page); //report()
+                var detail = site_page.split('/'),
+                    url = 'http://' + detail[0] + '/' + detail[1] + '.json'
+                fetch(url)
+                    .then(res=>res.json())
+                    .then(page=>do_page(detail[0], detail[1], page))
+                    .catch(err=>pages_inflight--)
+            }
+
+            function download(filename, text) {
+                var element = document.createElement('a');
+                element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+                element.setAttribute('download', filename);
+                element.style.display = 'none';
+                document.body.appendChild(element);
+                element.click();
+                document.body.removeChild(element);
+            }
+
+            function next () {
+                if (sites_todo.length && Math.random() < 0.1) {
+                    fetch_site(sites_todo.shift())
+                }
+                if (pages_todo.length) {
+                    fetch_page(pages_todo.shift())
+                }
+                report()
+                if ((sites_todo.length + sites_inflight +
+                     pages_todo.length + pages_inflight) == 0) {
+                        clearInterval(timer)
+                        // console.log(json_graph)
+                        download(`scrape-${site}-${days}.json`, JSON.stringify(json_graph,null,2))
+                }
+            }
+
+            var sites_inflight = 0
+            var pages_inflight = 0
+            var timer = setInterval(next, 100)
+        }
+
+        main();
+
+        </script>
+    </body>
+</html>

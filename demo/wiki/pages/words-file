@@ -1,0 +1,96 @@
+{
+  "title": "words file",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Lists unique words in lowercase and alphabetical order."
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "scrape script --> HERE\nHERE"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "code",
+      "id": "2c7edb641a097ede",
+      "text": "a\nactions\nadd\nafter\nall\nalternative\nan\nand\napplication\nare\narrive\nas\nbased\nbe\nbecause\nbeen\nbut\nc\ncan\nchanged\nclean\ncolors\ncom\ncompare\ncompleted\nconfusing\ncontent\ncould\ncreate\ncss\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "words file",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508202481562
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "2c7edb641a097ede"
+      },
+      "id": "2c7edb641a097ede",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1508205055015
+    },
+    {
+      "type": "edit",
+      "id": "2c7edb641a097ede",
+      "item": {
+        "type": "code",
+        "id": "2c7edb641a097ede",
+        "text": "a\nactions\nadd\nafter\nall\nalternative\nan\nand\napplication\nare\narrive\nas\nbased\nbe\nbecause\nbeen\nbut\nc\ncan\nchanged\nclean\ncolors\ncom\ncompare\ncompleted\nconfusing\ncontent\ncould\ncreate\ncss\n"
+      },
+      "date": 1508205059587
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Lists unique words in lowercase and alphabetical order."
+      },
+      "date": 1508209000747
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE"
+      },
+      "date": 1511739996953
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775080747280
+    }
+  ]
+}

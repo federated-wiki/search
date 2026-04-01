@@ -1,0 +1,151 @@
+{
+  "title": "activity script",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Create wiki pages with useful rosters of activity. [https://github.com/WardCunningham/search/blob/master/activity.rb github]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> counts script\nHERE --> recent activity page\nHERE --> visible roster script\nHERE --> visible federation page"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "activity script",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508092629773
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nHERE"
+      },
+      "date": 1508092638448
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nHERE --> recent activity page\nHERE --> visible federation page"
+      },
+      "date": 1508101477337
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Create wiki pages with useful rosters of activity."
+      },
+      "date": 1508205457976
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Create wiki pages with useful rosters of activity. [https://github.com/WardCunningham/search/blob/master/activity.rb github]"
+      },
+      "date": 1511573574378
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> recent activity page\nHERE --> visible federation page"
+      },
+      "date": 1511574889873
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> counts script\nHERE --> recent activity page\nHERE --> visible federation page"
+      },
+      "date": 1511734572349
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> counts script\nHERE --> recent activity page\nHERE --> roster script\nHERE --> visible federation page"
+      },
+      "date": 1512331185347
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> counts script\nHERE --> recent activity page\nHERE --> visible roster script\nHERE --> visible federation page"
+      },
+      "date": 1512331214321
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> counts script\nHERE --> recent activity page\nHERE --> visible roster script\n"
+      },
+      "date": 1512351386574
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity directory --> HERE\ncron script --> HERE\nHERE --> counts script\nHERE --> recent activity page\nHERE --> visible roster script\nHERE --> visible federation page"
+      },
+      "date": 1512351538908
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078657793
+    }
+  ]
+}

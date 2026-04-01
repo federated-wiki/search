@@ -1,0 +1,272 @@
+{
+  "title": "Graphviz",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "198b8cd84128eb21",
+      "text": "Use this script to create a single page drawing of the graphs in the lineup so far. "
+    },
+    {
+      "type": "frame",
+      "id": "4af20ae00641c173",
+      "text": "http://hatfield.asia.wiki.org/assets/pages/lineup-overview/diagram.html"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Graphviz",
+        "story": []
+      },
+      "date": 1508092244567
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "198b8cd84128eb21",
+        "text": "Use this transporter to create a single page drawing the graph in the lineup so far. "
+      },
+      "id": "198b8cd84128eb21",
+      "date": 1508092262597
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "transport",
+        "id": "3fe77af6f4aa7db2",
+        "text": "GRAPH POST http://home.c2.com:4010/graphviz"
+      },
+      "after": "198b8cd84128eb21",
+      "id": "3fe77af6f4aa7db2",
+      "date": 1508092266743
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "56783fda0dd0300a"
+      },
+      "id": "56783fda0dd0300a",
+      "type": "add",
+      "after": "3fe77af6f4aa7db2",
+      "date": 1508092373456
+    },
+    {
+      "type": "edit",
+      "id": "56783fda0dd0300a",
+      "item": {
+        "type": "paragraph",
+        "id": "56783fda0dd0300a",
+        "text": "[[Merge All Graphs]] for a single diagram of "
+      },
+      "date": 1508092383200
+    },
+    {
+      "type": "edit",
+      "id": "56783fda0dd0300a",
+      "item": {
+        "type": "paragraph",
+        "id": "56783fda0dd0300a",
+        "text": "[[Merge All Graphs]] for a single diagram of all pages."
+      },
+      "date": 1508092389423
+    },
+    {
+      "type": "remove",
+      "id": "56783fda0dd0300a",
+      "date": 1508093138425
+    },
+    {
+      "type": "edit",
+      "id": "3fe77af6f4aa7db2",
+      "item": {
+        "type": "transport",
+        "id": "3fe77af6f4aa7db2",
+        "text": "GRAPH POST http://home.c2.com:4010/graphviz/files"
+      },
+      "date": 1511570869195
+    },
+    {
+      "type": "edit",
+      "id": "3fe77af6f4aa7db2",
+      "item": {
+        "type": "transport",
+        "id": "3fe77af6f4aa7db2",
+        "text": "GRAPH POST http://home.c2.com:4010/graphviz"
+      },
+      "date": 1511570901309
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4b4437e1066441d3"
+      },
+      "id": "4b4437e1066441d3",
+      "type": "add",
+      "after": "3fe77af6f4aa7db2",
+      "date": 1511571357305
+    },
+    {
+      "type": "edit",
+      "id": "4b4437e1066441d3",
+      "item": {
+        "type": "transport",
+        "id": "4b4437e1066441d3",
+        "text": "GRAPH POST http://home.c2.com:4010/graphviz?style=files"
+      },
+      "date": 1511571374344
+    },
+    {
+      "type": "add",
+      "id": "e0eb25e96a474bbf",
+      "item": {
+        "type": "paragraph",
+        "id": "e0eb25e96a474bbf",
+        "text": "Also with shape and color styling."
+      },
+      "after": "198b8cd84128eb21",
+      "date": 1511571408604
+    },
+    {
+      "type": "move",
+      "order": [
+        "198b8cd84128eb21",
+        "3fe77af6f4aa7db2",
+        "e0eb25e96a474bbf",
+        "4b4437e1066441d3"
+      ],
+      "id": "e0eb25e96a474bbf",
+      "date": 1511571412935
+    },
+    {
+      "type": "edit",
+      "id": "e0eb25e96a474bbf",
+      "item": {
+        "type": "paragraph",
+        "id": "e0eb25e96a474bbf",
+        "text": "Also with shape and color styling. [https://github.com/WardCunningham/image-transporter/commit/2ba1eeee651bd0cc8ca910a0336d3242485a0ea9 github]"
+      },
+      "date": 1511572460061
+    },
+    {
+      "type": "move",
+      "order": [
+        "198b8cd84128eb21",
+        "e0eb25e96a474bbf",
+        "4b4437e1066441d3",
+        "3fe77af6f4aa7db2"
+      ],
+      "id": "3fe77af6f4aa7db2",
+      "date": 1511714020846
+    },
+    {
+      "type": "edit",
+      "id": "e0eb25e96a474bbf",
+      "item": {
+        "type": "paragraph",
+        "id": "e0eb25e96a474bbf",
+        "text": "Now with shape and color styling. [https://github.com/WardCunningham/image-transporter/commit/2ba1eeee651bd0cc8ca910a0336d3242485a0ea9 github]"
+      },
+      "date": 1511714032057
+    },
+    {
+      "type": "add",
+      "id": "e9a328c3a67f72ca",
+      "item": {
+        "type": "paragraph",
+        "id": "e9a328c3a67f72ca",
+        "text": "Compare with almost original version."
+      },
+      "after": "e0eb25e96a474bbf",
+      "date": 1511714087457
+    },
+    {
+      "type": "move",
+      "order": [
+        "198b8cd84128eb21",
+        "e0eb25e96a474bbf",
+        "4b4437e1066441d3",
+        "e9a328c3a67f72ca",
+        "3fe77af6f4aa7db2"
+      ],
+      "id": "e9a328c3a67f72ca",
+      "date": 1511714091344
+    },
+    {
+      "type": "edit",
+      "id": "e9a328c3a67f72ca",
+      "item": {
+        "type": "paragraph",
+        "id": "e9a328c3a67f72ca",
+        "text": "Compare with an almost original version."
+      },
+      "date": 1511731010597
+    },
+    {
+      "type": "edit",
+      "id": "4b4437e1066441d3",
+      "item": {
+        "type": "transport",
+        "id": "4b4437e1066441d3",
+        "text": "GRAPH POST http://eu.wiki.org:4010/graphviz?style=files"
+      },
+      "date": 1518730173480
+    },
+    {
+      "type": "remove",
+      "id": "3fe77af6f4aa7db2",
+      "date": 1627711057763
+    },
+    {
+      "type": "remove",
+      "id": "4b4437e1066441d3",
+      "date": 1627711064854
+    },
+    {
+      "type": "remove",
+      "id": "e9a328c3a67f72ca",
+      "date": 1627711073396
+    },
+    {
+      "type": "remove",
+      "id": "e0eb25e96a474bbf",
+      "date": 1627711078601
+    },
+    {
+      "type": "edit",
+      "id": "198b8cd84128eb21",
+      "item": {
+        "type": "paragraph",
+        "id": "198b8cd84128eb21",
+        "text": "Use this script to create a single page drawing of the graphs in the lineup so far. "
+      },
+      "date": 1627711115048
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4af20ae00641c173"
+      },
+      "id": "4af20ae00641c173",
+      "type": "add",
+      "after": "198b8cd84128eb21",
+      "date": 1627711116672
+    },
+    {
+      "type": "edit",
+      "id": "4af20ae00641c173",
+      "item": {
+        "type": "frame",
+        "id": "4af20ae00641c173",
+        "text": "http://hatfield.asia.wiki.org/assets/pages/lineup-overview/diagram.html"
+      },
+      "date": 1627711123675
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775077896058
+    }
+  ]
+}

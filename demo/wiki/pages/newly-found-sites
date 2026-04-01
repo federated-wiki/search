@@ -1,0 +1,569 @@
+{
+  "title": "Newly Found Sites",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "9a99b57a44036f00",
+      "text": "We now automatically add new sites to the list of sites we watch. This has been developed as a separate pass mostly as a coding convenience. Here we consider the impact this has on reporting and content availability."
+    },
+    {
+      "type": "paragraph",
+      "id": "cf40e18f16097212",
+      "text": "This is why content from newly discovered sites won't be available to search until six hours after the site itself is discovered and reported in [[Recent Activity]]"
+    },
+    {
+      "type": "markdown",
+      "id": "1f1fbd93c9f21572",
+      "text": "# Previously"
+    },
+    {
+      "type": "paragraph",
+      "id": "e815922a0e1ec359",
+      "text": "I have found public sites while scraping private wiki. I'll block the private sites but scrapes of the public sites should remain, so long as there is something there."
+    },
+    {
+      "type": "code",
+      "id": "c8e2b9b6a7e1de77",
+      "text": "diff <(ls sites) sites.txt | \\\n  grep '<' | cut -d ' ' -f 2 | \\\n  while read i; do wc -l sites/$i/words.txt; done"
+    },
+    {
+      "type": "paragraph",
+      "id": "0a17058e18b745b6",
+      "text": "I introduce sites to be scraped by adding them to the sites directory after some inspection of the diff and blocks for sites that shouldn't scrape."
+    },
+    {
+      "type": "code",
+      "id": "c093c7ab1c604d49",
+      "text": "diff <(ls sites) sites.txt | \\\n  grep '>' | cut -d ' ' -f 2 | \\\n  egrep -v 'local|/|^192.168|^127.0' | \\\n  while read i; do mkdir sites/$i; done"
+    },
+    {
+      "type": "markdown",
+      "id": "aab687daaa6bfcad",
+      "text": "# Automation"
+    },
+    {
+      "type": "paragraph",
+      "id": "25c786652db2e7a5",
+      "text": "We've merged the new site discovery into our routine scrape but have preserved the independence provided by a separate pass through the available data. [https://github.com/WardCunningham/search/blob/master/found.rb github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "32a69217bc3ddf9e",
+      "text": "We added discovery to our activity reporting but identify newly discovered sites on independent rows because sites present could appear for different reasons."
+    },
+    {
+      "type": "paragraph",
+      "id": "147392d869b635fa",
+      "text": "We could find a newly created site mentioned in an update of a currently scraped site."
+    },
+    {
+      "type": "paragraph",
+      "id": "d8f4146ef7a8b8fb",
+      "text": "We could find an old and inactive site mentioned in an update of a currently scraped site."
+    },
+    {
+      "type": "markdown",
+      "id": "17a19ba162e3d3fc",
+      "text": "# Sequence"
+    },
+    {
+      "type": "paragraph",
+      "id": "8d320ac225b40905",
+      "text": "The order in which we perform these two passes will influence when and how activity shows up in the Roster reported as [[Recent Activity]]."
+    },
+    {
+      "type": "paragraph",
+      "id": "c43ce6bdae0bd570",
+      "text": "We're running our scrape four times a day. We've chosen to report newly discovered sites on the same pass they are discovered but in an order that will defer the actual scraping of content from those sites for another six hours. "
+    },
+    {
+      "type": "reference",
+      "id": "c8cb118831334583",
+      "site": "new.ward.asia.wiki.org",
+      "slug": "testing-search-discovery",
+      "title": "Testing Search Discovery",
+      "text": "Will the scraper find this site? I hope so."
+    },
+    {
+      "type": "markdown",
+      "id": "53675c82fc136671",
+      "text": "# Experience"
+    },
+    {
+      "type": "paragraph",
+      "id": "bc8a78d2f82847b2",
+      "text": "We've seen bursts of \"activity\" when our scrape finally discovers a cluster of previously unknown sites. One case was sites made for an upcoming class which were finally added to a Roster on a site we scraped. Another was seventeen empty \"submissions\" made to an experimental site 22 months ago. One edit by the experimenter cause us to notice these other sites."
+    },
+    {
+      "type": "paragraph",
+      "id": "defb5de2be18eb0f",
+      "text": "It would be possible to construct a server that would appear to be sites but was in reality an algorithm designed to abuse our scrape. By analogy, I once published a Sudoko game where every possible move was given a url and thereby trapped multiple robots into a near endless search of the game space."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Newly Found Sites",
+        "story": []
+      },
+      "date": 1438684704910
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9a99b57a44036f00"
+      },
+      "id": "9a99b57a44036f00",
+      "type": "add",
+      "date": 1438685878347
+    },
+    {
+      "type": "edit",
+      "id": "9a99b57a44036f00",
+      "item": {
+        "type": "paragraph",
+        "id": "9a99b57a44036f00",
+        "text": "We now automatically add new sites to the list of sites we watch for new activity. This has developed as a separate pass through our data mostly as a coding convenience. Here we consider the impact this has on reporting."
+      },
+      "date": 1438686290545
+    },
+    {
+      "type": "edit",
+      "id": "9a99b57a44036f00",
+      "item": {
+        "type": "paragraph",
+        "id": "9a99b57a44036f00",
+        "text": "We now automatically add new sites to the list of sites we watch. This has developed as a separate pass through our data mostly as a coding convenience. Here we consider the impact this has on reporting."
+      },
+      "date": 1438686323128
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "7f058d6f4afed834"
+      },
+      "id": "7f058d6f4afed834",
+      "type": "add",
+      "after": "9a99b57a44036f00",
+      "date": 1438686492355
+    },
+    {
+      "type": "remove",
+      "id": "7f058d6f4afed834",
+      "date": 1438686500216
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1f1fbd93c9f21572"
+      },
+      "id": "1f1fbd93c9f21572",
+      "type": "add",
+      "after": "9a99b57a44036f00",
+      "date": 1438686729907
+    },
+    {
+      "type": "edit",
+      "id": "1f1fbd93c9f21572",
+      "item": {
+        "type": "markdown",
+        "id": "1f1fbd93c9f21572",
+        "text": "# Previously"
+      },
+      "date": 1438686746042
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "e815922a0e1ec359",
+        "text": "I have found public sites while scraping private wiki. I'll block the private sites but scrapes of the public sites should remain, so long as there is something there."
+      },
+      "after": "1f1fbd93c9f21572",
+      "id": "e815922a0e1ec359",
+      "date": 1438686779585
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "c8e2b9b6a7e1de77",
+        "text": "diff <(ls sites) sites.txt | \\\n  grep '<' | cut -d ' ' -f 2 | \\\n  while read i; do wc -l sites/$i/words.txt; done"
+      },
+      "after": "e815922a0e1ec359",
+      "id": "c8e2b9b6a7e1de77",
+      "date": 1438686782955
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "0a17058e18b745b6",
+        "text": "I introduce sites to be scraped by adding them to the sites directory after some inspection of the diff and blocks for sites that shouldn't scrape."
+      },
+      "after": "c8e2b9b6a7e1de77",
+      "id": "0a17058e18b745b6",
+      "date": 1438686787176
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "c093c7ab1c604d49",
+        "text": "diff <(ls sites) sites.txt | \\\n  grep '>' | cut -d ' ' -f 2 | \\\n  egrep -v 'local|/|^192.168|^127.0' | \\\n  while read i; do mkdir sites/$i; done"
+      },
+      "after": "0a17058e18b745b6",
+      "id": "c093c7ab1c604d49",
+      "date": 1438686791372
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aab687daaa6bfcad"
+      },
+      "id": "aab687daaa6bfcad",
+      "type": "add",
+      "after": "c093c7ab1c604d49",
+      "date": 1438686839104
+    },
+    {
+      "type": "edit",
+      "id": "aab687daaa6bfcad",
+      "item": {
+        "type": "markdown",
+        "id": "aab687daaa6bfcad",
+        "text": "Automated"
+      },
+      "date": 1438686849713
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "75b210cf59112990"
+      },
+      "id": "75b210cf59112990",
+      "type": "add",
+      "after": "aab687daaa6bfcad",
+      "date": 1438686854873
+    },
+    {
+      "type": "remove",
+      "id": "75b210cf59112990",
+      "date": 1438686860476
+    },
+    {
+      "type": "edit",
+      "id": "aab687daaa6bfcad",
+      "item": {
+        "type": "markdown",
+        "id": "aab687daaa6bfcad",
+        "text": "# Automated"
+      },
+      "date": 1438686865619
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "25c786652db2e7a5"
+      },
+      "id": "25c786652db2e7a5",
+      "type": "add",
+      "after": "aab687daaa6bfcad",
+      "date": 1438686869917
+    },
+    {
+      "type": "edit",
+      "id": "25c786652db2e7a5",
+      "item": {
+        "type": "paragraph",
+        "id": "25c786652db2e7a5",
+        "text": "We've merged the new site discovery into our routine scrape but have preserved the independence provided by a separate pass through the available data. "
+      },
+      "date": 1438687254495
+    },
+    {
+      "type": "edit",
+      "id": "25c786652db2e7a5",
+      "item": {
+        "type": "paragraph",
+        "id": "25c786652db2e7a5",
+        "text": "We've merged the new site discovery into our routine scrape but have preserved the independence provided by a separate pass through the available data. [https://github.com/WardCunningham/search/blob/master/found.rb github]"
+      },
+      "date": 1438687466688
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "32a69217bc3ddf9e"
+      },
+      "id": "32a69217bc3ddf9e",
+      "type": "add",
+      "after": "25c786652db2e7a5",
+      "date": 1438687532014
+    },
+    {
+      "type": "edit",
+      "id": "32a69217bc3ddf9e",
+      "item": {
+        "type": "paragraph",
+        "id": "32a69217bc3ddf9e",
+        "text": "We added discovery to our activity reporting but identify newly discovered sites on independent rows because sites present could appear for different reasons."
+      },
+      "date": 1438687716911
+    },
+    {
+      "type": "add",
+      "id": "147392d869b635fa",
+      "item": {
+        "type": "paragraph",
+        "id": "147392d869b635fa",
+        "text": "We could find a newly created site mentioned in an update of a currently scraped site."
+      },
+      "after": "32a69217bc3ddf9e",
+      "date": 1438687803790
+    },
+    {
+      "type": "add",
+      "id": "d8f4146ef7a8b8fb",
+      "item": {
+        "type": "paragraph",
+        "id": "d8f4146ef7a8b8fb",
+        "text": "We could find an old and inactive site mentioned in an update of a currently scraped site."
+      },
+      "after": "147392d869b635fa",
+      "date": 1438687892411
+    },
+    {
+      "type": "edit",
+      "id": "aab687daaa6bfcad",
+      "item": {
+        "type": "markdown",
+        "id": "aab687daaa6bfcad",
+        "text": "# Automation"
+      },
+      "date": 1438688149292
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "17a19ba162e3d3fc"
+      },
+      "id": "17a19ba162e3d3fc",
+      "type": "add",
+      "after": "d8f4146ef7a8b8fb",
+      "date": 1438688174181
+    },
+    {
+      "type": "edit",
+      "id": "17a19ba162e3d3fc",
+      "item": {
+        "type": "markdown",
+        "id": "17a19ba162e3d3fc",
+        "text": "# Sequence"
+      },
+      "date": 1438688184747
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "8d320ac225b40905"
+      },
+      "id": "8d320ac225b40905",
+      "type": "add",
+      "after": "17a19ba162e3d3fc",
+      "date": 1438688187692
+    },
+    {
+      "type": "edit",
+      "id": "8d320ac225b40905",
+      "item": {
+        "type": "paragraph",
+        "id": "8d320ac225b40905",
+        "text": "The order in which we perform these two passes will influence when and how activity shows up in the [[Recent Activity]] roster."
+      },
+      "date": 1438688319487
+    },
+    {
+      "type": "edit",
+      "id": "8d320ac225b40905",
+      "item": {
+        "type": "paragraph",
+        "id": "8d320ac225b40905",
+        "text": "The order in which we perform these two passes will influence when and how activity shows up in the roster reported as [[Recent Activity]]."
+      },
+      "date": 1438688343233
+    },
+    {
+      "type": "edit",
+      "id": "8d320ac225b40905",
+      "item": {
+        "type": "paragraph",
+        "id": "8d320ac225b40905",
+        "text": "The order in which we perform these two passes will influence when and how activity shows up in the Roster reported as [[Recent Activity]]."
+      },
+      "date": 1438688354367
+    },
+    {
+      "type": "add",
+      "id": "c43ce6bdae0bd570",
+      "item": {
+        "type": "paragraph",
+        "id": "c43ce6bdae0bd570",
+        "text": "We're running our scrape four times a day. We've chosen to report newly discovered sites on the same pass they are discovered but in an order that will defer the actual scraping of content from those sites for another six hours. "
+      },
+      "after": "8d320ac225b40905",
+      "date": 1438689202818
+    },
+    {
+      "type": "edit",
+      "id": "9a99b57a44036f00",
+      "item": {
+        "type": "paragraph",
+        "id": "9a99b57a44036f00",
+        "text": "We now automatically add new sites to the list of sites we watch. This has been developed as a separate pass mostly as a coding convenience. Here we consider the impact this has on reporting."
+      },
+      "date": 1438689479388
+    },
+    {
+      "type": "edit",
+      "id": "9a99b57a44036f00",
+      "item": {
+        "type": "paragraph",
+        "id": "9a99b57a44036f00",
+        "text": "We now automatically add new sites to the list of sites we watch. This has been developed as a separate pass mostly as a coding convenience. Here we consider the impact this has on reporting and the availability of new search content."
+      },
+      "date": 1438689501981
+    },
+    {
+      "type": "edit",
+      "id": "9a99b57a44036f00",
+      "item": {
+        "type": "paragraph",
+        "id": "9a99b57a44036f00",
+        "text": "We now automatically add new sites to the list of sites we watch. This has been developed as a separate pass mostly as a coding convenience. Here we consider the impact this has on reporting and content availability."
+      },
+      "date": 1438689524878
+    },
+    {
+      "type": "add",
+      "id": "cf40e18f16097212",
+      "item": {
+        "type": "paragraph",
+        "id": "cf40e18f16097212",
+        "text": "Content from newly discovered sites won't be available to search until six hours after the site itself is discovered and reported."
+      },
+      "after": "9a99b57a44036f00",
+      "date": 1438689644007
+    },
+    {
+      "type": "edit",
+      "id": "cf40e18f16097212",
+      "item": {
+        "type": "paragraph",
+        "id": "cf40e18f16097212",
+        "text": "Content from newly discovered sites won't be available to search until six hours after the site itself is discovered and reported in [[Recent Activity]]"
+      },
+      "date": 1438689662441
+    },
+    {
+      "type": "edit",
+      "id": "cf40e18f16097212",
+      "item": {
+        "type": "paragraph",
+        "id": "cf40e18f16097212",
+        "text": "This is why content from newly discovered sites won't be available to search until six hours after the site itself is discovered and reported in [[Recent Activity]]"
+      },
+      "date": 1438689684114
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1438865709439
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "c8cb118831334583"
+      },
+      "id": "c8cb118831334583",
+      "type": "add",
+      "after": "c43ce6bdae0bd570",
+      "site": "ward.asia.wiki.org",
+      "date": 1438865709435
+    },
+    {
+      "type": "fork",
+      "date": 1438865731413
+    },
+    {
+      "type": "edit",
+      "id": "c8cb118831334583",
+      "item": {
+        "type": "reference",
+        "id": "c8cb118831334583",
+        "site": "new.ward.asia.wiki.org",
+        "slug": "testing-search-discovery",
+        "title": "Testing Search Discovery",
+        "text": "Will the scraper find this site? I hope so."
+      },
+      "date": 1438865745997
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "53675c82fc136671"
+      },
+      "id": "53675c82fc136671",
+      "type": "add",
+      "after": "c8cb118831334583",
+      "date": 1440686197010
+    },
+    {
+      "type": "edit",
+      "id": "53675c82fc136671",
+      "item": {
+        "type": "markdown",
+        "id": "53675c82fc136671",
+        "text": "# Experience"
+      },
+      "date": 1440686206545
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bc8a78d2f82847b2"
+      },
+      "id": "bc8a78d2f82847b2",
+      "type": "add",
+      "after": "53675c82fc136671",
+      "date": 1440686209939
+    },
+    {
+      "type": "edit",
+      "id": "bc8a78d2f82847b2",
+      "item": {
+        "type": "paragraph",
+        "id": "bc8a78d2f82847b2",
+        "text": "We've seen bursts of \"activity\" when our scrape finally discovers a cluster of previously unknown sites. One case was sites made for an upcoming class which were finally added to a Roster on a site we scraped. Another was seventeen empty \"submissions\" made to an experimental site 22 months ago. One edit by the experimenter cause us to notice these other sites."
+      },
+      "date": 1440686546390
+    },
+    {
+      "type": "add",
+      "id": "defb5de2be18eb0f",
+      "item": {
+        "type": "paragraph",
+        "id": "defb5de2be18eb0f",
+        "text": "It would be possible to construct a server that would appear to be sites but was in reality an algorithm designed to abuse our scrape. By analogy, I once published a Sudoko game where every possible move was given a url and thereby trapped multiple robots into a near endless search of the game space."
+      },
+      "after": "bc8a78d2f82847b2",
+      "date": 1440687609635
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1775080557176
+    }
+  ]
+}

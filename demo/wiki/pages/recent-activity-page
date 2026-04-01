@@ -1,0 +1,116 @@
+{
+  "title": "recent activity page",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Wrap the activity roster with json for full page. [https://github.com/WardCunningham/search/blob/master/activity.rb github]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "activity file --> HERE\nactivity script --> HERE\nHERE"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "paragraph",
+      "id": "b9e9f56743812e2d",
+      "text": "We now show only periods where there has been activity."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "recent activity page",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508202134007
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Wrap the activity roster with json for full page."
+      },
+      "date": 1508205745596
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nHERE"
+      },
+      "date": 1511558524641,
+      "error": {
+        "type": "error",
+        "msg": "Forbidden",
+        "response": "Forbidden"
+      }
+    },
+    {
+      "type": "fork",
+      "date": 1511558592848
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity file --> HERE\nactivity script --> HERE\nHERE"
+      },
+      "date": 1511558745339
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Wrap the activity roster with json for full page. [https://github.com/WardCunningham/search/blob/master/activity.rb github]"
+      },
+      "date": 1520552739185
+    },
+    {
+      "type": "add",
+      "id": "b9e9f56743812e2d",
+      "item": {
+        "type": "paragraph",
+        "id": "b9e9f56743812e2d",
+        "text": "We now show only periods where there has been activity."
+      },
+      "after": "7a22af872bf037d5",
+      "date": 1529032237022
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078618839
+    }
+  ]
+}

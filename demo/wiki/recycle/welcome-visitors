@@ -40,13 +40,23 @@
     },
     {
       "type": "paragraph",
+      "id": "ef122c40b49662e6",
+      "text": "[[How Search Works]]"
+    },
+    {
+      "type": "paragraph",
+      "id": "7cf14ec01884b91d",
+      "text": "[[How Scrape Works]]"
+    },
+    {
+      "type": "paragraph",
       "id": "ee416d431ebf4fb4",
       "text": "You can edit your copy of these pages. Press [+] to add more writing spaces. Read [[How to Wiki]] for more ideas. Follow [[Recent Changes]] here and nearby."
     },
     {
       "type": "roster",
       "id": "226a0cf6e26ce11f",
-      "text": "Search Dojo\nsearch.dojo.fed.wiki\n\nScrape Wiki\nscrape.ward.bay.wiki.org"
+      "text": "Search Dojo\nsearch.dojo.fed.wiki\n\nScrape Wiki\nscrape.ward.bay.wiki.org\n\nFound Wiki\nfound.ward.bay.wiki.org"
     }
   ],
   "journal": [
@@ -464,18 +474,36 @@
       "date": 1775077917650
     },
     {
-      "type": "fork",
-      "date": 1775081622336
-    },
-    {
       "type": "edit",
       "id": "226a0cf6e26ce11f",
       "item": {
         "type": "roster",
         "id": "226a0cf6e26ce11f",
-        "text": "Search Dojo\nsearch.dojo.fed.wiki\n\nScrape Wiki\nscrape.ward.bay.wiki.org"
+        "text": "Search Dojo\nsearch.dojo.fed.wiki\n\nScrape Wiki\nscrape.ward.bay.wiki.org\n\nFound Wiki\nfound.ward.bay.wiki.org"
       },
-      "date": 1775081632004
+      "date": 1775077946843
+    },
+    {
+      "type": "add",
+      "id": "ef122c40b49662e6",
+      "item": {
+        "type": "paragraph",
+        "id": "ef122c40b49662e6",
+        "text": "[[How Search Works]]"
+      },
+      "after": "2b19e146699acc9c",
+      "date": 1775078542412
+    },
+    {
+      "type": "add",
+      "id": "7cf14ec01884b91d",
+      "item": {
+        "type": "paragraph",
+        "id": "7cf14ec01884b91d",
+        "text": "[[How Scrape Works]]"
+      },
+      "after": "ef122c40b49662e6",
+      "date": 1775078549045
     }
   ]
 }

@@ -1,0 +1,188 @@
+{
+  "nodes": [
+    {
+      "type": "Researcher",
+      "in": [],
+      "out": [
+        0
+      ],
+      "props": {
+        "name": "Nils"
+      }
+    },
+    {
+      "type": "Publication",
+      "in": [
+        0,
+        2,
+        3
+      ],
+      "out": [
+        1
+      ],
+      "props": {
+        "name": "220"
+      }
+    },
+    {
+      "type": "Publication",
+      "in": [
+        1
+      ],
+      "out": [],
+      "props": {
+        "name": "190"
+      }
+    },
+    {
+      "type": "Publication",
+      "in": [
+        8
+      ],
+      "out": [
+        2
+      ],
+      "props": {
+        "name": "235"
+      }
+    },
+    {
+      "type": "Publication",
+      "in": [
+        4,
+        10
+      ],
+      "out": [
+        3
+      ],
+      "props": {
+        "name": "240"
+      }
+    },
+    {
+      "type": "Researcher",
+      "in": [],
+      "out": [
+        4,
+        5,
+        6,
+        9
+      ],
+      "props": {
+        "name": "Elin"
+      }
+    },
+    {
+      "type": "Student",
+      "in": [
+        5,
+        7
+      ],
+      "out": [],
+      "props": {
+        "name": "Sten"
+      }
+    },
+    {
+      "type": "Student",
+      "in": [
+        6
+      ],
+      "out": [],
+      "props": {
+        "name": "Linda"
+      }
+    },
+    {
+      "type": "Publication",
+      "in": [
+        9
+      ],
+      "out": [
+        8,
+        10
+      ],
+      "props": {
+        "name": "269"
+      }
+    },
+    {
+      "type": "Researcher",
+      "in": [],
+      "out": [
+        7
+      ],
+      "props": {
+        "name": "Thor"
+      }
+    }
+  ],
+  "rels": [
+    {
+      "type": "Authors",
+      "from": 0,
+      "to": 1,
+      "props": {}
+    },
+    {
+      "type": "Cites",
+      "from": 1,
+      "to": 2,
+      "props": {}
+    },
+    {
+      "type": "Cites",
+      "from": 3,
+      "to": 1,
+      "props": {}
+    },
+    {
+      "type": "Cites",
+      "from": 4,
+      "to": 1,
+      "props": {}
+    },
+    {
+      "type": "Authors",
+      "from": 5,
+      "to": 4,
+      "props": {}
+    },
+    {
+      "type": "Supervises",
+      "from": 5,
+      "to": 6,
+      "props": {}
+    },
+    {
+      "type": "Supervises",
+      "from": 5,
+      "to": 7,
+      "props": {}
+    },
+    {
+      "type": "Supervises",
+      "from": 9,
+      "to": 6,
+      "props": {}
+    },
+    {
+      "type": "Cites",
+      "from": 8,
+      "to": 3,
+      "props": {}
+    },
+    {
+      "type": "Authors",
+      "from": 5,
+      "to": 8,
+      "props": {}
+    },
+    {
+      "type": "Cites",
+      "from": 8,
+      "to": 4,
+      "props": {}
+    }
+  ]
+}

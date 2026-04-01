@@ -1,0 +1,137 @@
+{
+  "title": "slugs file",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Explain the flow or sequence."
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "scrape script --> HERE\nHERE"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "code",
+      "id": "1222743202779ee2",
+      "text": "a-beautiful-death\na-beautiful-home-for-all-your-notes\na-bigger-better-non-essay-essay\na-boy-who-loved-history\na-brief-history-of-technology-in-the-classroom\na-bug-in-three-acts\na-case-history-in-scientific-method\na-cautionary-tale\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "f0286391765e78d9",
+      "text": "The slugs represent pages that we have seen during a scrape sometime."
+    },
+    {
+      "type": "paragraph",
+      "id": "781f3eec8cd07682",
+      "text": "See [[links file]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "slugs file",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1546818354240
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE"
+      },
+      "date": 1546818404285
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "1222743202779ee2"
+      },
+      "id": "1222743202779ee2",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1546818635325
+    },
+    {
+      "type": "edit",
+      "id": "1222743202779ee2",
+      "item": {
+        "type": "code",
+        "id": "1222743202779ee2",
+        "text": "a-beautiful-death\na-beautiful-home-for-all-your-notes\na-bigger-better-non-essay-essay\na-boy-who-loved-history\na-brief-history-of-technology-in-the-classroom\na-bright-future-and-other-puns-about-solar-panels-in-schools\na-bug-in-three-acts\na-case-history-in-scientific-method\na-cautionary-tale\n"
+      },
+      "date": 1546818639563
+    },
+    {
+      "type": "edit",
+      "id": "1222743202779ee2",
+      "item": {
+        "type": "code",
+        "id": "1222743202779ee2",
+        "text": "a-beautiful-death\na-beautiful-home-for-all-your-notes\na-bigger-better-non-essay-essay\na-boy-who-loved-history\na-brief-history-of-technology-in-the-classroom\na-bug-in-three-acts\na-case-history-in-scientific-method\na-cautionary-tale\n"
+      },
+      "date": 1546818656020
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f0286391765e78d9"
+      },
+      "id": "f0286391765e78d9",
+      "type": "add",
+      "after": "1222743202779ee2",
+      "date": 1546818674242
+    },
+    {
+      "type": "edit",
+      "id": "f0286391765e78d9",
+      "item": {
+        "type": "paragraph",
+        "id": "f0286391765e78d9",
+        "text": "The slugs represent pages that we have seen during a scrape sometime."
+      },
+      "date": 1546818727503
+    },
+    {
+      "type": "add",
+      "id": "781f3eec8cd07682",
+      "item": {
+        "type": "paragraph",
+        "id": "781f3eec8cd07682",
+        "text": "See [[links file]]"
+      },
+      "after": "f0286391765e78d9",
+      "date": 1546818807662
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775080758815
+    }
+  ]
+}

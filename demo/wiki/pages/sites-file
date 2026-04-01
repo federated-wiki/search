@@ -1,0 +1,120 @@
+{
+  "title": "sites file",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Lists sites found in items and actions. "
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "scrape script --> HERE\nHERE\nHERE --> sites rollup"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "code",
+      "id": "dc84337b22b985ec",
+      "text": "search.federatedwiki.org:3030"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "sites file",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508202494616
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dc84337b22b985ec"
+      },
+      "id": "dc84337b22b985ec",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1508204988640
+    },
+    {
+      "type": "fork",
+      "date": 1508205000704
+    },
+    {
+      "type": "edit",
+      "id": "dc84337b22b985ec",
+      "item": {
+        "type": "code",
+        "id": "dc84337b22b985ec",
+        "text": "search.fed.wiki.org:3030"
+      },
+      "date": 1508205005035
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Lists sites found in items and actions. "
+      },
+      "date": 1508209082937
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE"
+      },
+      "date": 1511740005975
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE\nHERE --> sites rollup"
+      },
+      "date": 1511908911209
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775080768858
+    },
+    {
+      "type": "edit",
+      "id": "dc84337b22b985ec",
+      "item": {
+        "type": "code",
+        "id": "dc84337b22b985ec",
+        "text": "search.federatedwiki.org:3030"
+      },
+      "date": 1775080775421
+    }
+  ]
+}

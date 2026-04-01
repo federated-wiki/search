@@ -1,0 +1,252 @@
+{
+  "title": "Search Script Annotations",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f0def03ebd62fd2f",
+      "text": "We would like to distribute node and relation definitions throughout the scripts. We anticipate a need for finding these so will build this tool first. [https://github.com/WardCunningham/search/commit/f595d918c1d1390fc65ad6fc9466e2887103733f github]"
+    },
+    {
+      "type": "frame",
+      "id": "873321ca4b74f4fd",
+      "text": "http://search.federatedwiki.org:3030/xref\nHEIGHT 200"
+    },
+    {
+      "type": "assets",
+      "id": "ef8fe574b0d8f082",
+      "text": "pages/search-script-annotations"
+    },
+    {
+      "type": "frame",
+      "id": "0a47e5fb062147fe",
+      "text": "http://search.federatedwiki.org/assets/pages/search-script-annotations/browse.html\nHEIGHT 600"
+    },
+    {
+      "type": "paragraph",
+      "id": "60e5a761430b25c9",
+      "text": "We've borrowed Hypertext Super Collaborator code to make an annotation specific version that can produce similar diagrams with tweaks to color and layout tuned to this usage. [https://github.com/WardCunningham/search/blob/master/README.html github]"
+    },
+    {
+      "type": "graphviz",
+      "id": "05b29bfd7014d7b0",
+      "text": "digraph {\noverlap = false; splines=true\nlayout = dot;\nnode [shape=box style=filled fillcolor=gold penwidth=2]\n1\n6\n2\n9\n11\nnode [fillcolor=palegreen penwidth=1]\n0 [label=\"Graphviz\\nColor Module by Type\" fillcolor=white  tooltip=\"name: Color Module by Type\\nemphasis: [object Object]\"]\n1 [label=\"Shell\\ncron\" fillcolor=lightblue  tooltip=\"name: cron\"]\n2 [label=\"Ruby\\nscrape\" fillcolor=lightblue  tooltip=\"name: scrape\"]\n3 [label=\"Ruby\\nrollup\" fillcolor=lightblue  tooltip=\"name: rollup\"]\n4 [label=\"Search\\nslugs.txt\"   tooltip=\"name: slugs.txt\"]\n5 [label=\"Sites\\nslugs.txt\"   tooltip=\"name: slugs.txt\"]\n6 [label=\"Ruby\\nfound\" fillcolor=lightblue  tooltip=\"name: found\"]\n7 [label=\"Sites\\ndir\"   tooltip=\"name: dir\"]\n8 [label=\"Retired\\ndir\"   tooltip=\"name: dir\"]\n9 [label=\"Pages\\nwords.txt\"   tooltip=\"name: words.txt\"]\n10 [label=\"Pages\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n11 [label=\"Sites\\nwords.txt\"   tooltip=\"name: words.txt\"]\n12 [label=\"Search\\nwords.txt\"   tooltip=\"name: words.txt\"]\n13 [label=\"Sites\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n14 [label=\"Search\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n15 [label=\"Wiki\\nsitemap\"   tooltip=\"name: sitemap\"]\n16 [label=\"Logs\\nNow-0000\"   tooltip=\"name: Now-0000\"]\n17 [label=\"Public\\nsites.tgz\"   tooltip=\"name: sites.tgz\"]\n18 [label=\"Ruby\\ncounts\" fillcolor=lightblue  tooltip=\"name: counts\"]\n19 [label=\"Search\\ncounts.txt\"   tooltip=\"name: counts.txt\"]\n20 [label=\"Activity\\nNow-0000\"   tooltip=\"name: Now-0000\"]\n21 [label=\"Public\\nscraped.json\"   tooltip=\"name: scraped.json\"]\n22 [label=\"Ruby\\nserver\" fillcolor=lightblue  tooltip=\"name: server\"]\n23 [label=\"Public\\nfiles\"   tooltip=\"name: files\"]\n24 [label=\"API\\nSearch\"   tooltip=\"name: Search\"]\n25 [label=\"API\\nIndex\"   tooltip=\"name: Index\"]\n1->2 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 7\\nsource: Index\"]\n1->3 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 18\\nsource: Index\"]\n1->4 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 21\\nsource: Index\"]\n1->5 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 21\\nsource: Index\"]\n1->6 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 39\\nsource: Index\"]\n7->6 [label=\"read\"  labeltooltip=\"file: found.rb\\nline: 6\\nsource: Index\" dir=back]\n8->6 [label=\"read\"  labeltooltip=\"file: found.rb\\nline: 6\\nsource: Index\" dir=back]\n6->7 [label=\"make\"  labeltooltip=\"file: found.rb\\nline: 16\\nsource: Index\"]\n9->3 [label=\"read\"  labeltooltip=\"file: rollup.rb\\nline: 3\\nsource: Index\" dir=back]\n10->3 [label=\"read\"  labeltooltip=\"file: rollup.rb\\nline: 4\\nsource: Index\" dir=back]\n3->11 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 5\\nsource: Index\"]\n3->12 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 5\\nsource: Index\"]\n3->13 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 6\\nsource: Index\"]\n3->14 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 6\\nsource: Index\"]\n7->2 [label=\"read\"  labeltooltip=\"file: scrape.rb\\nline: 13\\nsource: Index\" dir=back]\n15->2 [label=\"get\"  labeltooltip=\"file: scrape.rb\\nline: 21\\nsource: Index\" dir=back]\n2->9 [label=\"write\"  labeltooltip=\"file: scrape.rb\\nline: 43\\nsource: Index\"]\n2->10 [label=\"write\"  labeltooltip=\"file: scrape.rb\\nline: 43\\nsource: Index\"]\n1->16 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 8\\nsource: Debug\"]\n1->17 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 34\\nsource: Debug\"]\n16->18 [label=\"read\"  labeltooltip=\"file: counts.rb\\nline: 6\\nsource: Debug\" dir=back]\n18->19 [label=\"write\"  labeltooltip=\"file: counts.rb\\nline: 16\\nsource: Debug\"]\n6->20 [label=\"write\"  labeltooltip=\"file: found.rb\\nline: 19\\nsource: Debug\"]\n2->21 [label=\"writes\"  labeltooltip=\"file: scrape.rb\\nline: 167\\nsource: Debug\"]\n22->23 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 5\\nsource: Query\"]\n22->24 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 6\\nsource: Query\"]\n22->25 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 7\\nsource: Query\"]\n9->24 [label=\"read\"  labeltooltip=\"file: server.rb\\nline: 153\\nsource: Query\" dir=back]\n11->24 [label=\"read\"  labeltooltip=\"file: server.rb\\nline: 153\\nsource: Query\" dir=back]\n}",
+      "dot": "digraph {\noverlap = false; splines=true\nlayout = dot;\nnode [shape=box style=filled fillcolor=gold penwidth=2]\n1\n6\n2\n9\n11\nnode [fillcolor=palegreen penwidth=1]\n0 [label=\"Graphviz\\nColor Module by Type\" fillcolor=white  tooltip=\"name: Color Module by Type\\nemphasis: [object Object]\"]\n1 [label=\"Shell\\ncron\" fillcolor=lightblue  tooltip=\"name: cron\"]\n2 [label=\"Ruby\\nscrape\" fillcolor=lightblue  tooltip=\"name: scrape\"]\n3 [label=\"Ruby\\nrollup\" fillcolor=lightblue  tooltip=\"name: rollup\"]\n4 [label=\"Search\\nslugs.txt\"   tooltip=\"name: slugs.txt\"]\n5 [label=\"Sites\\nslugs.txt\"   tooltip=\"name: slugs.txt\"]\n6 [label=\"Ruby\\nfound\" fillcolor=lightblue  tooltip=\"name: found\"]\n7 [label=\"Sites\\ndir\"   tooltip=\"name: dir\"]\n8 [label=\"Retired\\ndir\"   tooltip=\"name: dir\"]\n9 [label=\"Pages\\nwords.txt\"   tooltip=\"name: words.txt\"]\n10 [label=\"Pages\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n11 [label=\"Sites\\nwords.txt\"   tooltip=\"name: words.txt\"]\n12 [label=\"Search\\nwords.txt\"   tooltip=\"name: words.txt\"]\n13 [label=\"Sites\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n14 [label=\"Search\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n15 [label=\"Wiki\\nsitemap\"   tooltip=\"name: sitemap\"]\n16 [label=\"Logs\\nNow-0000\"   tooltip=\"name: Now-0000\"]\n17 [label=\"Public\\nsites.tgz\"   tooltip=\"name: sites.tgz\"]\n18 [label=\"Ruby\\ncounts\" fillcolor=lightblue  tooltip=\"name: counts\"]\n19 [label=\"Search\\ncounts.txt\"   tooltip=\"name: counts.txt\"]\n20 [label=\"Activity\\nNow-0000\"   tooltip=\"name: Now-0000\"]\n21 [label=\"Public\\nscraped.json\"   tooltip=\"name: scraped.json\"]\n22 [label=\"Ruby\\nserver\" fillcolor=lightblue  tooltip=\"name: server\"]\n23 [label=\"Public\\nfiles\"   tooltip=\"name: files\"]\n24 [label=\"API\\nSearch\"   tooltip=\"name: Search\"]\n25 [label=\"API\\nIndex\"   tooltip=\"name: Index\"]\n1->2 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 7\\nsource: Index\"]\n1->3 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 18\\nsource: Index\"]\n1->4 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 21\\nsource: Index\"]\n1->5 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 21\\nsource: Index\"]\n1->6 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 39\\nsource: Index\"]\n7->6 [label=\"read\"  labeltooltip=\"file: found.rb\\nline: 6\\nsource: Index\" dir=back]\n8->6 [label=\"read\"  labeltooltip=\"file: found.rb\\nline: 6\\nsource: Index\" dir=back]\n6->7 [label=\"make\"  labeltooltip=\"file: found.rb\\nline: 16\\nsource: Index\"]\n9->3 [label=\"read\"  labeltooltip=\"file: rollup.rb\\nline: 3\\nsource: Index\" dir=back]\n10->3 [label=\"read\"  labeltooltip=\"file: rollup.rb\\nline: 4\\nsource: Index\" dir=back]\n3->11 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 5\\nsource: Index\"]\n3->12 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 5\\nsource: Index\"]\n3->13 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 6\\nsource: Index\"]\n3->14 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 6\\nsource: Index\"]\n7->2 [label=\"read\"  labeltooltip=\"file: scrape.rb\\nline: 13\\nsource: Index\" dir=back]\n15->2 [label=\"get\"  labeltooltip=\"file: scrape.rb\\nline: 21\\nsource: Index\" dir=back]\n2->9 [label=\"write\"  labeltooltip=\"file: scrape.rb\\nline: 43\\nsource: Index\"]\n2->10 [label=\"write\"  labeltooltip=\"file: scrape.rb\\nline: 43\\nsource: Index\"]\n1->16 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 8\\nsource: Debug\"]\n1->17 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 34\\nsource: Debug\"]\n16->18 [label=\"read\"  labeltooltip=\"file: counts.rb\\nline: 6\\nsource: Debug\" dir=back]\n18->19 [label=\"write\"  labeltooltip=\"file: counts.rb\\nline: 16\\nsource: Debug\"]\n6->20 [label=\"write\"  labeltooltip=\"file: found.rb\\nline: 19\\nsource: Debug\"]\n2->21 [label=\"writes\"  labeltooltip=\"file: scrape.rb\\nline: 167\\nsource: Debug\"]\n22->23 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 5\\nsource: Query\"]\n22->24 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 6\\nsource: Query\"]\n22->25 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 7\\nsource: Query\"]\n9->24 [label=\"read\"  labeltooltip=\"file: server.rb\\nline: 153\\nsource: Query\" dir=back]\n11->24 [label=\"read\"  labeltooltip=\"file: server.rb\\nline: 153\\nsource: Query\" dir=back]\n}",
+      "svg": "<svg width=\"715pt\" height=\"710pt\" viewBox=\"0.00 0.00 714.60 710.40\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" style=\"max-width: 100%; height: auto;\">\n<g id=\"graph0\" class=\"graph\" transform=\"scale(1 1) rotate(0) translate(4 706.4)\">\n<polygon fill=\"white\" stroke=\"none\" points=\"-4,4 -4,-706.4 710.6,-706.4 710.6,4 -4,4\"/>\n<!-- 1 -->\n<g id=\"node1\" class=\"node\">\n<title>1</title>\n<g id=\"a_node1\"><a xlink:title=\"name: cron\">\n<polygon fill=\"lightblue\" stroke=\"black\" stroke-width=\"2\" points=\"338.25,-702.4 284.25,-702.4 284.25,-660.8 338.25,-660.8 338.25,-702.4\"/>\n<text text-anchor=\"middle\" x=\"311.25\" y=\"-685.8\" font-family=\"Times,serif\" font-size=\"14.00\">Shell</text>\n<text text-anchor=\"middle\" x=\"311.25\" y=\"-669\" font-family=\"Times,serif\" font-size=\"14.00\">cron</text>\n</a>\n</g>\n</g>\n<!-- 6 -->\n<g id=\"node2\" class=\"node\">\n<title>6</title>\n<g id=\"a_node2\"><a xlink:title=\"name: found\">\n<polygon fill=\"lightblue\" stroke=\"black\" stroke-width=\"2\" points=\"533.25,-608 479.25,-608 479.25,-566.4 533.25,-566.4 533.25,-608\"/>\n<text text-anchor=\"middle\" x=\"506.25\" y=\"-591.4\" font-family=\"Times,serif\" font-size=\"14.00\">Ruby</text>\n<text text-anchor=\"middle\" x=\"506.25\" y=\"-574.6\" font-family=\"Times,serif\" font-size=\"14.00\">found</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;6 -->\n<g id=\"edge5\" class=\"edge\">\n<title>1-&gt;6</title>\n<path fill=\"none\" stroke=\"black\" d=\"M339.19,-674.96C364.84,-669.12 403.43,-658.59 434.25,-642.8 448.38,-635.56 462.59,-625.51 474.61,-616.01\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"476.62,-618.88 482.16,-609.86 472.2,-613.46 476.62,-618.88\"/>\n<g id=\"a_edge5-label\"><a xlink:title=\"file: cron.sh&#xA;line: 39&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"468.9\" y=\"-630.2\" font-family=\"Times,serif\" font-size=\"14.00\">run</text>\n</a>\n</g>\n</g>\n<!-- 2 -->\n<g id=\"node3\" class=\"node\">\n<title>2</title>\n<g id=\"a_node3\"><a xlink:title=\"name: scrape\">\n<polygon fill=\"lightblue\" stroke=\"black\" stroke-width=\"2\" points=\"343.25,-419.2 289.25,-419.2 289.25,-377.6 343.25,-377.6 343.25,-419.2\"/>\n<text text-anchor=\"middle\" x=\"316.25\" y=\"-402.6\" font-family=\"Times,serif\" font-size=\"14.00\">Ruby</text>\n<text text-anchor=\"middle\" x=\"316.25\" y=\"-385.8\" font-family=\"Times,serif\" font-size=\"14.00\">scrape</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;2 -->\n<g id=\"edge1\" class=\"edge\">\n<title>1-&gt;2</title>\n<path fill=\"none\" stroke=\"black\" d=\"M332.45,-659.97C336.89,-654.73 341.16,-648.85 344.25,-642.8 351.46,-628.66 350.46,-623.77 352.25,-608 359.06,-547.94 365.17,-531.05 352.25,-472 349.05,-457.4 342.31,-442.41 335.51,-429.87\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"338.61,-428.25 330.62,-421.3 332.53,-431.72 338.61,-428.25\"/>\n<g id=\"a_edge1-label\"><a xlink:title=\"file: cron.sh&#xA;line: 7&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"369.15\" y=\"-535.8\" font-family=\"Times,serif\" font-size=\"14.00\">run</text>\n</a>\n</g>\n</g>\n<!-- 3 -->\n<g id=\"node7\" class=\"node\">\n<title>3</title>\n<g id=\"a_node7\"><a xlink:title=\"name: rollup\">\n<polygon fill=\"lightblue\" stroke=\"black\" points=\"179.25,-230.4 125.25,-230.4 125.25,-188.8 179.25,-188.8 179.25,-230.4\"/>\n<text text-anchor=\"middle\" x=\"152.25\" y=\"-213.8\" font-family=\"Times,serif\" font-size=\"14.00\">Ruby</text>\n<text text-anchor=\"middle\" x=\"152.25\" y=\"-197\" font-family=\"Times,serif\" font-size=\"14.00\">rollup</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;3 -->\n<g id=\"edge2\" class=\"edge\">\n<title>1-&gt;3</title>\n<path fill=\"none\" stroke=\"black\" d=\"M283.49,-675.72C221.5,-664.02 77.25,-632.1 77.25,-588.2 77.25,-588.2 77.25,-588.2 77.25,-303 77.25,-275.77 97.13,-252.08 116.42,-235.51\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"118.44,-238.38 124,-229.36 114.03,-232.95 118.44,-238.38\"/>\n<g id=\"a_edge2-label\"><a xlink:title=\"file: cron.sh&#xA;line: 18&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"86.58\" y=\"-441.4\" font-family=\"Times,serif\" font-size=\"14.00\">run</text>\n</a>\n</g>\n</g>\n<!-- 4 -->\n<g id=\"node8\" class=\"node\">\n<title>4</title>\n<g id=\"a_node8\"><a xlink:title=\"name: slugs.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"261.78,-608 198.72,-608 198.72,-566.4 261.78,-566.4 261.78,-608\"/>\n<text text-anchor=\"middle\" x=\"230.25\" y=\"-591.4\" font-family=\"Times,serif\" font-size=\"14.00\">Search</text>\n<text text-anchor=\"middle\" x=\"230.25\" y=\"-574.6\" font-family=\"Times,serif\" font-size=\"14.00\">slugs.txt</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;4 -->\n<g id=\"edge3\" class=\"edge\">\n<title>1-&gt;4</title>\n<path fill=\"none\" stroke=\"black\" d=\"M293.27,-660.09C282.08,-647.32 267.52,-630.72 255.22,-616.68\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"258.12,-614.68 248.9,-609.47 252.86,-619.3 258.12,-614.68\"/>\n<g id=\"a_edge3-label\"><a xlink:title=\"file: cron.sh&#xA;line: 21&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"292.39\" y=\"-630.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 5 -->\n<g id=\"node9\" class=\"node\">\n<title>5</title>\n<g id=\"a_node9\"><a xlink:title=\"name: slugs.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"342.78,-608 279.72,-608 279.72,-566.4 342.78,-566.4 342.78,-608\"/>\n<text text-anchor=\"middle\" x=\"311.25\" y=\"-591.4\" font-family=\"Times,serif\" font-size=\"14.00\">Sites</text>\n<text text-anchor=\"middle\" x=\"311.25\" y=\"-574.6\" font-family=\"Times,serif\" font-size=\"14.00\">slugs.txt</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;5 -->\n<g id=\"edge4\" class=\"edge\">\n<title>1-&gt;5</title>\n<path fill=\"none\" stroke=\"black\" d=\"M311.25,-660.09C311.25,-648.17 311.25,-632.89 311.25,-619.49\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"314.75,-619.84 311.25,-609.84 307.75,-619.84 314.75,-619.84\"/>\n<g id=\"a_edge4-label\"><a xlink:title=\"file: cron.sh&#xA;line: 21&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"325.63\" y=\"-630.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 16 -->\n<g id=\"node17\" class=\"node\">\n<title>16</title>\n<g id=\"a_node17\"><a xlink:title=\"name: Now-0000\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"181.19,-608 105.31,-608 105.31,-566.4 181.19,-566.4 181.19,-608\"/>\n<text text-anchor=\"middle\" x=\"143.25\" y=\"-591.4\" font-family=\"Times,serif\" font-size=\"14.00\">Logs</text>\n<text text-anchor=\"middle\" x=\"143.25\" y=\"-574.6\" font-family=\"Times,serif\" font-size=\"14.00\">Now-0000</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;16 -->\n<g id=\"edge19\" class=\"edge\">\n<title>1-&gt;16</title>\n<path fill=\"none\" stroke=\"black\" d=\"M283.55,-668.64C267.77,-661.58 247.75,-652.2 230.48,-642.8 214.52,-634.11 197.47,-623.71 182.72,-614.32\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"184.97,-611.61 174.66,-609.15 181.19,-617.5 184.97,-611.61\"/>\n<g id=\"a_edge19-label\"><a xlink:title=\"file: cron.sh&#xA;line: 8&#xA;source: Debug\">\n<text text-anchor=\"middle\" x=\"244.87\" y=\"-630.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 17 -->\n<g id=\"node18\" class=\"node\">\n<title>17</title>\n<g id=\"a_node18\"><a xlink:title=\"name: sites.tgz\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"461,-608 399.5,-608 399.5,-566.4 461,-566.4 461,-608\"/>\n<text text-anchor=\"middle\" x=\"430.25\" y=\"-591.4\" font-family=\"Times,serif\" font-size=\"14.00\">Public</text>\n<text text-anchor=\"middle\" x=\"430.25\" y=\"-574.6\" font-family=\"Times,serif\" font-size=\"14.00\">sites.tgz</text>\n</a>\n</g>\n</g>\n<!-- 1&#45;&gt;17 -->\n<g id=\"edge20\" class=\"edge\">\n<title>1-&gt;17</title>\n<path fill=\"none\" stroke=\"black\" d=\"M339.22,-669.59C353.79,-663.07 371.42,-653.91 385.25,-642.8 394.28,-635.55 402.76,-626.23 409.87,-617.36\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"412.53,-619.64 415.83,-609.58 406.97,-615.39 412.53,-619.64\"/>\n<g id=\"a_edge20-label\"><a xlink:title=\"file: cron.sh&#xA;line: 34&#xA;source: Debug\">\n<text text-anchor=\"middle\" x=\"416.36\" y=\"-630.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 7 -->\n<g id=\"node10\" class=\"node\">\n<title>7</title>\n<g id=\"a_node10\"><a xlink:title=\"name: dir\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"551.25,-513.6 497.25,-513.6 497.25,-472 551.25,-472 551.25,-513.6\"/>\n<text text-anchor=\"middle\" x=\"524.25\" y=\"-497\" font-family=\"Times,serif\" font-size=\"14.00\">Sites</text>\n<text text-anchor=\"middle\" x=\"524.25\" y=\"-480.2\" font-family=\"Times,serif\" font-size=\"14.00\">dir</text>\n</a>\n</g>\n</g>\n<!-- 6&#45;&gt;7 -->\n<g id=\"edge8\" class=\"edge\">\n<title>6-&gt;7</title>\n<path fill=\"none\" stroke=\"black\" d=\"M498.78,-565.64C496.1,-555.26 494.49,-542.58 497.93,-531.6 498.79,-528.86 499.93,-526.15 501.24,-523.51\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"504.15,-525.47 506.25,-515.08 498.13,-521.89 504.15,-525.47\"/>\n<g id=\"a_edge8-label\"><a xlink:title=\"file: found.rb&#xA;line: 16&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"513.09\" y=\"-535.8\" font-family=\"Times,serif\" font-size=\"14.00\">make</text>\n</a>\n</g>\n</g>\n<!-- 20 -->\n<g id=\"node21\" class=\"node\">\n<title>20</title>\n<g id=\"a_node21\"><a xlink:title=\"name: Now-0000\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"479.19,-513.6 403.31,-513.6 403.31,-472 479.19,-472 479.19,-513.6\"/>\n<text text-anchor=\"middle\" x=\"441.25\" y=\"-497\" font-family=\"Times,serif\" font-size=\"14.00\">Activity</text>\n<text text-anchor=\"middle\" x=\"441.25\" y=\"-480.2\" font-family=\"Times,serif\" font-size=\"14.00\">Now-0000</text>\n</a>\n</g>\n</g>\n<!-- 6&#45;&gt;20 -->\n<g id=\"edge23\" class=\"edge\">\n<title>6-&gt;20</title>\n<path fill=\"none\" stroke=\"black\" d=\"M479.01,-565.53C473.38,-560.37 467.84,-554.54 463.48,-548.4 458.4,-541.23 454.22,-532.71 450.91,-524.57\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"454.23,-523.44 447.47,-515.28 447.66,-525.87 454.23,-523.44\"/>\n<g id=\"a_edge23-label\"><a xlink:title=\"file: found.rb&#xA;line: 19&#xA;source: Debug\">\n<text text-anchor=\"middle\" x=\"477.87\" y=\"-535.8\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 9 -->\n<g id=\"node4\" class=\"node\">\n<title>9</title>\n<g id=\"a_node4\"><a xlink:title=\"name: words.txt\">\n<polygon fill=\"gold\" stroke=\"black\" stroke-width=\"2\" points=\"371.5,-324.8 303,-324.8 303,-283.2 371.5,-283.2 371.5,-324.8\"/>\n<text text-anchor=\"middle\" x=\"337.25\" y=\"-308.2\" font-family=\"Times,serif\" font-size=\"14.00\">Pages</text>\n<text text-anchor=\"middle\" x=\"337.25\" y=\"-291.4\" font-family=\"Times,serif\" font-size=\"14.00\">words.txt</text>\n</a>\n</g>\n</g>\n<!-- 2&#45;&gt;9 -->\n<g id=\"edge17\" class=\"edge\">\n<title>2-&gt;9</title>\n<path fill=\"none\" stroke=\"black\" d=\"M320.91,-376.89C323.58,-365.13 327,-350.11 330.01,-336.85\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"333.39,-337.77 332.19,-327.24 326.57,-336.22 333.39,-337.77\"/>\n<g id=\"a_edge17-label\"><a xlink:title=\"file: scrape.rb&#xA;line: 43&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"343.01\" y=\"-347\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 10 -->\n<g id=\"node12\" class=\"node\">\n<title>10</title>\n<g id=\"a_node12\"><a xlink:title=\"name: sites.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"181.83,-324.8 122.67,-324.8 122.67,-283.2 181.83,-283.2 181.83,-324.8\"/>\n<text text-anchor=\"middle\" x=\"152.25\" y=\"-308.2\" font-family=\"Times,serif\" font-size=\"14.00\">Pages</text>\n<text text-anchor=\"middle\" x=\"152.25\" y=\"-291.4\" font-family=\"Times,serif\" font-size=\"14.00\">sites.txt</text>\n</a>\n</g>\n</g>\n<!-- 2&#45;&gt;10 -->\n<g id=\"edge18\" class=\"edge\">\n<title>2-&gt;10</title>\n<path fill=\"none\" stroke=\"black\" d=\"M288.54,-384.6C273.79,-377.57 255.45,-368.49 239.48,-359.6 223.48,-350.68 206.3,-340.15 191.46,-330.72\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"193.66,-327.98 183.35,-325.54 189.89,-333.87 193.66,-327.98\"/>\n<g id=\"a_edge18-label\"><a xlink:title=\"file: scrape.rb&#xA;line: 43&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"253.87\" y=\"-347\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 21 -->\n<g id=\"node22\" class=\"node\">\n<title>21</title>\n<g id=\"a_node22\"><a xlink:title=\"name: scraped.json\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"285.04,-324.8 199.46,-324.8 199.46,-283.2 285.04,-283.2 285.04,-324.8\"/>\n<text text-anchor=\"middle\" x=\"242.25\" y=\"-308.2\" font-family=\"Times,serif\" font-size=\"14.00\">Public</text>\n<text text-anchor=\"middle\" x=\"242.25\" y=\"-291.4\" font-family=\"Times,serif\" font-size=\"14.00\">scraped.json</text>\n</a>\n</g>\n</g>\n<!-- 2&#45;&gt;21 -->\n<g id=\"edge24\" class=\"edge\">\n<title>2-&gt;21</title>\n<path fill=\"none\" stroke=\"black\" d=\"M299.83,-376.89C289.7,-364.25 276.55,-347.83 265.38,-333.88\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"268.3,-331.93 259.32,-326.31 262.84,-336.31 268.3,-331.93\"/>\n<g id=\"a_edge24-label\"><a xlink:title=\"file: scrape.rb&#xA;line: 167&#xA;source: Debug\">\n<text text-anchor=\"middle\" x=\"302.98\" y=\"-347\" font-family=\"Times,serif\" font-size=\"14.00\">writes</text>\n</a>\n</g>\n</g>\n<!-- 9&#45;&gt;3 -->\n<g id=\"edge9\" class=\"edge\">\n<title>9-&gt;3</title>\n<path fill=\"none\" stroke=\"black\" d=\"M291.99,-280.39C256.78,-262.81 209.11,-239 179.53,-224.23\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"290.15,-283.39 300.66,-284.73 293.28,-277.13 290.15,-283.39\"/>\n<g id=\"a_edge9-label\"><a xlink:title=\"file: rollup.rb&#xA;line: 3&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"273.37\" y=\"-252.6\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 24 -->\n<g id=\"node25\" class=\"node\">\n<title>24</title>\n<g id=\"a_node25\"><a xlink:title=\"name: Search\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"364.29,-41.6 310.21,-41.6 310.21,0 364.29,0 364.29,-41.6\"/>\n<text text-anchor=\"middle\" x=\"337.25\" y=\"-25\" font-family=\"Times,serif\" font-size=\"14.00\">API</text>\n<text text-anchor=\"middle\" x=\"337.25\" y=\"-8.2\" font-family=\"Times,serif\" font-size=\"14.00\">Search</text>\n</a>\n</g>\n</g>\n<!-- 9&#45;&gt;24 -->\n<g id=\"edge28\" class=\"edge\">\n<title>9-&gt;24</title>\n<path fill=\"none\" stroke=\"black\" d=\"M337.25,-270.84C337.25,-212.27 337.25,-89.8 337.25,-41.75\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"333.75,-270.81 337.25,-280.81 340.75,-270.81 333.75,-270.81\"/>\n<g id=\"a_edge28-label\"><a xlink:title=\"file: server.rb&#xA;line: 153&#xA;source: Query\">\n<text text-anchor=\"middle\" x=\"349.29\" y=\"-158.2\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 11 -->\n<g id=\"node5\" class=\"node\">\n<title>11</title>\n<g id=\"a_node5\"><a xlink:title=\"name: words.txt\">\n<polygon fill=\"gold\" stroke=\"black\" stroke-width=\"2\" points=\"309.5,-136 241,-136 241,-94.4 309.5,-94.4 309.5,-136\"/>\n<text text-anchor=\"middle\" x=\"275.25\" y=\"-119.4\" font-family=\"Times,serif\" font-size=\"14.00\">Sites</text>\n<text text-anchor=\"middle\" x=\"275.25\" y=\"-102.6\" font-family=\"Times,serif\" font-size=\"14.00\">words.txt</text>\n</a>\n</g>\n</g>\n<!-- 11&#45;&gt;24 -->\n<g id=\"edge29\" class=\"edge\">\n<title>11-&gt;24</title>\n<path fill=\"none\" stroke=\"black\" d=\"M286.49,-83.05C289.99,-75.09 294.25,-66.76 299.16,-59.6 303.48,-53.3 308.94,-47.16 314.37,-41.72\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"283.31,-81.56 282.75,-92.14 289.79,-84.22 283.31,-81.56\"/>\n<g id=\"a_edge29-label\"><a xlink:title=\"file: server.rb&#xA;line: 153&#xA;source: Query\">\n<text text-anchor=\"middle\" x=\"311.21\" y=\"-63.8\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 0 -->\n<g id=\"node6\" class=\"node\">\n<title>0</title>\n<g id=\"a_node6\"><a xlink:title=\"name: Color Module by Type&#xA;emphasis: [object Object]\">\n<polygon fill=\"white\" stroke=\"black\" points=\"706.6,-702.4 561.9,-702.4 561.9,-660.8 706.6,-660.8 706.6,-702.4\"/>\n<text text-anchor=\"middle\" x=\"634.25\" y=\"-685.8\" font-family=\"Times,serif\" font-size=\"14.00\">Graphviz</text>\n<text text-anchor=\"middle\" x=\"634.25\" y=\"-669\" font-family=\"Times,serif\" font-size=\"14.00\">Color Module by Type</text>\n</a>\n</g>\n</g>\n<!-- 3&#45;&gt;11 -->\n<g id=\"edge11\" class=\"edge\">\n<title>3-&gt;11</title>\n<path fill=\"none\" stroke=\"black\" d=\"M179.57,-191.76C189.41,-185.44 200.5,-178.03 210.25,-170.8 221.33,-162.58 232.99,-153.08 243.34,-144.32\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"245.57,-147.02 250.89,-137.86 241.01,-141.7 245.57,-147.02\"/>\n<g id=\"a_edge11-label\"><a xlink:title=\"file: rollup.rb&#xA;line: 5&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"244.86\" y=\"-158.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 12 -->\n<g id=\"node13\" class=\"node\">\n<title>12</title>\n<g id=\"a_node13\"><a xlink:title=\"name: words.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"68.5,-136 0,-136 0,-94.4 68.5,-94.4 68.5,-136\"/>\n<text text-anchor=\"middle\" x=\"34.25\" y=\"-119.4\" font-family=\"Times,serif\" font-size=\"14.00\">Search</text>\n<text text-anchor=\"middle\" x=\"34.25\" y=\"-102.6\" font-family=\"Times,serif\" font-size=\"14.00\">words.txt</text>\n</a>\n</g>\n</g>\n<!-- 3&#45;&gt;12 -->\n<g id=\"edge12\" class=\"edge\">\n<title>3-&gt;12</title>\n<path fill=\"none\" stroke=\"black\" d=\"M124.82,-190.04C116.27,-184.06 106.88,-177.29 98.48,-170.8 87.56,-162.35 75.97,-152.71 65.67,-143.9\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"68.02,-141.31 58.16,-137.42 63.45,-146.61 68.02,-141.31\"/>\n<g id=\"a_edge12-label\"><a xlink:title=\"file: rollup.rb&#xA;line: 5&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"112.87\" y=\"-158.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 13 -->\n<g id=\"node14\" class=\"node\">\n<title>13</title>\n<g id=\"a_node14\"><a xlink:title=\"name: sites.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"145.83,-136 86.67,-136 86.67,-94.4 145.83,-94.4 145.83,-136\"/>\n<text text-anchor=\"middle\" x=\"116.25\" y=\"-119.4\" font-family=\"Times,serif\" font-size=\"14.00\">Sites</text>\n<text text-anchor=\"middle\" x=\"116.25\" y=\"-102.6\" font-family=\"Times,serif\" font-size=\"14.00\">sites.txt</text>\n</a>\n</g>\n</g>\n<!-- 3&#45;&gt;13 -->\n<g id=\"edge13\" class=\"edge\">\n<title>3-&gt;13</title>\n<path fill=\"none\" stroke=\"black\" d=\"M144.44,-188.55C139.67,-176.32 133.49,-160.45 128.13,-146.68\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"131.49,-145.67 124.6,-137.62 124.96,-148.21 131.49,-145.67\"/>\n<g id=\"a_edge13-label\"><a xlink:title=\"file: rollup.rb&#xA;line: 6&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"151.86\" y=\"-158.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 14 -->\n<g id=\"node15\" class=\"node\">\n<title>14</title>\n<g id=\"a_node15\"><a xlink:title=\"name: sites.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"222.83,-136 163.67,-136 163.67,-94.4 222.83,-94.4 222.83,-136\"/>\n<text text-anchor=\"middle\" x=\"193.25\" y=\"-119.4\" font-family=\"Times,serif\" font-size=\"14.00\">Search</text>\n<text text-anchor=\"middle\" x=\"193.25\" y=\"-102.6\" font-family=\"Times,serif\" font-size=\"14.00\">sites.txt</text>\n</a>\n</g>\n</g>\n<!-- 3&#45;&gt;14 -->\n<g id=\"edge14\" class=\"edge\">\n<title>3-&gt;14</title>\n<path fill=\"none\" stroke=\"black\" d=\"M161.95,-188.67C164.69,-182.93 167.63,-176.64 170.25,-170.8 173.71,-163.08 177.32,-154.69 180.63,-146.85\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"183.84,-148.24 184.47,-137.66 177.39,-145.53 183.84,-148.24\"/>\n<g id=\"a_edge14-label\"><a xlink:title=\"file: rollup.rb&#xA;line: 6&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"191.81\" y=\"-158.2\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 7&#45;&gt;6 -->\n<g id=\"edge6\" class=\"edge\">\n<title>7-&gt;6</title>\n<path fill=\"none\" stroke=\"black\" d=\"M533.58,-525.07C534.6,-532.8 534.55,-540.99 532.25,-548.4 530.36,-554.49 527.11,-560.46 523.54,-565.8\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"537.03,-524.47 531.67,-515.33 530.16,-525.82 537.03,-524.47\"/>\n<g id=\"a_edge6-label\"><a xlink:title=\"file: found.rb&#xA;line: 6&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"546.26\" y=\"-535.8\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 7&#45;&gt;2 -->\n<g id=\"edge15\" class=\"edge\">\n<title>7-&gt;2</title>\n<path fill=\"none\" stroke=\"black\" d=\"M486.59,-471.4C431.43,-445.03 376.37,-422.77 344.05,-410.1\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"485,-474.52 495.52,-475.71 488.04,-468.21 485,-474.52\"/>\n<g id=\"a_edge15-label\"><a xlink:title=\"file: scrape.rb&#xA;line: 13&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"458.47\" y=\"-441.4\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 8 -->\n<g id=\"node11\" class=\"node\">\n<title>8</title>\n<g id=\"a_node11\"><a xlink:title=\"name: dir\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"543.85,-702.4 486.65,-702.4 486.65,-660.8 543.85,-660.8 543.85,-702.4\"/>\n<text text-anchor=\"middle\" x=\"515.25\" y=\"-685.8\" font-family=\"Times,serif\" font-size=\"14.00\">Retired</text>\n<text text-anchor=\"middle\" x=\"515.25\" y=\"-669\" font-family=\"Times,serif\" font-size=\"14.00\">dir</text>\n</a>\n</g>\n</g>\n<!-- 8&#45;&gt;6 -->\n<g id=\"edge7\" class=\"edge\">\n<title>8-&gt;6</title>\n<path fill=\"none\" stroke=\"black\" d=\"M512.21,-649.41C510.91,-636.04 509.42,-620.79 508.26,-608.85\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"508.7,-649.43 513.15,-659.04 515.66,-648.75 508.7,-649.43\"/>\n<g id=\"a_edge7-label\"><a xlink:title=\"file: found.rb&#xA;line: 6&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"523.6\" y=\"-630.2\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 10&#45;&gt;3 -->\n<g id=\"edge10\" class=\"edge\">\n<title>10-&gt;3</title>\n<path fill=\"none\" stroke=\"black\" d=\"M152.25,-271.65C152.25,-258.08 152.25,-242.59 152.25,-230.61\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"148.75,-271.44 152.25,-281.44 155.75,-271.44 148.75,-271.44\"/>\n<g id=\"a_edge10-label\"><a xlink:title=\"file: rollup.rb&#xA;line: 4&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"164.29\" y=\"-252.6\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 15 -->\n<g id=\"node16\" class=\"node\">\n<title>15</title>\n<g id=\"a_node16\"><a xlink:title=\"name: sitemap\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"343.02,-513.6 283.48,-513.6 283.48,-472 343.02,-472 343.02,-513.6\"/>\n<text text-anchor=\"middle\" x=\"313.25\" y=\"-497\" font-family=\"Times,serif\" font-size=\"14.00\">Wiki</text>\n<text text-anchor=\"middle\" x=\"313.25\" y=\"-480.2\" font-family=\"Times,serif\" font-size=\"14.00\">sitemap</text>\n</a>\n</g>\n</g>\n<!-- 15&#45;&gt;2 -->\n<g id=\"edge16\" class=\"edge\">\n<title>15-&gt;2</title>\n<path fill=\"none\" stroke=\"black\" d=\"M314.26,-460.61C314.7,-447.24 315.19,-431.99 315.58,-420.05\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"310.78,-460.13 313.95,-470.24 317.77,-460.36 310.78,-460.13\"/>\n<g id=\"a_edge16-label\"><a xlink:title=\"file: scrape.rb&#xA;line: 21&#xA;source: Index\">\n<text text-anchor=\"middle\" x=\"323.57\" y=\"-441.4\" font-family=\"Times,serif\" font-size=\"14.00\">get</text>\n</a>\n</g>\n</g>\n<!-- 18 -->\n<g id=\"node19\" class=\"node\">\n<title>18</title>\n<g id=\"a_node19\"><a xlink:title=\"name: counts\">\n<polygon fill=\"lightblue\" stroke=\"black\" points=\"170.25,-513.6 116.25,-513.6 116.25,-472 170.25,-472 170.25,-513.6\"/>\n<text text-anchor=\"middle\" x=\"143.25\" y=\"-497\" font-family=\"Times,serif\" font-size=\"14.00\">Ruby</text>\n<text text-anchor=\"middle\" x=\"143.25\" y=\"-480.2\" font-family=\"Times,serif\" font-size=\"14.00\">counts</text>\n</a>\n</g>\n</g>\n<!-- 16&#45;&gt;18 -->\n<g id=\"edge21\" class=\"edge\">\n<title>16-&gt;18</title>\n<path fill=\"none\" stroke=\"black\" d=\"M143.25,-554.85C143.25,-541.28 143.25,-525.79 143.25,-513.81\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"139.75,-554.64 143.25,-564.64 146.75,-554.64 139.75,-554.64\"/>\n<g id=\"a_edge21-label\"><a xlink:title=\"file: counts.rb&#xA;line: 6&#xA;source: Debug\">\n<text text-anchor=\"middle\" x=\"155.29\" y=\"-535.8\" font-family=\"Times,serif\" font-size=\"14.00\">read</text>\n</a>\n</g>\n</g>\n<!-- 19 -->\n<g id=\"node20\" class=\"node\">\n<title>19</title>\n<g id=\"a_node20\"><a xlink:title=\"name: counts.txt\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"178.67,-419.2 107.83,-419.2 107.83,-377.6 178.67,-377.6 178.67,-419.2\"/>\n<text text-anchor=\"middle\" x=\"143.25\" y=\"-402.6\" font-family=\"Times,serif\" font-size=\"14.00\">Search</text>\n<text text-anchor=\"middle\" x=\"143.25\" y=\"-385.8\" font-family=\"Times,serif\" font-size=\"14.00\">counts.txt</text>\n</a>\n</g>\n</g>\n<!-- 18&#45;&gt;19 -->\n<g id=\"edge22\" class=\"edge\">\n<title>18-&gt;19</title>\n<path fill=\"none\" stroke=\"black\" d=\"M143.25,-471.75C143.25,-459.76 143.25,-444.27 143.25,-430.7\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"146.75,-430.92 143.25,-420.92 139.75,-430.92 146.75,-430.92\"/>\n<g id=\"a_edge22-label\"><a xlink:title=\"file: counts.rb&#xA;line: 16&#xA;source: Debug\">\n<text text-anchor=\"middle\" x=\"157.63\" y=\"-441.4\" font-family=\"Times,serif\" font-size=\"14.00\">write</text>\n</a>\n</g>\n</g>\n<!-- 22 -->\n<g id=\"node23\" class=\"node\">\n<title>22</title>\n<g id=\"a_node23\"><a xlink:title=\"name: server\">\n<polygon fill=\"lightblue\" stroke=\"black\" points=\"450.25,-136 396.25,-136 396.25,-94.4 450.25,-94.4 450.25,-136\"/>\n<text text-anchor=\"middle\" x=\"423.25\" y=\"-119.4\" font-family=\"Times,serif\" font-size=\"14.00\">Ruby</text>\n<text text-anchor=\"middle\" x=\"423.25\" y=\"-102.6\" font-family=\"Times,serif\" font-size=\"14.00\">server</text>\n</a>\n</g>\n</g>\n<!-- 23 -->\n<g id=\"node24\" class=\"node\">\n<title>23</title>\n<g id=\"a_node24\"><a xlink:title=\"name: files\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"522.25,-41.6 468.25,-41.6 468.25,0 522.25,0 522.25,-41.6\"/>\n<text text-anchor=\"middle\" x=\"495.25\" y=\"-25\" font-family=\"Times,serif\" font-size=\"14.00\">Public</text>\n<text text-anchor=\"middle\" x=\"495.25\" y=\"-8.2\" font-family=\"Times,serif\" font-size=\"14.00\">files</text>\n</a>\n</g>\n</g>\n<!-- 22&#45;&gt;23 -->\n<g id=\"edge25\" class=\"edge\">\n<title>22-&gt;23</title>\n<path fill=\"none\" stroke=\"black\" d=\"M442.08,-94.2C447.15,-88.57 452.53,-82.35 457.25,-76.4 463.54,-68.46 469.98,-59.56 475.73,-51.28\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"478.5,-53.42 481.26,-43.19 472.72,-49.47 478.5,-53.42\"/>\n<g id=\"a_edge25-label\"><a xlink:title=\"file: server.rb&#xA;line: 5&#xA;source: Query\">\n<text text-anchor=\"middle\" x=\"484.1\" y=\"-63.8\" font-family=\"Times,serif\" font-size=\"14.00\">serve</text>\n</a>\n</g>\n</g>\n<!-- 22&#45;&gt;24 -->\n<g id=\"edge26\" class=\"edge\">\n<title>22-&gt;24</title>\n<path fill=\"none\" stroke=\"black\" d=\"M404.59,-94.15C392.53,-81.19 376.66,-64.15 363.36,-49.86\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"366.28,-47.85 356.91,-42.92 361.16,-52.62 366.28,-47.85\"/>\n<g id=\"a_edge26-label\"><a xlink:title=\"file: server.rb&#xA;line: 6&#xA;source: Query\">\n<text text-anchor=\"middle\" x=\"402.72\" y=\"-63.8\" font-family=\"Times,serif\" font-size=\"14.00\">serve</text>\n</a>\n</g>\n</g>\n<!-- 25 -->\n<g id=\"node26\" class=\"node\">\n<title>25</title>\n<g id=\"a_node26\"><a xlink:title=\"name: Index\">\n<polygon fill=\"palegreen\" stroke=\"black\" points=\"450.25,-41.6 396.25,-41.6 396.25,0 450.25,0 450.25,-41.6\"/>\n<text text-anchor=\"middle\" x=\"423.25\" y=\"-25\" font-family=\"Times,serif\" font-size=\"14.00\">API</text>\n<text text-anchor=\"middle\" x=\"423.25\" y=\"-8.2\" font-family=\"Times,serif\" font-size=\"14.00\">Index</text>\n</a>\n</g>\n</g>\n<!-- 22&#45;&gt;25 -->\n<g id=\"edge27\" class=\"edge\">\n<title>22-&gt;25</title>\n<path fill=\"none\" stroke=\"black\" d=\"M423.25,-94.15C423.25,-82.16 423.25,-66.67 423.25,-53.1\"/>\n<polygon fill=\"black\" stroke=\"black\" points=\"426.75,-53.32 423.25,-43.32 419.75,-53.32 426.75,-53.32\"/>\n<g id=\"a_edge27-label\"><a xlink:title=\"file: server.rb&#xA;line: 7&#xA;source: Query\">\n<text text-anchor=\"middle\" x=\"438.02\" y=\"-63.8\" font-family=\"Times,serif\" font-size=\"14.00\">serve</text>\n</a>\n</g>\n</g>\n</g>\n</svg>"
+    },
+    {
+      "type": "paragraph",
+      "id": "387ae707a27a7d69",
+      "text": "See [[Solo Super Collaborator]]"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Search Script Annotations",
+        "story": []
+      },
+      "date": 1695843828826
+    },
+    {
+      "id": "873321ca4b74f4fd",
+      "type": "add",
+      "item": {
+        "type": "frame",
+        "id": "873321ca4b74f4fd",
+        "text": "http://search.fed.wiki.org:3030/xref\nHEIGHT 200"
+      },
+      "attribution": {
+        "page": "Ward Cunningham"
+      },
+      "date": 1695843847393
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "f0def03ebd62fd2f"
+      },
+      "id": "f0def03ebd62fd2f",
+      "type": "add",
+      "after": "873321ca4b74f4fd",
+      "date": 1695843906693
+    },
+    {
+      "type": "edit",
+      "id": "f0def03ebd62fd2f",
+      "item": {
+        "type": "paragraph",
+        "id": "f0def03ebd62fd2f",
+        "text": "We would like to distribute node and relation definitions throughout the scripts. We anticipate a need for finding these so will build this tool first. "
+      },
+      "date": 1695844035123
+    },
+    {
+      "id": "f0def03ebd62fd2f",
+      "type": "move",
+      "order": [
+        "f0def03ebd62fd2f",
+        "873321ca4b74f4fd"
+      ],
+      "date": 1695844040414
+    },
+    {
+      "type": "edit",
+      "id": "f0def03ebd62fd2f",
+      "item": {
+        "type": "paragraph",
+        "id": "f0def03ebd62fd2f",
+        "text": "We would like to distribute node and relation definitions throughout the scripts. We anticipate a need for finding these so will build this tool first. [https://github.com/WardCunningham/search/commit/f595d918c1d1390fc65ad6fc9466e2887103733f github]"
+      },
+      "date": 1695844152000
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "ef8fe574b0d8f082"
+      },
+      "id": "ef8fe574b0d8f082",
+      "type": "add",
+      "after": "873321ca4b74f4fd",
+      "date": 1695844169752
+    },
+    {
+      "type": "edit",
+      "id": "ef8fe574b0d8f082",
+      "item": {
+        "type": "assets",
+        "id": "ef8fe574b0d8f082",
+        "text": "pages/search-script-annotations"
+      },
+      "date": 1695844203239
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "0a47e5fb062147fe"
+      },
+      "id": "0a47e5fb062147fe",
+      "type": "add",
+      "after": "ef8fe574b0d8f082",
+      "date": 1695845930177
+    },
+    {
+      "type": "edit",
+      "id": "0a47e5fb062147fe",
+      "item": {
+        "type": "frame",
+        "id": "0a47e5fb062147fe",
+        "text": "http://search.dojo.fed.wiki/assets/pages/search-script-annotations/browse.html\nHEIGHT 200"
+      },
+      "date": 1695845940168
+    },
+    {
+      "type": "edit",
+      "id": "0a47e5fb062147fe",
+      "item": {
+        "type": "frame",
+        "id": "0a47e5fb062147fe",
+        "text": "http://search.dojo.fed.wiki/assets/pages/search-script-annotations/browse.html\nHEIGHT 600"
+      },
+      "date": 1695858030212
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "05b29bfd7014d7b0"
+      },
+      "id": "05b29bfd7014d7b0",
+      "type": "add",
+      "after": "0a47e5fb062147fe",
+      "date": 1698777776837
+    },
+    {
+      "type": "edit",
+      "id": "05b29bfd7014d7b0",
+      "item": {
+        "type": "graphviz",
+        "id": "05b29bfd7014d7b0",
+        "text": "digraph {\noverlap = false; splines=true\nlayout = dot;\nnode [shape=box style=filled fillcolor=gold penwidth=2]\n1\n6\n2\n9\n11\nnode [fillcolor=palegreen penwidth=1]\n0 [label=\"Graphviz\\nColor Module by Type\" fillcolor=white  tooltip=\"name: Color Module by Type\\nemphasis: [object Object]\"]\n1 [label=\"Shell\\ncron\" fillcolor=lightblue  tooltip=\"name: cron\"]\n2 [label=\"Ruby\\nscrape\" fillcolor=lightblue  tooltip=\"name: scrape\"]\n3 [label=\"Ruby\\nrollup\" fillcolor=lightblue  tooltip=\"name: rollup\"]\n4 [label=\"Search\\nslugs.txt\"   tooltip=\"name: slugs.txt\"]\n5 [label=\"Sites\\nslugs.txt\"   tooltip=\"name: slugs.txt\"]\n6 [label=\"Ruby\\nfound\" fillcolor=lightblue  tooltip=\"name: found\"]\n7 [label=\"Sites\\ndir\"   tooltip=\"name: dir\"]\n8 [label=\"Retired\\ndir\"   tooltip=\"name: dir\"]\n9 [label=\"Pages\\nwords.txt\"   tooltip=\"name: words.txt\"]\n10 [label=\"Pages\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n11 [label=\"Sites\\nwords.txt\"   tooltip=\"name: words.txt\"]\n12 [label=\"Search\\nwords.txt\"   tooltip=\"name: words.txt\"]\n13 [label=\"Sites\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n14 [label=\"Search\\nsites.txt\"   tooltip=\"name: sites.txt\"]\n15 [label=\"Wiki\\nsitemap\"   tooltip=\"name: sitemap\"]\n16 [label=\"Logs\\nNow-0000\"   tooltip=\"name: Now-0000\"]\n17 [label=\"Public\\nsites.tgz\"   tooltip=\"name: sites.tgz\"]\n18 [label=\"Ruby\\ncounts\" fillcolor=lightblue  tooltip=\"name: counts\"]\n19 [label=\"Search\\ncounts.txt\"   tooltip=\"name: counts.txt\"]\n20 [label=\"Activity\\nNow-0000\"   tooltip=\"name: Now-0000\"]\n21 [label=\"Public\\nscraped.json\"   tooltip=\"name: scraped.json\"]\n22 [label=\"Ruby\\nserver\" fillcolor=lightblue  tooltip=\"name: server\"]\n23 [label=\"Public\\nfiles\"   tooltip=\"name: files\"]\n24 [label=\"API\\nSearch\"   tooltip=\"name: Search\"]\n25 [label=\"API\\nIndex\"   tooltip=\"name: Index\"]\n1->2 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 7\\nsource: Index\"]\n1->3 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 18\\nsource: Index\"]\n1->4 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 21\\nsource: Index\"]\n1->5 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 21\\nsource: Index\"]\n1->6 [label=\"run\"  labeltooltip=\"file: cron.sh\\nline: 39\\nsource: Index\"]\n7->6 [label=\"read\"  labeltooltip=\"file: found.rb\\nline: 6\\nsource: Index\" dir=back]\n8->6 [label=\"read\"  labeltooltip=\"file: found.rb\\nline: 6\\nsource: Index\" dir=back]\n6->7 [label=\"make\"  labeltooltip=\"file: found.rb\\nline: 16\\nsource: Index\"]\n9->3 [label=\"read\"  labeltooltip=\"file: rollup.rb\\nline: 3\\nsource: Index\" dir=back]\n10->3 [label=\"read\"  labeltooltip=\"file: rollup.rb\\nline: 4\\nsource: Index\" dir=back]\n3->11 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 5\\nsource: Index\"]\n3->12 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 5\\nsource: Index\"]\n3->13 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 6\\nsource: Index\"]\n3->14 [label=\"write\"  labeltooltip=\"file: rollup.rb\\nline: 6\\nsource: Index\"]\n7->2 [label=\"read\"  labeltooltip=\"file: scrape.rb\\nline: 13\\nsource: Index\" dir=back]\n15->2 [label=\"get\"  labeltooltip=\"file: scrape.rb\\nline: 21\\nsource: Index\" dir=back]\n2->9 [label=\"write\"  labeltooltip=\"file: scrape.rb\\nline: 43\\nsource: Index\"]\n2->10 [label=\"write\"  labeltooltip=\"file: scrape.rb\\nline: 43\\nsource: Index\"]\n1->16 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 8\\nsource: Debug\"]\n1->17 [label=\"write\"  labeltooltip=\"file: cron.sh\\nline: 34\\nsource: Debug\"]\n16->18 [label=\"read\"  labeltooltip=\"file: counts.rb\\nline: 6\\nsource: Debug\" dir=back]\n18->19 [label=\"write\"  labeltooltip=\"file: counts.rb\\nline: 16\\nsource: Debug\"]\n6->20 [label=\"write\"  labeltooltip=\"file: found.rb\\nline: 19\\nsource: Debug\"]\n2->21 [label=\"writes\"  labeltooltip=\"file: scrape.rb\\nline: 167\\nsource: Debug\"]\n22->23 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 5\\nsource: Query\"]\n22->24 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 6\\nsource: Query\"]\n22->25 [label=\"serve\"  labeltooltip=\"file: server.rb\\nline: 7\\nsource: Query\"]\n9->24 [label=\"read\"  labeltooltip=\"file: server.rb\\nline: 153\\nsource: Query\" dir=back]\n11->24 [label=\"read\"  labeltooltip=\"file: server.rb\\nline: 153\\nsource: Query\" dir=back]\n}"
+      },
+      "date": 1698777782513
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "60e5a761430b25c9"
+      },
+      "id": "60e5a761430b25c9",
+      "type": "add",
+      "after": "05b29bfd7014d7b0",
+      "date": 1698777888853
+    },
+    {
+      "type": "edit",
+      "id": "60e5a761430b25c9",
+      "item": {
+        "type": "paragraph",
+        "id": "60e5a761430b25c9",
+        "text": "We've borrowed Hypertext Super Collaborator code to make an annotation specific version that can produce similar diagrams with tweaks to color and layout tuned to this usage. [https://github.com/WardCunningham/search/blob/master/README.html github]"
+      },
+      "date": 1698777977584
+    },
+    {
+      "id": "60e5a761430b25c9",
+      "type": "move",
+      "order": [
+        "f0def03ebd62fd2f",
+        "873321ca4b74f4fd",
+        "ef8fe574b0d8f082",
+        "0a47e5fb062147fe",
+        "60e5a761430b25c9",
+        "05b29bfd7014d7b0"
+      ],
+      "date": 1698777981466
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "387ae707a27a7d69"
+      },
+      "id": "387ae707a27a7d69",
+      "type": "add",
+      "after": "05b29bfd7014d7b0",
+      "date": 1699241631774
+    },
+    {
+      "type": "edit",
+      "id": "387ae707a27a7d69",
+      "item": {
+        "type": "paragraph",
+        "id": "387ae707a27a7d69",
+        "text": "See [[Solo Super Collaborator]]"
+      },
+      "date": 1699241638239
+    },
+    {
+      "type": "fork",
+      "site": "search.dojo.fed.wiki",
+      "date": 1775068013362
+    },
+    {
+      "type": "edit",
+      "id": "873321ca4b74f4fd",
+      "item": {
+        "type": "frame",
+        "id": "873321ca4b74f4fd",
+        "text": "http://search.federatedwiki.org:3030/xref\nHEIGHT 200"
+      },
+      "date": 1775068122492
+    },
+    {
+      "type": "edit",
+      "id": "0a47e5fb062147fe",
+      "item": {
+        "type": "frame",
+        "id": "0a47e5fb062147fe",
+        "text": "http://search.federatedwiki.org/assets/pages/search-script-annotations/browse.html\nHEIGHT 600"
+      },
+      "date": 1775068151773
+    }
+  ]
+}

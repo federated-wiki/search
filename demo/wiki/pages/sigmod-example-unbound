@@ -1,0 +1,564 @@
+{
+  "title": "SigMod Example Unbound",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "b8a6fa92d6162d14",
+      "text": "Example data graph showing supervision and citation data for researchers, students and publications. [https://homepages.inf.ed.ac.uk/libkin/papers/sigmod18.pdf pdf] [http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg expand]"
+    },
+    {
+      "type": "html",
+      "id": "53a6c4997f9ffc2a",
+      "text": "<img width=100% src=http://search.federatedwiki.org/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg>"
+    },
+    {
+      "type": "paragraph",
+      "id": "e3727e6fb43e2d27",
+      "text": "We duplicate this graph with input below then format that graph data in a style easily compared with the published figure by converting to index origin one. [https://github.com/WardCunningham/assets/blob/master/pages/sigmod-example-unbound/format.html github]"
+    },
+    {
+      "type": "frame",
+      "id": "5b08f5324b8edf75",
+      "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 350"
+    },
+    {
+      "type": "paragraph",
+      "id": "9e746ba2a83b9e6a",
+      "text": "We will start with nodes with a colon and relations without. We rely on not having spaces in names to make parsing simpler. [https://github.com/WardCunningham/assets/blob/master/pages/mock-graph-data/freeform.html github]"
+    },
+    {
+      "type": "code",
+      "id": "728130ba59685924",
+      "text": "Researcher:Nils\nauthors Publication:220\n\nPublication:220\ncites Publication:190\n\nPublication:235\ncites Publication:220\n\nPublication:240\ncites Publication:220\n\nResearcher:Elin\nauthors Publication:240\nsupervises Student:Sten\nsupervises Student:Linda\n\nPublication:269\n\nResearcher:Thor\nsupervises Student:Sten\n\nPublication:269\ncites Publication:235\n\nResearcher:Elin\nauthors Publication:269\n\nPublication:269\ncites Publication:240"
+    },
+    {
+      "type": "paragraph",
+      "id": "4660873eedafed52",
+      "text": "A line that begins with a relation continues the line above. We write relations in lower case because they looks more distinctive pretty printed."
+    },
+    {
+      "type": "paragraph",
+      "id": "9505e62d6102dcb5",
+      "text": "Freeform input now careful to not duplicate nodes. We've worked breadth first here but can string relations depth first using the keyword \"which\". See [[Food Web Unbound]]"
+    },
+    {
+      "type": "assets",
+      "id": "98e79c0746f1d785",
+      "text": "pages/sigmod-example-unbound"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "SigMod Example Unbound",
+        "story": []
+      },
+      "date": 1654736309180
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b8a6fa92d6162d14"
+      },
+      "id": "b8a6fa92d6162d14",
+      "type": "add",
+      "date": 1654736635516
+    },
+    {
+      "type": "edit",
+      "id": "b8a6fa92d6162d14",
+      "item": {
+        "type": "paragraph",
+        "id": "b8a6fa92d6162d14",
+        "text": "Figure 1: Example data graph showing supervision and citation data for researchers, students and publications."
+      },
+      "date": 1654736645336
+    },
+    {
+      "type": "edit",
+      "id": "b8a6fa92d6162d14",
+      "item": {
+        "type": "paragraph",
+        "id": "b8a6fa92d6162d14",
+        "text": "Example data graph showing supervision and citation data for researchers, students and publications. [https://homepages.inf.ed.ac.uk/libkin/papers/sigmod18.pdf pdf]"
+      },
+      "date": 1654736664342
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "98e79c0746f1d785"
+      },
+      "id": "98e79c0746f1d785",
+      "type": "add",
+      "after": "b8a6fa92d6162d14",
+      "date": 1654736679912
+    },
+    {
+      "type": "edit",
+      "id": "98e79c0746f1d785",
+      "item": {
+        "type": "assets",
+        "id": "98e79c0746f1d785",
+        "text": "pages/sigmod-example-unbound"
+      },
+      "date": 1654736700724
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "53a6c4997f9ffc2a"
+      },
+      "id": "53a6c4997f9ffc2a",
+      "type": "add",
+      "after": "98e79c0746f1d785",
+      "date": 1654736723358
+    },
+    {
+      "type": "edit",
+      "id": "53a6c4997f9ffc2a",
+      "item": {
+        "type": "html",
+        "id": "53a6c4997f9ffc2a",
+        "text": "<img width=100% src=http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg>"
+      },
+      "date": 1654736739401
+    },
+    {
+      "type": "edit",
+      "id": "b8a6fa92d6162d14",
+      "item": {
+        "type": "paragraph",
+        "id": "b8a6fa92d6162d14",
+        "text": "Example data graph showing supervision and citation data for researchers, students and publications. [https://homepages.inf.ed.ac.uk/libkin/papers/sigmod18.pdf pdf] [http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg expand]"
+      },
+      "date": 1654736760255
+    },
+    {
+      "id": "9e746ba2a83b9e6a",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "9e746ba2a83b9e6a",
+        "text": "We will start with nodes with a colon and relations without. We rely on not having spaces in names to make parsing simpler. [https://github.com/WardCunningham/assets/blob/master/pages/mock-graph-data/freeform.html github]"
+      },
+      "after": "53a6c4997f9ffc2a",
+      "date": 1654736824026
+    },
+    {
+      "id": "728130ba59685924",
+      "type": "add",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Person:Consumer\nconsumes Consumable:VegOil\ndepletes Resource:Health\nincreases Disease:HeartStrokeObesity\n\nResource:Health\nincreases Economy:LostLifeWages\n\nConsumable:VegOil\ndemands Person:Producer\nconsumes Resource:Forest\ndepletes Resource:Diversity\n\nResource:Forest\nincreases Resource:CO2\nincreases Resource:Temperature\nincreases Calamities:FireFloodWar"
+      },
+      "after": "53a6c4997f9ffc2a",
+      "date": 1654736844016
+    },
+    {
+      "id": "9e746ba2a83b9e6a",
+      "type": "move",
+      "order": [
+        "b8a6fa92d6162d14",
+        "98e79c0746f1d785",
+        "53a6c4997f9ffc2a",
+        "9e746ba2a83b9e6a",
+        "728130ba59685924"
+      ],
+      "date": 1654736851353
+    },
+    {
+      "id": "4660873eedafed52",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "4660873eedafed52",
+        "text": "A line that begins with a relation continues the line above. We write relations in lower case because they looks more distinctive pretty printed."
+      },
+      "after": "728130ba59685924",
+      "date": 1654736865857
+    },
+    {
+      "id": "5469a6eea82d4a15",
+      "type": "add",
+      "item": {
+        "type": "frame",
+        "id": "5469a6eea82d4a15",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/mock-graph-data/freeform.html\nHEIGHT 300"
+      },
+      "after": "4660873eedafed52",
+      "date": 1654736881117
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\n\n\nPerson:Consumer\nconsumes Consumable:VegOil\ndepletes Resource:Health\nincreases Disease:HeartStrokeObesity\n\nResource:Health\nincreases Economy:LostLifeWages\n\nConsumable:VegOil\ndemands Person:Producer\nconsumes Resource:Forest\ndepletes Resource:Diversity\n\nResource:Forest\nincreases Resource:CO2\nincreases Resource:Temperature\nincreases Calamities:FireFloodWar"
+      },
+      "date": 1654737083639
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\n"
+      },
+      "date": 1654737092792
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles"
+      },
+      "date": 1654737108140
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\nauthors Publication:Publication"
+      },
+      "date": 1654737210973
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\nauthors Publication:220"
+      },
+      "date": 1654737243444
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\nauthors Publication:220\n\nPublication:220\ncites Publication:190\ncites Publication:235\ncites Publication:240\n\nResearcher:Elin\nsupervises Student:Sten\nsupervises Student:Linda\n\nPublication:269\n\nResearcher:Thor\nsupervises Student:Sten"
+      },
+      "date": 1654737753931
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\nauthors Publication:220\n\nPublication:220\ncites Publication:190\ncites Publication:235\ncites Publication:240\n\nResearcher:Elin\nsupervises Student:Sten\nsupervises Student:Linda\n\nPublication:269\n\nResearcher:Thor\nsupervises Student:Sten\n\nPublication:269\ncites Publication:235\n\nResearcher:Elin\nauthors Publication:269\n\nPublication:269\ncites Publication:240"
+      },
+      "date": 1654738105232
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5b08f5324b8edf75"
+      },
+      "id": "5b08f5324b8edf75",
+      "type": "add",
+      "after": "5469a6eea82d4a15",
+      "date": 1654739261515
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 300"
+      },
+      "date": 1654739273255
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 400"
+      },
+      "date": 1654739455624
+    },
+    {
+      "id": "5b08f5324b8edf75",
+      "type": "move",
+      "order": [
+        "b8a6fa92d6162d14",
+        "98e79c0746f1d785",
+        "53a6c4997f9ffc2a",
+        "5b08f5324b8edf75",
+        "9e746ba2a83b9e6a",
+        "728130ba59685924",
+        "4660873eedafed52",
+        "5469a6eea82d4a15"
+      ],
+      "date": 1654739565539
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 350"
+      },
+      "date": 1654739581471
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 360"
+      },
+      "date": 1654739913440
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 370"
+      },
+      "date": 1654739922498
+    },
+    {
+      "id": "98e79c0746f1d785",
+      "type": "move",
+      "order": [
+        "b8a6fa92d6162d14",
+        "53a6c4997f9ffc2a",
+        "5b08f5324b8edf75",
+        "9e746ba2a83b9e6a",
+        "728130ba59685924",
+        "4660873eedafed52",
+        "5469a6eea82d4a15",
+        "98e79c0746f1d785"
+      ],
+      "date": 1654739982695
+    },
+    {
+      "type": "add",
+      "id": "e3727e6fb43e2d27",
+      "item": {
+        "type": "paragraph",
+        "id": "e3727e6fb43e2d27",
+        "text": "We duplicate this graph with input below then format the graph data in a format easily compared with the published figure."
+      },
+      "after": "b8a6fa92d6162d14",
+      "date": 1654740133841
+    },
+    {
+      "id": "e3727e6fb43e2d27",
+      "type": "move",
+      "order": [
+        "b8a6fa92d6162d14",
+        "53a6c4997f9ffc2a",
+        "e3727e6fb43e2d27",
+        "5b08f5324b8edf75",
+        "9e746ba2a83b9e6a",
+        "728130ba59685924",
+        "4660873eedafed52",
+        "5469a6eea82d4a15",
+        "98e79c0746f1d785"
+      ],
+      "date": 1654740136253
+    },
+    {
+      "type": "edit",
+      "id": "e3727e6fb43e2d27",
+      "item": {
+        "type": "paragraph",
+        "id": "e3727e6fb43e2d27",
+        "text": "We duplicate this graph with input below then format that graph data in a style easily compared with the published figure."
+      },
+      "date": 1654740162392
+    },
+    {
+      "type": "edit",
+      "id": "e3727e6fb43e2d27",
+      "item": {
+        "type": "paragraph",
+        "id": "e3727e6fb43e2d27",
+        "text": "We duplicate this graph with input below then format that graph data in a style easily compared with the published figure. [https://github.com/WardCunningham/assets/blob/master/pages/sigmod-example-unbound/format.html github]"
+      },
+      "date": 1654740398496
+    },
+    {
+      "type": "edit",
+      "id": "e3727e6fb43e2d27",
+      "item": {
+        "type": "paragraph",
+        "id": "e3727e6fb43e2d27",
+        "text": "We duplicate this graph with input below then format that graph data in a style easily compared with the published figure by converting to index origin 1. [https://github.com/WardCunningham/assets/blob/master/pages/sigmod-example-unbound/format.html github]"
+      },
+      "date": 1654740547026
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "9505e62d6102dcb5"
+      },
+      "id": "9505e62d6102dcb5",
+      "type": "add",
+      "after": "98e79c0746f1d785",
+      "date": 1654741176571
+    },
+    {
+      "type": "edit",
+      "id": "9505e62d6102dcb5",
+      "item": {
+        "type": "paragraph",
+        "id": "9505e62d6102dcb5",
+        "text": "Freeform input isn't careful to make unique nodes so we run the downloaded graph through the composite.html script as we have in [[Food Web Unbound]]]"
+      },
+      "date": 1654741282279
+    },
+    {
+      "type": "edit",
+      "id": "9505e62d6102dcb5",
+      "item": {
+        "type": "paragraph",
+        "id": "9505e62d6102dcb5",
+        "text": "Freeform input isn't careful to make unique nodes so we run the downloaded graph through the composite.html script as we have in [[Food Web Unbound]]."
+      },
+      "date": 1654741288077
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 270"
+      },
+      "date": 1654741416019
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 300"
+      },
+      "date": 1654741427650
+    },
+    {
+      "id": "9505e62d6102dcb5",
+      "type": "move",
+      "order": [
+        "b8a6fa92d6162d14",
+        "53a6c4997f9ffc2a",
+        "e3727e6fb43e2d27",
+        "5b08f5324b8edf75",
+        "9e746ba2a83b9e6a",
+        "728130ba59685924",
+        "4660873eedafed52",
+        "5469a6eea82d4a15",
+        "9505e62d6102dcb5",
+        "98e79c0746f1d785"
+      ],
+      "date": 1654741491690
+    },
+    {
+      "type": "edit",
+      "id": "5b08f5324b8edf75",
+      "item": {
+        "type": "frame",
+        "id": "5b08f5324b8edf75",
+        "text": "http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/format.html\nHEIGHT 350"
+      },
+      "date": 1654746121212
+    },
+    {
+      "type": "edit",
+      "id": "e3727e6fb43e2d27",
+      "item": {
+        "type": "paragraph",
+        "id": "e3727e6fb43e2d27",
+        "text": "We duplicate this graph with input below then format that graph data in a style easily compared with the published figure by converting to index origin one. [https://github.com/WardCunningham/assets/blob/master/pages/sigmod-example-unbound/format.html github]"
+      },
+      "date": 1654746946169
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Niles\nauthors Publication:220\n\nPublication:220\ncites Publication:190\n\nPublication:235\ncites Publication:220\n\nPublication:240\ncites Publication:220\n\nResearcher:Elin\nauthors Publication:240\nsupervises Student:Sten\nsupervises Student:Linda\n\nPublication:269\n\nResearcher:Thor\nsupervises Student:Sten\n\nPublication:269\ncites Publication:235\n\nResearcher:Elin\nauthors Publication:269\n\nPublication:269\ncites Publication:240"
+      },
+      "date": 1654884174183
+    },
+    {
+      "type": "edit",
+      "id": "728130ba59685924",
+      "item": {
+        "type": "code",
+        "id": "728130ba59685924",
+        "text": "Researcher:Nils\nauthors Publication:220\n\nPublication:220\ncites Publication:190\n\nPublication:235\ncites Publication:220\n\nPublication:240\ncites Publication:220\n\nResearcher:Elin\nauthors Publication:240\nsupervises Student:Sten\nsupervises Student:Linda\n\nPublication:269\n\nResearcher:Thor\nsupervises Student:Sten\n\nPublication:269\ncites Publication:235\n\nResearcher:Elin\nauthors Publication:269\n\nPublication:269\ncites Publication:240"
+      },
+      "date": 1654885063433
+    },
+    {
+      "type": "edit",
+      "id": "9505e62d6102dcb5",
+      "item": {
+        "type": "paragraph",
+        "id": "9505e62d6102dcb5",
+        "text": "Freeform input is now more careful to not duplicate nodes. We've worked breadth first here but can string relations depth first using the keyword \"which\". See [[Food Web Unbound]]"
+      },
+      "date": 1654965554997
+    },
+    {
+      "type": "edit",
+      "id": "9505e62d6102dcb5",
+      "item": {
+        "type": "paragraph",
+        "id": "9505e62d6102dcb5",
+        "text": "Freeform input now careful to not duplicate nodes. We've worked breadth first here but can string relations depth first using the keyword \"which\". See [[Food Web Unbound]]"
+      },
+      "date": 1654965572369
+    },
+    {
+      "type": "fork",
+      "site": "ward.dojo.fed.wiki",
+      "date": 1695936258557
+    },
+    {
+      "type": "fork",
+      "site": "search.dojo.fed.wiki",
+      "date": 1775073746839
+    },
+    {
+      "type": "remove",
+      "id": "5469a6eea82d4a15",
+      "date": 1775073775887
+    },
+    {
+      "type": "edit",
+      "id": "53a6c4997f9ffc2a",
+      "item": {
+        "type": "html",
+        "id": "53a6c4997f9ffc2a",
+        "text": "<img width=100% src=http://search.federatedwiki.org/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg>"
+      },
+      "date": 1775073814263
+    }
+  ]
+}

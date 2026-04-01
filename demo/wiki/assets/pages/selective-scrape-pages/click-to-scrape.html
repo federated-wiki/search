@@ -1,0 +1,237 @@
+<html>
+  <head>
+    <style>
+      pre {
+        width: 400px;
+        background-color: #eee;
+        margin: 20px;
+        padding: 5px;
+        overflow: hidden;
+      }
+      div.column {
+        float:left;
+      }
+      #sitestodo {
+        cursor:pointer;
+      }
+      span:hover{
+        background-color: #ffe;
+      }
+    </style>
+  </head>
+  <body>
+    <div class='column' >
+    <div>
+      <h3> sites todo (0)</h3>
+      <pre id="sitestodo" onclick=dosite(event)></pre>
+    </div>
+    <div>
+      <h3> sites done (0)</h3>
+      <pre id="sitesdone"></pre>
+    </div>
+    </div>
+    <div class='column'>
+    <div>
+      <h3> pages todo (0)</h3>
+      <pre id="pagestodo"></pre>
+    </div>
+    </div>
+    <div class='column'>
+    <div>
+      <h3> pages done (0)</h3>
+      <pre id="pagesdone"></pre>
+    </div>
+    </div>
+    <script type=module>
+
+
+    const params = Object.fromEntries(new URLSearchParams(location.search).entries())
+    const site = params.site || 'found.ward.fed.wiki'
+    const days = params.days || 30
+
+    const sites_todo = [site]
+    const sites_done = []
+
+    const pages_todo = []
+    const pages_done = []
+
+    const json_graph = {} // site => slug => links
+    const oldest = Date.now() - 1000*60*60*24*days
+
+    function chronological (a, b) {
+      return a.date - b.date
+    }
+
+    function count (id,list) {
+      const heading = document.getElementById(id).parentElement.querySelector('h3')
+      heading.innerText = (heading.innerText.replace(/\d+/, list.length))
+    }
+
+    function show(id,list) {
+      document.getElementById(id).innerHTML = list
+        .map(item => `<span>${item}</span>`)
+        .join("<br>")
+      count(id,list)
+      return list;
+    }
+
+    function report() {
+      show('sitestodo', sites_todo);
+      show('sitesdone', sites_done.slice().reverse());
+      show('pagestodo', pages_todo);
+      show('pagesdone', pages_done.slice().reverse());
+    }
+
+    function new_site (site) {
+      return sites_done.indexOf(site) < 0 &&
+           sites_todo.indexOf(site) < 0
+    }
+
+    function new_page (site_page) {
+      return pages_done.indexOf(site_page) < 0 &&
+           pages_todo.indexOf(site_page) < 0
+    }
+
+    function remove (array, element) {
+      const index = array.indexOf(element);
+      if (index > -1) {
+        array.splice(index, 1);
+      }
+      return element
+    }
+
+    function do_site(site, sitemap) {
+      const want = sitemap
+        // .filter(entry = entry.date > oldest)
+        .sort((a,b) => b.date - a.date)
+        .slice(0,10)
+      const site_graph = json_graph[site] = {}
+      for (const entry of want) {
+        try {
+          // entry: {date, slug, title, synopsis}
+          const site_page = site + '/' + entry.slug
+          if (new_page(site_page)) {
+            pages_todo.push(site_page)
+          }
+          report();
+          site_graph[entry.slug] = {
+            date: entry.date,
+            title: entry.title,
+            synopsis: entry.synopsis
+          }
+        }
+        catch (e) {
+        }
+      }
+      pages_todo.sort(chronological);
+      sites_inflight--
+    }
+
+    function do_page(site, slug, page) {
+      // {title, story, journal}
+      const page_node = json_graph[site][slug]
+      try {
+        const links = {}
+        for (const item of page.story) {
+          // {type:'paragraph', text}
+          // {type:'image', text, url}
+          // {type:'reference', text, site, slug}
+
+          if (item.site && new_site(item.site)) {
+            sites_todo.push(item.site)
+          }
+          for (var link of (item.text||'').match(/\[\[(.+?)\]\]/g)||[]) {
+            links[link.substr(2,link.length-4)] = true
+          }
+        }
+        page_node['links'] = Object.keys(links)
+
+        const sites = [site]
+        for (var i=page.journal.length-1; i>=0; i--) {
+          const action = page.journal[i]
+          // {type, date}
+          // {type:'fork', date, site}
+          if (action.site && new_site(action.site)) {
+            sites_todo.push(action.site)
+
+          }
+          if (action.site && !sites.includes(action.site)) {
+            sites.push(action.site)
+          }
+        }
+        page_node['sites'] = sites
+      }
+      catch (e) {
+      }
+      pages_inflight--
+
+    }
+
+    function fetch_site(site) {
+      sites_inflight++
+      sites_done.push(site); //report()
+      const url = 'http://' + site + '/system/sitemap.json';
+      fetch(url)
+        .then(res=>res.json())
+        .then(sitemap=>do_site(site, sitemap))
+        .catch(err=>sites_inflight--)
+    }
+
+    function fetch_page(site_page) {
+      pages_inflight++
+      pages_done.push(site_page); //report()
+      const detail = site_page.split('/'),
+        url = 'http://' + detail[0] + '/' + detail[1] + '.json'
+      fetch(url)
+        .then(res=>res.json())
+        .then(page=>do_page(detail[0], detail[1], page))
+        .catch(err=>pages_inflight--)
+    }
+
+    function download(filename, text) {
+      const element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', filename);
+      element.style.display = 'none';
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+
+    let timer
+    function next () {
+      // if (sites_todo.length && Math.random() < 0.1) {
+      //   fetch_site(sites_todo.shift())
+      // }
+      if (pages_todo.length) {
+        fetch_page(pages_todo.shift())
+      }
+      report()
+      if ((sites_todo.length + sites_inflight +
+         pages_todo.length + pages_inflight) == 0) {
+          clearInterval(timer)
+          // console.log(json_graph)
+          // download(`scrape-${site}-${days}.json`, JSON.stringify(json_graph,null,2))
+      }
+    }
+
+    window.dosite = event => {
+      const site = event.target.innerText
+      fetch_site(site)
+      const index = sites_todo.indexOf(site)
+      if(index >= 0) sites_todo.splice(index,1)
+      if (pages_todo.length) {
+        fetch_page(pages_todo.shift())
+      }
+      report()
+    }
+
+    let sites_inflight = 0
+    let pages_inflight = 0
+    report()
+    timer = setInterval(next,500)
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,172 @@
+{
+  "title": "log file",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "The scrap script output is redirected to a log file. [http://search.federatedwiki.org:3030/logs logs]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "scrape script --> HERE\nHERE"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "paragraph",
+      "id": "7cd07f8f8314f01a",
+      "text": "The log records sitemap size when successful and an error message otherwise. Sitemap pages with new dates are fetched and summarized."
+    },
+    {
+      "type": "code",
+      "id": "4e2c756519b349c2",
+      "text": "andrew.cryptoacademy.org, 2 pages\nandrew.dork.wiki.org, 2 pages\nandrew.edfedwiki.com, sitemap: 743: unexpected token\nandrew.lcf.fed.wiki.org, 0 pages\nandrew.outlandish.academy, 0 pages\nandrew.tries.fed.wiki, 2 pages\nandreworford.com, 126 pages\n\tMadame Bovary, 0 days ago\n\t\tstory 5, journal 13\n\t\t\twords 106\n\t\t\tlinks 3\n\t\t\titems 5\n\t\t\tplugins 2\n\tProject Bovary, 0 days ago\n\t\tstory 1, journal 4\n\t\t\titems 1\n\t\t\tplugins 1"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "log file",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1511738571239
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "scrape script --> HERE\nHERE"
+      },
+      "date": 1511738632281
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "The scrap script output is redirected to a log file."
+      },
+      "date": 1511738736763
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "The scrap script output is redirected to a log file. [http://search.fed.wiki.org:3030/logs logs]"
+      },
+      "date": 1511738781865
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "4e2c756519b349c2"
+      },
+      "id": "4e2c756519b349c2",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1511738905527
+    },
+    {
+      "type": "edit",
+      "id": "4e2c756519b349c2",
+      "item": {
+        "type": "code",
+        "id": "4e2c756519b349c2",
+        "text": "andrew.cryptoacademy.org, 2 pages\nandrew.dork.wiki.org, 2 pages\nandrew.edfedwiki.com, sitemap: 743: unexpected token at '<!doctype html> <html lang=\"en-US\" > <head> <!-- Meta Tags --> <meta http-equiv=\"Cont\nandrew.lcf.fed.wiki.org, 0 pages\nandrew.outlandish.academy, 0 pages\nandrew.tries.fed.wiki, 2 pages\nandreworford.com, 126 pages\n\tMadame Bovary, 0 days ago\n\t\tstory 5, journal 13\n\t\t\twords 106\n\t\t\tlinks 3\n\t\t\titems 5\n\t\t\tplugins 2\n\tProject Bovary, 0 days ago\n\t\tstory 1, journal 4\n\t\t\titems 1\n\t\t\tplugins 1"
+      },
+      "date": 1511738917298
+    },
+    {
+      "type": "edit",
+      "id": "4e2c756519b349c2",
+      "item": {
+        "type": "code",
+        "id": "4e2c756519b349c2",
+        "text": "andrew.cryptoacademy.org, 2 pages\nandrew.dork.wiki.org, 2 pages\nandrew.edfedwiki.com, sitemap: 743: unexpected token at '<!doctype html> <head> <!-- Meta Tags --> ...\nandrew.lcf.fed.wiki.org, 0 pages\nandrew.outlandish.academy, 0 pages\nandrew.tries.fed.wiki, 2 pages\nandreworford.com, 126 pages\n\tMadame Bovary, 0 days ago\n\t\tstory 5, journal 13\n\t\t\twords 106\n\t\t\tlinks 3\n\t\t\titems 5\n\t\t\tplugins 2\n\tProject Bovary, 0 days ago\n\t\tstory 1, journal 4\n\t\t\titems 1\n\t\t\tplugins 1"
+      },
+      "date": 1511738972591
+    },
+    {
+      "type": "edit",
+      "id": "4e2c756519b349c2",
+      "item": {
+        "type": "code",
+        "id": "4e2c756519b349c2",
+        "text": "andrew.cryptoacademy.org, 2 pages\nandrew.dork.wiki.org, 2 pages\nandrew.edfedwiki.com, sitemap: 743: unexpected token at  ...\nandrew.lcf.fed.wiki.org, 0 pages\nandrew.outlandish.academy, 0 pages\nandrew.tries.fed.wiki, 2 pages\nandreworford.com, 126 pages\n\tMadame Bovary, 0 days ago\n\t\tstory 5, journal 13\n\t\t\twords 106\n\t\t\tlinks 3\n\t\t\titems 5\n\t\t\tplugins 2\n\tProject Bovary, 0 days ago\n\t\tstory 1, journal 4\n\t\t\titems 1\n\t\t\tplugins 1"
+      },
+      "date": 1511738986701
+    },
+    {
+      "type": "edit",
+      "id": "4e2c756519b349c2",
+      "item": {
+        "type": "code",
+        "id": "4e2c756519b349c2",
+        "text": "andrew.cryptoacademy.org, 2 pages\nandrew.dork.wiki.org, 2 pages\nandrew.edfedwiki.com, sitemap: 743: unexpected token ...\nandrew.lcf.fed.wiki.org, 0 pages\nandrew.outlandish.academy, 0 pages\nandrew.tries.fed.wiki, 2 pages\nandreworford.com, 126 pages\n\tMadame Bovary, 0 days ago\n\t\tstory 5, journal 13\n\t\t\twords 106\n\t\t\tlinks 3\n\t\t\titems 5\n\t\t\tplugins 2\n\tProject Bovary, 0 days ago\n\t\tstory 1, journal 4\n\t\t\titems 1\n\t\t\tplugins 1"
+      },
+      "date": 1511739006357
+    },
+    {
+      "type": "edit",
+      "id": "4e2c756519b349c2",
+      "item": {
+        "type": "code",
+        "id": "4e2c756519b349c2",
+        "text": "andrew.cryptoacademy.org, 2 pages\nandrew.dork.wiki.org, 2 pages\nandrew.edfedwiki.com, sitemap: 743: unexpected token\nandrew.lcf.fed.wiki.org, 0 pages\nandrew.outlandish.academy, 0 pages\nandrew.tries.fed.wiki, 2 pages\nandreworford.com, 126 pages\n\tMadame Bovary, 0 days ago\n\t\tstory 5, journal 13\n\t\t\twords 106\n\t\t\tlinks 3\n\t\t\titems 5\n\t\t\tplugins 2\n\tProject Bovary, 0 days ago\n\t\tstory 1, journal 4\n\t\t\titems 1\n\t\t\tplugins 1"
+      },
+      "date": 1511739030926
+    },
+    {
+      "type": "add",
+      "id": "7cd07f8f8314f01a",
+      "item": {
+        "type": "paragraph",
+        "id": "7cd07f8f8314f01a",
+        "text": "The log records sitemap size when successful and an error message otherwise. Sitemap pages with new dates are fetched and summarized."
+      },
+      "after": "7a22af872bf037d5",
+      "date": 1511739193195
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078662391
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "The scrap script output is redirected to a log file. [http://search.federatedwiki.org:3030/logs logs]"
+      },
+      "date": 1775078671399
+    }
+  ]
+}

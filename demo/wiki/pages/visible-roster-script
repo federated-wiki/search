@@ -1,0 +1,146 @@
+{
+  "title": "visible roster script",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Creates an organized roster of the federation. [https://github.com/WardCunningham/search/blob/master/roster.rb github]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "activity script --> HERE\nsites directory --> HERE\nHERE\nHERE --> visible federation page"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "roster",
+      "id": "5e70db79a59ac224",
+      "text": "ROSTER search.federatedwiki.org:3030/visible-federation"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "visible roster script",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1512331283255
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nHERE"
+      },
+      "date": 1512331304082
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Creates an organized roster of the federation. "
+      },
+      "date": 1512337741675
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Creates an organized roster of the federation. [https://github.com/WardCunningham/search/blob/master/roster.rb github]"
+      },
+      "date": 1512337755266
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "5e70db79a59ac224"
+      },
+      "id": "5e70db79a59ac224",
+      "type": "add",
+      "after": "7a22af872bf037d5",
+      "date": 1512338215498
+    },
+    {
+      "type": "edit",
+      "id": "5e70db79a59ac224",
+      "item": {
+        "type": "roster",
+        "id": "5e70db79a59ac224",
+        "text": "ROSTER search.fed.wiki.org:3030/visible-federation"
+      },
+      "date": 1512338246933
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "sites directory --> HERE\nactivity script --> HERE\nHERE"
+      },
+      "date": 1512351309200
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nsites directory --> HERE\nHERE"
+      },
+      "date": 1512351322873
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "activity script --> HERE\nsites directory --> HERE\nHERE\nHERE --> visible federation page"
+      },
+      "date": 1512351391592
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078705187
+    },
+    {
+      "type": "edit",
+      "id": "5e70db79a59ac224",
+      "item": {
+        "type": "roster",
+        "id": "5e70db79a59ac224",
+        "text": "ROSTER search.federatedwiki.org:3030/visible-federation"
+      },
+      "date": 1775078712252
+    }
+  ]
+}

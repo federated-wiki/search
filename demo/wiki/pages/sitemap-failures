@@ -1,0 +1,343 @@
+{
+  "title": "Sitemap Failures",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "e338173ed308f92c",
+      "text": "We notice that scrapes take longer and longer. A pet theory is that sitemap fetches are timing out. We've changed the curl -m time limit from 10 to 5 seconds. Now we wonder what effect that will have."
+    },
+    {
+      "type": "paragraph",
+      "id": "91803fa56b2b45c6",
+      "text": "We notice a long term increase in the scrape run time from 20 to 80 minutes. Sudden drops are actually the clock wrapping around at 80. [http://search.federatedwiki.org:3030/counts.html plots]"
+    },
+    {
+      "type": "paragraph",
+      "id": "f203afc5b623edfd",
+      "text": "We plot a reasonably accurate count of active sites by finding a correctly formatted sitemap. This runs in the  mid 800s for each scrape without the volatility we see above. "
+    },
+    {
+      "type": "paragraph",
+      "id": "ebb0da714b4f9955",
+      "text": "We see timeouts in the log as json parse failures. Empty results complain that two octets are required. [http://search.federatedwiki.org:3030/logs logs]"
+    },
+    {
+      "type": "paragraph",
+      "id": "9acece075bd02229",
+      "text": "We use this script to count how many sitemap fetch failures we had each run over the last week. "
+    },
+    {
+      "type": "paragraph",
+      "id": "b05584d6ea4bbc59",
+      "text": " "
+    },
+    {
+      "type": "code",
+      "id": "cf387128104d7699",
+      "text": "for i in logs/*; do\n  echo $i `grep octet $i | wc -l`\ndone"
+    },
+    {
+      "type": "paragraph",
+      "id": "6944d29c840165cc",
+      "text": "This count was on Sept 18, 2016 right before we shortened the time out time from 10 to 5 seconds."
+    },
+    {
+      "type": "code",
+      "id": "aa0736cf25039bfe",
+      "text": "logs/Fri-0100 151\nlogs/Fri-0700 165\nlogs/Fri-1300 166\nlogs/Fri-1900 152\nlogs/Mon-0100 151\nlogs/Mon-0700 159\nlogs/Mon-1300 166\nlogs/Mon-1900 161\nlogs/Sat-0100 152\nlogs/Sat-0700 153\nlogs/Sat-1300 155\nlogs/Sat-1900 150\nlogs/Sun-0100 156\nlogs/Sun-0700 160\nlogs/Sun-1300 152\nlogs/Sun-1900 152\nlogs/Thu-0100 152\nlogs/Thu-0700 158\nlogs/Thu-1300 158\nlogs/Thu-1900 154\nlogs/Tue-0100 177\nlogs/Tue-0700 184\nlogs/Tue-1300 183\nlogs/Tue-1900 157\nlogs/Wed-0100 152\nlogs/Wed-0700 207\nlogs/Wed-1300 172\nlogs/Wed-1900 156\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Sitemap Failures",
+        "story": []
+      },
+      "date": 1474249290282
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "e338173ed308f92c"
+      },
+      "id": "e338173ed308f92c",
+      "type": "add",
+      "date": 1474249292230
+    },
+    {
+      "type": "edit",
+      "id": "e338173ed308f92c",
+      "item": {
+        "type": "paragraph",
+        "id": "e338173ed308f92c",
+        "text": "We notice that scrapes take longer and longer. A pet theory is that sitemap fetches are timing out. We've changed the curl -m time limit from 10 to 5 seconds. Now we wonder what effect that will have."
+      },
+      "date": 1474249403623
+    },
+    {
+      "type": "add",
+      "id": "b05584d6ea4bbc59",
+      "item": {
+        "type": "paragraph",
+        "id": "b05584d6ea4bbc59",
+        "text": " "
+      },
+      "after": "e338173ed308f92c",
+      "date": 1474249408272
+    },
+    {
+      "type": "add",
+      "id": "ebb0da714b4f9955",
+      "item": {
+        "type": "paragraph",
+        "id": "ebb0da714b4f9955",
+        "text": "We see timeouts in the log as json parse failures. Empty results complain that at least two octets are required. [http://search.fed.wiki.org:3030/logs logs]"
+      },
+      "after": "e338173ed308f92c",
+      "date": 1474249498346
+    },
+    {
+      "type": "edit",
+      "id": "ebb0da714b4f9955",
+      "item": {
+        "type": "paragraph",
+        "id": "ebb0da714b4f9955",
+        "text": "We see timeouts in the log as json parse failures. Empty results complain that two octets are required. [http://search.fed.wiki.org:3030/logs logs]"
+      },
+      "date": 1474249521928
+    },
+    {
+      "type": "add",
+      "id": "91803fa56b2b45c6",
+      "item": {
+        "type": "paragraph",
+        "id": "91803fa56b2b45c6",
+        "text": "We notice a long term increase in the scrape time from 30 minutes to well over an hour. [http://search.fed.wiki.org:3030/counts.html plots]"
+      },
+      "after": "ebb0da714b4f9955",
+      "date": 1474249802083
+    },
+    {
+      "type": "edit",
+      "id": "91803fa56b2b45c6",
+      "item": {
+        "type": "paragraph",
+        "id": "91803fa56b2b45c6",
+        "text": "We notice a long term increase in the scrape run time from 30 minutes to well over an hour. Sudden drops are actually the clock wrapping around at 90 minutes. [http://search.fed.wiki.org:3030/counts.html plots]"
+      },
+      "date": 1474249875952
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cf387128104d7699"
+      },
+      "id": "cf387128104d7699",
+      "type": "add",
+      "after": "b05584d6ea4bbc59",
+      "date": 1474249889609
+    },
+    {
+      "type": "edit",
+      "id": "cf387128104d7699",
+      "item": {
+        "type": "code",
+        "id": "cf387128104d7699",
+        "text": "for i in logs/*; do\n  echo $i `grep octet $i | wc -l`\ndone"
+      },
+      "date": 1474249906224
+    },
+    {
+      "type": "add",
+      "id": "9acece075bd02229",
+      "item": {
+        "type": "paragraph",
+        "id": "9acece075bd02229",
+        "text": "We use this script to count how many sitemap fetch failures we had each run over the last week. "
+      },
+      "after": "91803fa56b2b45c6",
+      "date": 1474249958774
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "6944d29c840165cc"
+      },
+      "id": "6944d29c840165cc",
+      "type": "add",
+      "after": "cf387128104d7699",
+      "date": 1474249962232
+    },
+    {
+      "type": "edit",
+      "id": "6944d29c840165cc",
+      "item": {
+        "type": "paragraph",
+        "id": "6944d29c840165cc",
+        "text": "This count was on Sept 18, 2016 right before we shortened the time out time."
+      },
+      "date": 1474250005971
+    },
+    {
+      "type": "edit",
+      "id": "6944d29c840165cc",
+      "item": {
+        "type": "paragraph",
+        "id": "6944d29c840165cc",
+        "text": "This count was on Sept 18, 2016 right before we shortened the time out time from 10 to 5 seconds."
+      },
+      "date": 1474250017124
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "aa0736cf25039bfe"
+      },
+      "id": "aa0736cf25039bfe",
+      "type": "add",
+      "after": "6944d29c840165cc",
+      "date": 1474250029626
+    },
+    {
+      "type": "edit",
+      "id": "aa0736cf25039bfe",
+      "item": {
+        "type": "code",
+        "id": "aa0736cf25039bfe",
+        "text": "logs/Fri-0100 151\nlogs/Fri-0700 165\nlogs/Fri-1300 166\nlogs/Fri-1900 152\nlogs/Mon-0100 151\nlogs/Mon-0700 159\nlogs/Mon-1300 166\nlogs/Mon-1900 161\nlogs/Sat-0100 152\nlogs/Sat-0700 153\nlogs/Sat-1300 155\nlogs/Sat-1900 150\nlogs/Sun-0100 156\nlogs/Sun-0700 160\nlogs/Sun-1300 152\nlogs/Sun-1900 152\nlogs/Thu-0100 152\nlogs/Thu-0700 158\nlogs/Thu-1300 158\nlogs/Thu-1900 154\nlogs/Tue-0100 177\nlogs/Tue-0700 184\nlogs/Tue-1300 183\nlogs/Tue-1900 157\nlogs/Wed-0100 152\nlogs/Wed-0700 207\nlogs/Wed-1300 172\nlogs/Wed-1900 156\n"
+      },
+      "date": 1474250034276
+    },
+    {
+      "type": "add",
+      "id": "f203afc5b623edfd",
+      "item": {
+        "type": "paragraph",
+        "id": "f203afc5b623edfd",
+        "text": "We plot a reasonably accurate count of active sites by finding a correctly formatted sitemap. This runs in the "
+      },
+      "after": "91803fa56b2b45c6",
+      "date": 1474250292101
+    },
+    {
+      "type": "edit",
+      "id": "f203afc5b623edfd",
+      "item": {
+        "type": "paragraph",
+        "id": "f203afc5b623edfd",
+        "text": "We plot a reasonably accurate count of active sites by finding a correctly formatted sitemap. This runs in the  mid 800s for each scrape."
+      },
+      "date": 1474250314021
+    },
+    {
+      "type": "move",
+      "order": [
+        "e338173ed308f92c",
+        "ebb0da714b4f9955",
+        "91803fa56b2b45c6",
+        "9acece075bd02229",
+        "b05584d6ea4bbc59",
+        "cf387128104d7699",
+        "6944d29c840165cc",
+        "f203afc5b623edfd",
+        "aa0736cf25039bfe"
+      ],
+      "id": "f203afc5b623edfd",
+      "date": 1474250350526
+    },
+    {
+      "type": "move",
+      "order": [
+        "e338173ed308f92c",
+        "ebb0da714b4f9955",
+        "91803fa56b2b45c6",
+        "9acece075bd02229",
+        "b05584d6ea4bbc59",
+        "cf387128104d7699",
+        "6944d29c840165cc",
+        "aa0736cf25039bfe",
+        "f203afc5b623edfd"
+      ],
+      "id": "f203afc5b623edfd",
+      "date": 1474250355023
+    },
+    {
+      "type": "edit",
+      "id": "f203afc5b623edfd",
+      "item": {
+        "type": "paragraph",
+        "id": "f203afc5b623edfd",
+        "text": "We plot a reasonably accurate count of active sites by finding a correctly formatted sitemap. This runs in the  mid 800s for each scrape without the volatility we see above. "
+      },
+      "date": 1474250394775
+    },
+    {
+      "type": "edit",
+      "id": "91803fa56b2b45c6",
+      "item": {
+        "type": "paragraph",
+        "id": "91803fa56b2b45c6",
+        "text": "We notice a long term increase in the scrape run time from 20 to 80 minutes. Sudden drops are actually the clock wrapping around at 80. [http://search.fed.wiki.org:3030/counts.html plots]"
+      },
+      "date": 1474251114274
+    },
+    {
+      "type": "move",
+      "order": [
+        "e338173ed308f92c",
+        "91803fa56b2b45c6",
+        "ebb0da714b4f9955",
+        "9acece075bd02229",
+        "b05584d6ea4bbc59",
+        "cf387128104d7699",
+        "6944d29c840165cc",
+        "aa0736cf25039bfe",
+        "f203afc5b623edfd"
+      ],
+      "id": "91803fa56b2b45c6",
+      "date": 1474255375462
+    },
+    {
+      "type": "move",
+      "order": [
+        "e338173ed308f92c",
+        "91803fa56b2b45c6",
+        "f203afc5b623edfd",
+        "ebb0da714b4f9955",
+        "9acece075bd02229",
+        "b05584d6ea4bbc59",
+        "cf387128104d7699",
+        "6944d29c840165cc",
+        "aa0736cf25039bfe"
+      ],
+      "id": "f203afc5b623edfd",
+      "date": 1474255403470
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1775080178902
+    },
+    {
+      "type": "edit",
+      "id": "91803fa56b2b45c6",
+      "item": {
+        "type": "paragraph",
+        "id": "91803fa56b2b45c6",
+        "text": "We notice a long term increase in the scrape run time from 20 to 80 minutes. Sudden drops are actually the clock wrapping around at 80. [http://search.federatedwiki.org:3030/counts.html plots]"
+      },
+      "date": 1775080186777
+    },
+    {
+      "type": "edit",
+      "id": "ebb0da714b4f9955",
+      "item": {
+        "type": "paragraph",
+        "id": "ebb0da714b4f9955",
+        "text": "We see timeouts in the log as json parse failures. Empty results complain that two octets are required. [http://search.federatedwiki.org:3030/logs logs]"
+      },
+      "date": 1775080212551
+    }
+  ]
+}

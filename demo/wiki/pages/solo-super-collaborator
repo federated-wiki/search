@@ -1,0 +1,416 @@
+{
+  "title": "Solo Super Collaborator",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "f71a8bfb601e5f55",
+      "text": "The Super Collaborator explored online collaboration based on Croquet. We've stepped back from this interaction but think its graph merging mechanism will be useful for relating \"read me\" level documentation across many repos."
+    },
+    {
+      "type": "paragraph",
+      "id": "6852c9ca6ff07f40",
+      "text": "Note: This tool has a first, middle and last name. Informally we refer to it as \"Solo\" but more properly as the \"Solo Collaborator\" to be clear it is one of several \"Collaborators\"."
+    },
+    {
+      "type": "paragraph",
+      "id": "86e1fdfe24990dae",
+      "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.federatedwiki.org/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Client.graph.jsonl readme]"
+    },
+    {
+      "type": "assets",
+      "id": "b14875952fc207d8",
+      "text": "pages/solo-super-collaborator"
+    },
+    {
+      "type": "paragraph",
+      "id": "b17662642e5c0a6a",
+      "text": "The sample data above is from the Federation Search service annotated as part of this experiment based on a real need for a system model. [https://github.com/WardCunningham/search/tree/master/graphs github]"
+    },
+    {
+      "type": "paragraph",
+      "id": "bd178bbecd6500c2",
+      "text": "See [[Drawing Automation]] for more about our methodology."
+    },
+    {
+      "type": "paragraph",
+      "id": "90cb2e7aebf139dc",
+      "text": "See [[Solo Reads and Writes]] with files and on pages."
+    },
+    {
+      "type": "paragraph",
+      "id": "dac6b83227332a87",
+      "text": "See [[Site Link Map]] for solo exploration of a pattern site."
+    },
+    {
+      "type": "paragraph",
+      "id": "9d9fda136981c0c6",
+      "text": "See [[Zoom to Group]] to recast a cluster as its own graph."
+    },
+    {
+      "type": "paragraph",
+      "id": "3a5b0a0a76a494e9",
+      "text": "See [[Utility Converters]] borrowed from the original app."
+    },
+    {
+      "type": "paragraph",
+      "id": "9497815dbb454d0c",
+      "text": "See [[Aspects of the Solo Collaborator]] for self reference."
+    },
+    {
+      "type": "paragraph",
+      "id": "16aca7464fafb370",
+      "text": "See [[About Solo Plugin]] for progress toward plugin."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Solo Super Collaborator",
+        "story": []
+      },
+      "date": 1698937726301
+    },
+    {
+      "id": "f71a8bfb601e5f55",
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "f71a8bfb601e5f55",
+        "text": "The Super Collaborator explored online collaboration based on Croquet. We've stepped back from this interaction but think its graph merging mechanism will be useful for relating \"read me\" level documentation across many repos."
+      },
+      "attribution": {
+        "page": "Solo HSC"
+      },
+      "date": 1698937731196
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b14875952fc207d8"
+      },
+      "id": "b14875952fc207d8",
+      "type": "add",
+      "after": "f71a8bfb601e5f55",
+      "date": 1698937937367
+    },
+    {
+      "type": "edit",
+      "id": "b14875952fc207d8",
+      "item": {
+        "type": "assets",
+        "id": "b14875952fc207d8",
+        "text": "pages/solo-super-collaborator"
+      },
+      "date": 1698937946726
+    },
+    {
+      "type": "add",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with a GitHub action created system diagram encoded as jsonl. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=README.graph.jsonl readme]"
+      },
+      "after": "f71a8bfb601e5f55",
+      "date": 1698940518184
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=README.graph.jsonl readme]"
+      },
+      "date": 1698940709521
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "bd178bbecd6500c2"
+      },
+      "id": "bd178bbecd6500c2",
+      "type": "add",
+      "after": "b14875952fc207d8",
+      "date": 1698940728871
+    },
+    {
+      "type": "edit",
+      "id": "bd178bbecd6500c2",
+      "item": {
+        "type": "paragraph",
+        "id": "bd178bbecd6500c2",
+        "text": "See [[Drawing Automation]] for more about our methodology."
+      },
+      "date": 1698940749205
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "b17662642e5c0a6a"
+      },
+      "id": "b17662642e5c0a6a",
+      "type": "add",
+      "after": "bd178bbecd6500c2",
+      "date": 1698944831623
+    },
+    {
+      "type": "edit",
+      "id": "b17662642e5c0a6a",
+      "item": {
+        "type": "paragraph",
+        "id": "b17662642e5c0a6a",
+        "text": "The sample data above is from the Federation Search service annotated as part of this experiment based on a real need for a system model."
+      },
+      "date": 1698944910415
+    },
+    {
+      "type": "edit",
+      "id": "b17662642e5c0a6a",
+      "item": {
+        "type": "paragraph",
+        "id": "b17662642e5c0a6a",
+        "text": "The sample data above is from the Federation Search service annotated as part of this experiment based on a real need for a system model. [https://github.com/WardCunningham/search/blob/master/doxref.rb github]"
+      },
+      "date": 1698945058739
+    },
+    {
+      "type": "edit",
+      "id": "b17662642e5c0a6a",
+      "item": {
+        "type": "paragraph",
+        "id": "b17662642e5c0a6a",
+        "text": "The sample data above is from the Federation Search service annotated as part of this experiment based on a real need for a system model. [https://github.com/WardCunningham/search/tree/master/graphs github]"
+      },
+      "date": 1698945109845
+    },
+    {
+      "id": "bd178bbecd6500c2",
+      "type": "move",
+      "order": [
+        "f71a8bfb601e5f55",
+        "86e1fdfe24990dae",
+        "b14875952fc207d8",
+        "b17662642e5c0a6a",
+        "bd178bbecd6500c2"
+      ],
+      "date": 1698945124030
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl readme]"
+      },
+      "date": 1699728680052
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&add=eyJuYW1lIjoiQ29sb3IgTW9kdWxlIGJ5IFR5cGUiLCJncmFwaCI6eyJub2RlcyI6W3sidHlwZSI6IkdyYXBodml6IiwiaW4iOltdLCJvdXQiOltdLCJwcm9wcyI6eyJuYW1lIjoiQ29sb3IgTW9kdWxlIGJ5IFR5cGUiLCJlbXBoYXNpcyI6eyJSdWJ5IjoiZmlsbGNvbG9yPWxpZ2h0Ymx1ZSIsIlNoZWxsIjoiZmlsbGNvbG9yPWxpZ2h0Ymx1ZSIsIkhUTUwiOiJmaWxsY29sb3I9YmlzcXVlIiwiUGFnZSI6ImZpbGxjb2xvcj1iaXNxdWUiLCJHcmFwaHZpeiI6ImZpbGxjb2xvcj13aGl0ZSJ9fX1dLCJyZWxzIjpbXX19 readme]"
+      },
+      "date": 1701558706100
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl readme]"
+      },
+      "date": 1701559223879
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl readme]"
+      },
+      "date": 1701559273971
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Client.graph.jsonl readme]"
+      },
+      "date": 1701561269413
+    },
+    {
+      "type": "fork",
+      "site": "search.dojo.fed.wiki",
+      "date": 1703555673243
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "dac6b83227332a87"
+      },
+      "id": "dac6b83227332a87",
+      "type": "add",
+      "after": "bd178bbecd6500c2",
+      "date": 1703555962635
+    },
+    {
+      "type": "edit",
+      "id": "dac6b83227332a87",
+      "item": {
+        "type": "paragraph",
+        "id": "dac6b83227332a87",
+        "text": "See [[Site Link Map]] for solo exploration of a pattern site."
+      },
+      "date": 1703556438456
+    },
+    {
+      "type": "add",
+      "id": "9d9fda136981c0c6",
+      "item": {
+        "type": "paragraph",
+        "id": "9d9fda136981c0c6",
+        "text": "See [[Zoom to Group]] to recast node clusters as their own graph."
+      },
+      "after": "dac6b83227332a87",
+      "date": 1703556530771
+    },
+    {
+      "type": "edit",
+      "id": "9d9fda136981c0c6",
+      "item": {
+        "type": "paragraph",
+        "id": "9d9fda136981c0c6",
+        "text": "See [[Zoom to Group]] to recast a cluster as its own graph."
+      },
+      "date": 1703556611454
+    },
+    {
+      "type": "add",
+      "id": "3a5b0a0a76a494e9",
+      "item": {
+        "type": "paragraph",
+        "id": "3a5b0a0a76a494e9",
+        "text": "See [[Utility Converters]] borrowed from the original collaborator."
+      },
+      "after": "9d9fda136981c0c6",
+      "date": 1703556843711
+    },
+    {
+      "type": "edit",
+      "id": "3a5b0a0a76a494e9",
+      "item": {
+        "type": "paragraph",
+        "id": "3a5b0a0a76a494e9",
+        "text": "See [[Utility Converters]] borrowed from the original app."
+      },
+      "date": 1703556855276
+    },
+    {
+      "type": "add",
+      "id": "90cb2e7aebf139dc",
+      "item": {
+        "type": "paragraph",
+        "id": "90cb2e7aebf139dc",
+        "text": "See [[Solo Reads and Writes]] with files and on pages."
+      },
+      "after": "bd178bbecd6500c2",
+      "date": 1703605410775
+    },
+    {
+      "type": "add",
+      "id": "9497815dbb454d0c",
+      "item": {
+        "type": "paragraph",
+        "id": "9497815dbb454d0c",
+        "text": "See [[Aspects of the Solo Collaborator]]"
+      },
+      "after": "3a5b0a0a76a494e9",
+      "date": 1707323637268
+    },
+    {
+      "type": "edit",
+      "id": "9497815dbb454d0c",
+      "item": {
+        "type": "paragraph",
+        "id": "9497815dbb454d0c",
+        "text": "See [[Aspects of the Solo Collaborator]] for self reference."
+      },
+      "date": 1707323675918
+    },
+    {
+      "type": "add",
+      "id": "6852c9ca6ff07f40",
+      "item": {
+        "type": "paragraph",
+        "id": "6852c9ca6ff07f40",
+        "text": "This tool has a first, middle and last name. Informally we refer to it as \"Solo\" but more properly as \"Solo Collaborator\" to be clear it is one of several \"Collaborators\"."
+      },
+      "after": "f71a8bfb601e5f55",
+      "date": 1707325244460
+    },
+    {
+      "type": "edit",
+      "id": "6852c9ca6ff07f40",
+      "item": {
+        "type": "paragraph",
+        "id": "6852c9ca6ff07f40",
+        "text": "Note: This tool has a first, middle and last name. Informally we refer to it as \"Solo\" but more properly as \"Solo Collaborator\" to be clear it is one of several \"Collaborators\"."
+      },
+      "date": 1707325255328
+    },
+    {
+      "type": "edit",
+      "id": "6852c9ca6ff07f40",
+      "item": {
+        "type": "paragraph",
+        "id": "6852c9ca6ff07f40",
+        "text": "Note: This tool has a first, middle and last name. Informally we refer to it as \"Solo\" but more properly as the \"Solo Collaborator\" to be clear it is one of several \"Collaborators\"."
+      },
+      "date": 1707325334249
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "16aca7464fafb370"
+      },
+      "id": "16aca7464fafb370",
+      "type": "add",
+      "after": "9497815dbb454d0c",
+      "date": 1710484284711
+    },
+    {
+      "type": "edit",
+      "id": "16aca7464fafb370",
+      "item": {
+        "type": "paragraph",
+        "id": "16aca7464fafb370",
+        "text": "See [[About Solo Plugin]] for progress toward plugin."
+      },
+      "date": 1710484315524
+    },
+    {
+      "type": "fork",
+      "site": "ward.dojo.fed.wiki",
+      "date": 1775082393442
+    },
+    {
+      "type": "edit",
+      "id": "86e1fdfe24990dae",
+      "item": {
+        "type": "paragraph",
+        "id": "86e1fdfe24990dae",
+        "text": "This snapshot of work in progress will show a single html file that implements the non-collaborative version along with sample jsonl data automatically generated from source code annontations. Try it. [http://search.federatedwiki.org/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Client.graph.jsonl readme]"
+      },
+      "date": 1775082393443
+    }
+  ]
+}

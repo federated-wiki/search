@@ -1,0 +1,281 @@
+{
+  "title": "Full Scrape",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "06063e4bb560f9d4",
+      "text": "We will at times defeat the incremental behavior of the  [[Ruby Sitemap Scrape]] in order to retrieve new kinds of information."
+    },
+    {
+      "type": "paragraph",
+      "id": "8192da6e436e1796",
+      "text": "When we defeat the incremental behavior we also lose the activity reporting that comes from the change detection logic. We document these discontinuities by recording our full scrape history here."
+    },
+    {
+      "type": "markdown",
+      "id": "21b8cab2d30308f9",
+      "text": "# Method"
+    },
+    {
+      "type": "paragraph",
+      "id": "8d503e84e2e14340",
+      "text": "Edit scrape.rb to ignore the 'scraped' file dates."
+    },
+    {
+      "type": "paragraph",
+      "id": "94e0dfda92e1f0fa",
+      "text": "Edit cron.sh to not record activity."
+    },
+    {
+      "type": "paragraph",
+      "id": "63250909f3a0879c",
+      "text": "Edit crontab to not launch scrapes on its schedule."
+    },
+    {
+      "type": "paragraph",
+      "id": "8e9ce9690298914f",
+      "text": "Launch the modified cron.sh from the command line."
+    },
+    {
+      "type": "markdown",
+      "id": "cb3395f87063c0fa",
+      "text": "# History"
+    },
+    {
+      "type": "paragraph",
+      "id": "99c6e55696f3405c",
+      "text": "We ran a full scrape from 22:41 July 28 until 1:11 the next day. Incremental scraping will resume at 6:00. We added indexes items.txt and plugins.txt."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "Full Scrape",
+        "story": []
+      },
+      "date": 1438173481428
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "06063e4bb560f9d4"
+      },
+      "id": "06063e4bb560f9d4",
+      "type": "add",
+      "date": 1438173484854
+    },
+    {
+      "type": "edit",
+      "id": "06063e4bb560f9d4",
+      "item": {
+        "type": "paragraph",
+        "id": "06063e4bb560f9d4",
+        "text": "We will at times defeat the incremental behavior of the  [[Ruby Sitemap Scrape]] in order to retrieve new kinds of information."
+      },
+      "date": 1438173891230
+    },
+    {
+      "type": "add",
+      "id": "99c6e55696f3405c",
+      "item": {
+        "type": "paragraph",
+        "id": "99c6e55696f3405c",
+        "text": "We ran a full scrape from "
+      },
+      "after": "06063e4bb560f9d4",
+      "date": 1438174018666
+    },
+    {
+      "type": "edit",
+      "id": "99c6e55696f3405c",
+      "item": {
+        "type": "paragraph",
+        "id": "99c6e55696f3405c",
+        "text": "We ran a full scrape from 22:41"
+      },
+      "date": 1438174037233
+    },
+    {
+      "type": "edit",
+      "id": "99c6e55696f3405c",
+      "item": {
+        "type": "paragraph",
+        "id": "99c6e55696f3405c",
+        "text": "We ran a full scrape from 22:41 July 28 until "
+      },
+      "date": 1438174057921
+    },
+    {
+      "type": "edit",
+      "id": "99c6e55696f3405c",
+      "item": {
+        "type": "paragraph",
+        "id": "99c6e55696f3405c",
+        "text": "We ran a full scrape from 22:41 July 28 until 1:11 the next day. Incremental scraping will resume at 6:00."
+      },
+      "date": 1438174132337
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "63250909f3a0879c"
+      },
+      "id": "63250909f3a0879c",
+      "type": "add",
+      "after": "99c6e55696f3405c",
+      "date": 1438174173558
+    },
+    {
+      "type": "edit",
+      "id": "63250909f3a0879c",
+      "item": {
+        "type": "paragraph",
+        "id": "63250909f3a0879c",
+        "text": "Edit crontab to not launch scrapes on its schedule."
+      },
+      "date": 1438174235293
+    },
+    {
+      "type": "add",
+      "id": "94e0dfda92e1f0fa",
+      "item": {
+        "type": "paragraph",
+        "id": "94e0dfda92e1f0fa",
+        "text": "Edit cron.sh to not record activity."
+      },
+      "after": "63250909f3a0879c",
+      "date": 1438174280052
+    },
+    {
+      "type": "add",
+      "id": "8e9ce9690298914f",
+      "item": {
+        "type": "paragraph",
+        "id": "8e9ce9690298914f",
+        "text": "Launch the modified cron.sh from the command line."
+      },
+      "after": "94e0dfda92e1f0fa",
+      "date": 1438174297793
+    },
+    {
+      "type": "add",
+      "id": "8d503e84e2e14340",
+      "item": {
+        "type": "paragraph",
+        "id": "8d503e84e2e14340",
+        "text": "Edit scrape.rb to ignore the 'scraped' file dates."
+      },
+      "after": "99c6e55696f3405c",
+      "date": 1438174367140
+    },
+    {
+      "type": "move",
+      "order": [
+        "06063e4bb560f9d4",
+        "99c6e55696f3405c",
+        "8d503e84e2e14340",
+        "94e0dfda92e1f0fa",
+        "63250909f3a0879c",
+        "8e9ce9690298914f"
+      ],
+      "id": "94e0dfda92e1f0fa",
+      "date": 1438174375871
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "21b8cab2d30308f9"
+      },
+      "id": "21b8cab2d30308f9",
+      "type": "add",
+      "after": "8e9ce9690298914f",
+      "date": 1438174382477
+    },
+    {
+      "type": "edit",
+      "id": "21b8cab2d30308f9",
+      "item": {
+        "type": "markdown",
+        "id": "21b8cab2d30308f9",
+        "text": "# Method"
+      },
+      "date": 1438174390398
+    },
+    {
+      "type": "move",
+      "order": [
+        "06063e4bb560f9d4",
+        "99c6e55696f3405c",
+        "21b8cab2d30308f9",
+        "8d503e84e2e14340",
+        "94e0dfda92e1f0fa",
+        "63250909f3a0879c",
+        "8e9ce9690298914f"
+      ],
+      "id": "21b8cab2d30308f9",
+      "date": 1438174394935
+    },
+    {
+      "item": {
+        "type": "factory",
+        "id": "cb3395f87063c0fa"
+      },
+      "id": "cb3395f87063c0fa",
+      "type": "add",
+      "after": "8e9ce9690298914f",
+      "date": 1438174416755
+    },
+    {
+      "type": "edit",
+      "id": "cb3395f87063c0fa",
+      "item": {
+        "type": "markdown",
+        "id": "cb3395f87063c0fa",
+        "text": "# History"
+      },
+      "date": 1438174434775
+    },
+    {
+      "type": "move",
+      "order": [
+        "06063e4bb560f9d4",
+        "21b8cab2d30308f9",
+        "8d503e84e2e14340",
+        "94e0dfda92e1f0fa",
+        "63250909f3a0879c",
+        "8e9ce9690298914f",
+        "cb3395f87063c0fa",
+        "99c6e55696f3405c"
+      ],
+      "id": "99c6e55696f3405c",
+      "date": 1438174439319
+    },
+    {
+      "type": "add",
+      "id": "8192da6e436e1796",
+      "item": {
+        "type": "paragraph",
+        "id": "8192da6e436e1796",
+        "text": "When we defeat the incremental behavior we also lose the activity reporting that comes from the change detection logic. We document these discontinuities by recording our full scrape history here."
+      },
+      "after": "06063e4bb560f9d4",
+      "date": 1438174791695
+    },
+    {
+      "type": "edit",
+      "id": "99c6e55696f3405c",
+      "item": {
+        "type": "paragraph",
+        "id": "99c6e55696f3405c",
+        "text": "We ran a full scrape from 22:41 July 28 until 1:11 the next day. Incremental scraping will resume at 6:00. We added indexes items.txt and plugins.txt."
+      },
+      "date": 1438174844935
+    },
+    {
+      "type": "fork",
+      "site": "ward.asia.wiki.org",
+      "date": 1775080511965
+    }
+  ]
+}

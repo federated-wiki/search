@@ -1,0 +1,174 @@
+{
+  "title": "found script",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "67aa530f7a1651d8",
+      "text": "Reconcile sites we have with sites we seen in scrape."
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "cron script --> HERE\nsites total rollup --> HERE\nHERE --> sites directory\nHERE --> activity file\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "found script",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508092610881
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nHERE"
+      },
+      "date": 1508092617770
+    },
+    {
+      "type": "fork",
+      "date": 1508099295338
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "sites directory --> HERE\ncron script --> HERE\nHERE"
+      },
+      "date": 1508099324739
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nsites total file --> HERE\nHERE"
+      },
+      "date": 1508099390818
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nsites total rollup --> HERE\nHERE"
+      },
+      "date": 1508099444546
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nsites total rollup --> HERE\nHERE --> activity file"
+      },
+      "date": 1508100373843
+    },
+    {
+      "type": "remove",
+      "id": "add031501dfdb8b3",
+      "date": 1508100795135
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nsites total rollup --> HERE\nHERE --> activity file\nHERE --> pages directory"
+      },
+      "date": 1508100814178
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nsites total rollup --> HERE\nHERE --> pages directory\nHERE --> activity file\n"
+      },
+      "date": 1508100829330
+    },
+    {
+      "type": "add",
+      "item": {
+        "type": "paragraph",
+        "id": "67aa530f7a1651d8",
+        "text": "Each scrape runs through a sequence of steps controlled by one or more scripts. "
+      },
+      "id": "67aa530f7a1651d8",
+      "date": 1508100840508
+    },
+    {
+      "type": "edit",
+      "id": "67aa530f7a1651d8",
+      "item": {
+        "type": "paragraph",
+        "id": "67aa530f7a1651d8",
+        "text": "Reconcile sites we have with sites we seen in scrape."
+      },
+      "date": 1508101039232
+    },
+    {
+      "type": "fork",
+      "date": 1511723154691
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\nsites total rollup --> HERE\nHERE --> sites directory\nHERE --> activity file\n"
+      },
+      "date": 1511908712111
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites total rollup --> HERE\nHERE --> sites directory\nHERE --> activity file\n"
+      },
+      "date": 1511908726461
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078655387
+    }
+  ]
+}

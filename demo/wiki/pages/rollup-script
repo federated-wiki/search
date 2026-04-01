@@ -1,0 +1,399 @@
+{
+  "title": "rollup script",
+  "story": [
+    {
+      "type": "paragraph",
+      "id": "add031501dfdb8b3",
+      "text": "Rollup attributes from pages to sites and totals. [https://github.com/WardCunningham/search/blob/master/rollup.rb github]"
+    },
+    {
+      "type": "graph",
+      "id": "bad6ea6ec5c56722",
+      "text": "cron script --> HERE\npages directory --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words total rollup\nHERE --> links rollup --> links total rollup\nHERE --> sites rollup --> sites total rollup --> found script\nHERE --> items rollup --> items total rollup\nHERE --> plugins rollup --> plugins total rollup\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "7a22af872bf037d5",
+      "text": "See [[Graphviz]] for composite graphs."
+    },
+    {
+      "type": "paragraph",
+      "id": "db1c464e2bea3c04",
+      "text": "For each of the five attribute merge value lists from all pages within each site and then again for all sites within the federation."
+    },
+    {
+      "type": "paragraph",
+      "id": "efaf2c42c923828a",
+      "text": "[[words site rollup]] ⇒ [[words total rollup]]\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "117992916366285f",
+      "text": "[[links site rollup]] ⇒ [[links total rollup]]\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "0653c1e9f4501418",
+      "text": "[[sites site rollup]] ⇒ [[sites total rollup]]\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "127c09bbde907b01",
+      "text": "[[items site rollup]] ⇒ [[items total rollup]]\n"
+    },
+    {
+      "type": "paragraph",
+      "id": "446b686a394d1b51",
+      "text": "[[plugins site rollup]] ⇒ [[plugins total rollup]]\n"
+    }
+  ],
+  "journal": [
+    {
+      "type": "create",
+      "item": {
+        "title": "rollup script",
+        "story": [
+          {
+            "type": "paragraph",
+            "id": "add031501dfdb8b3",
+            "text": "Explain the flow or sequence."
+          },
+          {
+            "type": "graph",
+            "id": "bad6ea6ec5c56722",
+            "text": "HERE"
+          },
+          {
+            "type": "paragraph",
+            "id": "7a22af872bf037d5",
+            "text": "See [[Graphviz]] for composite graphs."
+          }
+        ]
+      },
+      "date": 1508092575917
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nHERE"
+      },
+      "date": 1508092598909
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup\nHERE --> links rollup\nHERE --> sites rollup\nHERE --> plugins rollup\nHERE --> words rollup\n"
+      },
+      "date": 1508095567290
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup\nHERE --> links rollup\nHERE --> sites rollup\nHERE --> items rollup\nHERE --> plugins rollup\n"
+      },
+      "date": 1508095598563
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Rollup attributes from pages to sites and then the federation."
+      },
+      "date": 1508095792479
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Rollup attributes from pages to sites and the federation."
+      },
+      "date": 1508095801632
+    },
+    {
+      "type": "add",
+      "id": "db1c464e2bea3c04",
+      "item": {
+        "type": "paragraph",
+        "id": "db1c464e2bea3c04",
+        "text": "For each attribute merge lists from all pages within each site and then again for all sites within the federation."
+      },
+      "after": "7a22af872bf037d5",
+      "date": 1508095898124
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "db1c464e2bea3c04",
+        "7a22af872bf037d5"
+      ],
+      "id": "db1c464e2bea3c04",
+      "date": 1508095903006
+    },
+    {
+      "type": "edit",
+      "id": "db1c464e2bea3c04",
+      "item": {
+        "type": "paragraph",
+        "id": "db1c464e2bea3c04",
+        "text": "For each of the five attribute merge value lists from all pages within each site and then again for all sites within the federation."
+      },
+      "date": 1508095929635
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words federation rollup\nHERE --> links rollup\nHERE --> sites rollup\nHERE --> items rollup\nHERE --> plugins rollup\n"
+      },
+      "date": 1508096150643
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words total rollup\nHERE --> links rollup\nHERE --> sites rollup\nHERE --> items rollup\nHERE --> plugins rollup\n"
+      },
+      "date": 1508096228960
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words total rollup\nHERE --> links rollup --> links total rollup\nHERE --> sites rollup --> sites total rollup\nHERE --> items rollup --> items total rollup\nHERE --> plugins rollup --> plugins total rollup\n"
+      },
+      "date": 1508096275104
+    },
+    {
+      "type": "move",
+      "order": [
+        "add031501dfdb8b3",
+        "bad6ea6ec5c56722",
+        "7a22af872bf037d5",
+        "db1c464e2bea3c04"
+      ],
+      "id": "7a22af872bf037d5",
+      "date": 1508096549839
+    },
+    {
+      "type": "add",
+      "id": "efaf2c42c923828a",
+      "item": {
+        "type": "paragraph",
+        "id": "efaf2c42c923828a",
+        "text": "[[words rollup]] ⇒ [[words total rollup]]\n[[links rollup]] ⇒ [[links total rollup]]\n[[sites rollup]] ⇒ [[sites total rollup]]\n[[items rollup]] ⇒ [[items total rollup]]\n[[plugins rollup]] ⇒ [[plugins total rollup]]\n"
+      },
+      "after": "db1c464e2bea3c04",
+      "date": 1508096554865
+    },
+    {
+      "type": "edit",
+      "id": "efaf2c42c923828a",
+      "item": {
+        "type": "paragraph",
+        "id": "efaf2c42c923828a",
+        "text": "[[words rollup]] ⇒ [[words total rollup]]\n"
+      },
+      "date": 1508096564322
+    },
+    {
+      "type": "add",
+      "id": "117992916366285f",
+      "item": {
+        "type": "paragraph",
+        "id": "117992916366285f",
+        "text": "[[links rollup]] ⇒ [[links total rollup]]\n"
+      },
+      "after": "efaf2c42c923828a",
+      "date": 1508096566657
+    },
+    {
+      "type": "add",
+      "id": "0653c1e9f4501418",
+      "item": {
+        "type": "paragraph",
+        "id": "0653c1e9f4501418",
+        "text": "[[sites rollup]] ⇒ [[sites total rollup]]\n"
+      },
+      "after": "117992916366285f",
+      "date": 1508096567570
+    },
+    {
+      "type": "add",
+      "id": "127c09bbde907b01",
+      "item": {
+        "type": "paragraph",
+        "id": "127c09bbde907b01",
+        "text": "[[items rollup]] ⇒ [[items total rollup]]\n"
+      },
+      "after": "0653c1e9f4501418",
+      "date": 1508096568649
+    },
+    {
+      "type": "add",
+      "id": "446b686a394d1b51",
+      "item": {
+        "type": "paragraph",
+        "id": "446b686a394d1b51",
+        "text": "[[plugins rollup]] ⇒ [[plugins total rollup]]\n"
+      },
+      "after": "127c09bbde907b01",
+      "date": 1508096569968
+    },
+    {
+      "type": "edit",
+      "id": "efaf2c42c923828a",
+      "item": {
+        "type": "paragraph",
+        "id": "efaf2c42c923828a",
+        "text": "[[words site rollup]] ⇒ [[words total rollup]]\n"
+      },
+      "date": 1508096617487
+    },
+    {
+      "type": "edit",
+      "id": "117992916366285f",
+      "item": {
+        "type": "paragraph",
+        "id": "117992916366285f",
+        "text": "[[links site rollup]] ⇒ [[links total rollup]]\n"
+      },
+      "date": 1508096625255
+    },
+    {
+      "type": "edit",
+      "id": "0653c1e9f4501418",
+      "item": {
+        "type": "paragraph",
+        "id": "0653c1e9f4501418",
+        "text": "[[sites site rollup]] ⇒ [[sites total rollup]]\n"
+      },
+      "date": 1508096631175
+    },
+    {
+      "type": "edit",
+      "id": "127c09bbde907b01",
+      "item": {
+        "type": "paragraph",
+        "id": "127c09bbde907b01",
+        "text": "[[items site rollup]] ⇒ [[items total rollup]]\n"
+      },
+      "date": 1508096637582
+    },
+    {
+      "type": "edit",
+      "id": "446b686a394d1b51",
+      "item": {
+        "type": "paragraph",
+        "id": "446b686a394d1b51",
+        "text": "[[plugins site rollup]] ⇒ [[plugins total rollup]]\n"
+      },
+      "date": 1508096644597
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words site rollup --> words total rollup\nHERE --> links site rollup --> links total rollup\nHERE --> sites site rollup --> sites total rollup\nHERE --> items site rollup --> items total rollup\nHERE --> plugins site rollup --> plugins total rollup\n"
+      },
+      "date": 1508096680052
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "words file -> pages directory\ncron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words site rollup --> words total rollup\nHERE --> links site rollup --> links total rollup\nHERE --> sites site rollup --> sites total rollup\nHERE --> items site rollup --> items total rollup\nHERE --> plugins site rollup --> plugins total rollup\n"
+      },
+      "date": 1508101762739
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "words file -> pages directory --> HERE\ncron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words site rollup --> words total rollup\nHERE --> links site rollup --> links total rollup\nHERE --> sites site rollup --> sites total rollup\nHERE --> items site rollup --> items total rollup\nHERE --> plugins site rollup --> plugins total rollup\n"
+      },
+      "date": 1508101805290
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "pages directory --> HERE\ncron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words site rollup --> words total rollup\nHERE --> links site rollup --> links total rollup\nHERE --> sites site rollup --> sites total rollup\nHERE --> items site rollup --> items total rollup\nHERE --> plugins site rollup --> plugins total rollup\n"
+      },
+      "date": 1508101834241
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "pages directory --> HERE\ncron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words total rollup\nHERE --> links rollup --> links total rollup\nHERE --> sites rollup --> sites total rollup\nHERE --> items rollup --> items total rollup\nHERE --> plugins rollup --> plugins total rollup\n"
+      },
+      "date": 1508202716344
+    },
+    {
+      "type": "edit",
+      "id": "add031501dfdb8b3",
+      "item": {
+        "type": "paragraph",
+        "id": "add031501dfdb8b3",
+        "text": "Rollup attributes from pages to sites and totals. [https://github.com/WardCunningham/search/blob/master/rollup.rb github]"
+      },
+      "date": 1511573495989
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "pages directory --> HERE\ncron script --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words total rollup\nHERE --> links rollup --> links total rollup\nHERE --> sites rollup --> sites total rollup --> found script\nHERE --> items rollup --> items total rollup\nHERE --> plugins rollup --> plugins total rollup\n"
+      },
+      "date": 1511722433915
+    },
+    {
+      "type": "edit",
+      "id": "bad6ea6ec5c56722",
+      "item": {
+        "type": "graph",
+        "id": "bad6ea6ec5c56722",
+        "text": "cron script --> HERE\npages directory --> HERE\nsites directory --> HERE\npages directory --> HERE\nHERE\nHERE --> words rollup --> words total rollup\nHERE --> links rollup --> links total rollup\nHERE --> sites rollup --> sites total rollup --> found script\nHERE --> items rollup --> items total rollup\nHERE --> plugins rollup --> plugins total rollup\n"
+      },
+      "date": 1511722642996
+    },
+    {
+      "type": "fork",
+      "site": "scrape.ward.bay.wiki.org",
+      "date": 1775078649454
+    }
+  ]
+}
