@@ -249,7 +249,7 @@ Next add the service to the proxy:
 ```sh
 cat <<CADDYFILE >> /etc/caddy/Caddyfile
 
-http://search.federatedwiki.org {
+http://search.federatedwiki.org, https://search.federatedwiki.org {
   reverse_proxy localhost:3000
 }
 CADDYFILE
