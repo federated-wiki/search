@@ -29,7 +29,7 @@
     {
       "type": "frame",
       "id": "6151dcffb2cea6bc",
-      "text": "http://search.federatedwiki.org/assets/pages/search-index-logs/sites-indexed.html\nHEIGHT 200"
+      "text": "//search.federatedwiki.org/assets/pages/search-index-logs/sites-indexed.html\nHEIGHT 200"
     },
     {
       "type": "paragraph",
@@ -39,7 +39,7 @@
     {
       "type": "frame",
       "id": "fe4f5182451f0f30",
-      "text": "http://search.federatedwiki.org/assets/pages/search-index-logs/sites-missing.html\nHEIGHT 200"
+      "text": "//search.federatedwiki.org/assets/pages/search-index-logs/sites-missing.html\nHEIGHT 200"
     },
     {
       "type": "paragraph",
@@ -49,7 +49,7 @@
     {
       "type": "frame",
       "id": "c4059ae128d3106b",
-      "text": "http://search.federatedwiki.org/assets/pages/search-index-logs/sites-retired.html\nHEIGHT 200"
+      "text": "//search.federatedwiki.org/assets/pages/search-index-logs/sites-retired.html\nHEIGHT 200"
     },
     {
       "type": "paragraph",
@@ -70,7 +70,7 @@
       "site": "search.dojo.fed.wiki",
       "slug": "solo-super-collaborator",
       "title": "Solo Super Collaborator",
-      "text": "We've applied our interest in assembling large graphs from selected aspect represented as small, overlapping graphs. We've used federation search as a test case. [http://search.dojo.fed.wiki/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Client.graph.jsonl demo]"
+      "text": "We've applied our interest in assembling large graphs from selected aspect represented as small, overlapping graphs. We've used federation search as a test case. [http://search.federatedwiki.org/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Client.graph.jsonl demo]"
     },
     {
       "type": "reference",
@@ -83,7 +83,7 @@
     {
       "type": "frame",
       "id": "70b0308aa1cbfeaa",
-      "text": "http://ward.dojo.fed.wiki/assets/pages/search-index-logs/scripts/scan-assets.html\nHEIGHT 50"
+      "text": "//search.federatedwiki.org/assets/pages/search-index-logs/scripts/scan-assets.html\nHEIGHT 50"
     },
     {
       "type": "assets",
@@ -794,6 +794,69 @@
         "text": "http://search.federatedwiki.org/assets/pages/search-index-logs/sites-retired.html\nHEIGHT 200"
       },
       "date": 1775067872558
+    },
+    {
+      "type": "edit",
+      "id": "70b0308aa1cbfeaa",
+      "item": {
+        "type": "frame",
+        "id": "70b0308aa1cbfeaa",
+        "text": "http://search.federatedwiki.org/assets/pages/search-index-logs/scripts/scan-assets.html\nHEIGHT 50"
+      },
+      "date": 1775086365372
+    },
+    {
+      "type": "edit",
+      "id": "70b0308aa1cbfeaa",
+      "item": {
+        "type": "frame",
+        "id": "70b0308aa1cbfeaa",
+        "text": "//search.federatedwiki.org/assets/pages/search-index-logs/scripts/scan-assets.html\nHEIGHT 50"
+      },
+      "date": 1775086440371
+    },
+    {
+      "type": "edit",
+      "id": "c4059ae128d3106b",
+      "item": {
+        "type": "frame",
+        "id": "c4059ae128d3106b",
+        "text": "//search.federatedwiki.org/assets/pages/search-index-logs/sites-retired.html\nHEIGHT 200"
+      },
+      "date": 1775086450488
+    },
+    {
+      "type": "edit",
+      "id": "fe4f5182451f0f30",
+      "item": {
+        "type": "frame",
+        "id": "fe4f5182451f0f30",
+        "text": "//search.federatedwiki.org/assets/pages/search-index-logs/sites-missing.html\nHEIGHT 200"
+      },
+      "date": 1775086456917
+    },
+    {
+      "type": "edit",
+      "id": "6151dcffb2cea6bc",
+      "item": {
+        "type": "frame",
+        "id": "6151dcffb2cea6bc",
+        "text": "//search.federatedwiki.org/assets/pages/search-index-logs/sites-indexed.html\nHEIGHT 200"
+      },
+      "date": 1775086464708
+    },
+    {
+      "type": "edit",
+      "id": "14668f68dfeff010",
+      "item": {
+        "type": "paragraph",
+        "id": "14668f68dfeff010",
+        "site": "search.dojo.fed.wiki",
+        "slug": "solo-super-collaborator",
+        "title": "Solo Super Collaborator",
+        "text": "We've applied our interest in assembling large graphs from selected aspect represented as small, overlapping graphs. We've used federation search as a test case. [http://search.federatedwiki.org/assets/pages/solo-super-collaborator/README.html?read=https://raw.githubusercontent.com/WardCunningham/search/master/README.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Color.graph.jsonl&read=https://raw.githubusercontent.com/WardCunningham/search/master/README-Client.graph.jsonl demo]"
+      },
+      "date": 1775086682217
     }
   ]
 }
