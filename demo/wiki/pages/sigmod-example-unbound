@@ -4,7 +4,7 @@
     {
       "type": "paragraph",
       "id": "b8a6fa92d6162d14",
-      "text": "Example data graph showing supervision and citation data for researchers, students and publications. [https://homepages.inf.ed.ac.uk/libkin/papers/sigmod18.pdf pdf] [http://ward.dojo.fed.wiki/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg expand]"
+      "text": "Example data graph showing supervision and citation data for researchers, students and publications. [https://homepages.inf.ed.ac.uk/libkin/papers/sigmod18.pdf pdf] [http://search.federatedwiki.org/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg expand]"
     },
     {
       "type": "html",
@@ -559,6 +559,16 @@
         "text": "<img width=100% src=http://search.federatedwiki.org/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg>"
       },
       "date": 1775073814263
+    },
+    {
+      "type": "edit",
+      "id": "b8a6fa92d6162d14",
+      "item": {
+        "type": "paragraph",
+        "id": "b8a6fa92d6162d14",
+        "text": "Example data graph showing supervision and citation data for researchers, students and publications. [https://homepages.inf.ed.ac.uk/libkin/papers/sigmod18.pdf pdf] [http://search.federatedwiki.org/assets/pages/sigmod-example-unbound/sigmod-figure-1.jpg expand]"
+      },
+      "date": 1775085224636
     }
   ]
 }
