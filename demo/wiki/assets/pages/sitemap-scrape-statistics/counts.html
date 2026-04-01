@@ -19,7 +19,7 @@
 
 	async function display (text) {
 		var lines = text.trim().split(/\n/)
-		var newer = await fetch('http://search.federatedwiki.org:3030/counts.txt')
+		var newer = await fetch('//query.search.federatedwiki.org/counts.txt')
 			.then(res => res.text())
 			.then(text => text.trim().split(/\n/))
 		var data = [...lines,...newer.slice(10)].map(function (line) {return JSON.parse(line)})

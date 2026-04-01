@@ -6,15 +6,15 @@
 </style>
 <script type=module>
   import * as frame from '//search.federatedwiki.org/assets/frame.js'
-  const search = 'http://search.federatedwiki.org:3030/'
+  const search = '//query.search.federatedwiki.org/'
   window.dolink = async event => {
     const site = event.target.innerText
 // Debug ► HTML:sites-indexed ► get Sites:owner
     const owner = (await fetch(`${search}/owner/${site}`).then(res => res.text())).trim()||'unknown'
     const title = `${site} Activity`
     const text = `${owner}'s ${site}.
-      [http://${site} site]
-      [http://${site}/system/sitemap.json sitemap]`
+      [//${site} site]
+      [//${site}/system/sitemap.json sitemap]`
 // Debug ► HTML:sites-indexed ► get Sites:detail-sites
     const detail = await fetch(`${search}/logs/detail-sites/${site}`).then(res => res.text())
     const story = [

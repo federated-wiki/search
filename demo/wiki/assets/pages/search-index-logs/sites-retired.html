@@ -10,8 +10,8 @@
     const site = event.target.innerText
     const title = `${site} Activity`
     const text = `Retired ${site}.
-      [http://${site} site]
-      [http://${site}/system/sitemap.json sitemap]`
+      [//${site} site]
+      [//${site}/system/sitemap.json sitemap]`
     const detail = await fetch(`${search}/logs/detail-retired/${site}`).then(res => res.text())
     const story = [
       {type:'paragraph',text},
@@ -22,7 +22,7 @@
     frame.open({title,story},event.shiftKey)
   }
   const rev = domain => domain.split('.').reverse().join('.')
-  const search = 'http://search.federatedwiki.org:3030'
+  const search = '//query.search.federatedwiki.org'
   const lines = (await fetch(`${search}/logs/retired`).then(res => res.text()))
     .split(/\n/)
     .filter(line => line.includes('.'))

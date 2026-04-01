@@ -7,10 +7,10 @@
 
 <script type=module>
   import {Graph} from 'https://wardcunningham.github.io/graph/graph.js'
-  import * as frame from 'http://code.fed.wiki/assets/v1/frame.js'
+  import * as frame from '//search.federatedwiki.org/assets/frame.js'
   const context = await frame.context()
   const github = 'https://github.com/WardCunningham/search/blob/master'
-  const search = 'http://search.federatedwiki.org:3030'
+  const search = '//query.search.federatedwiki.org'
   const xref = await fetch(`${search}/xref`).then(res => res.text())
   const lines = xref.trim().split(/\n/)
     .filter(line => line.includes(' # '))

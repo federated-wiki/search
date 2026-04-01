@@ -9,7 +9,7 @@
     {
       "type": "reference",
       "id": "d39523a8f8f1deed",
-      "site": "search.federatedwiki.org:3030",
+      "site": "query.search.federatedwiki.org",
       "slug": "recent-activity",
       "title": "Recent Activity",
       "text": "Sites we find with recently edited pages."
@@ -48,7 +48,7 @@
       "item": {
         "type": "reference",
         "id": "d39523a8f8f1deed",
-        "site": "search.federatedwiki.org:3030",
+        "site": "query.search.federatedwiki.org",
         "slug": "recent-activity",
         "title": "Recent Activity",
         "text": "Here we report sites we find with recently edited pages."
@@ -63,7 +63,7 @@
       "item": {
         "type": "reference",
         "id": "d39523a8f8f1deed",
-        "site": "search.federatedwiki.org:3030",
+        "site": "query.search.federatedwiki.org",
         "slug": "recent-activity",
         "title": "Recent Activity",
         "text": "Sites we find with recently edited pages."
